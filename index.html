@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title></title>
+  <link rel="stylesheet" href="jquery.mobile-1.3.2.css">
+  <link rel="stylesheet" href="index.css">
+  <script src="jquery-2.0.3.min.js"></script>
+  <script src="jquery.mobile-1.3.2.js"></script>
+    <link href="css/mobiscroll.custom-2.5.0.min.css" rel="stylesheet" type="text/css" />
+    <script src="js/mobiscroll.custom-2.5.0.min.js" type="text/javascript"></script>
+
+    <script src="index.js">
+
+  </script>
+
+   
+</head>
+<body>
+
+<!-- Home -->
+<div data-role="page" id="index">
+    <div data-theme="b" data-role="header" data-position="fixed">
+        <h3 >
+            慢性咽炎助手
+        </h3>
+    </div>
+    <div data-role="content">
+        <div style="width: 100%; height: 100%; position: relative;">
+            <h4>还不根治，享受生活，更待何时？</h4>
+        </div>
+        <ul data-role="listview" data-divider-theme="b" data-inset="true">
+            <li data-theme="c">
+                <a href="#smalltips" data-transition="slide">
+                    根治流程
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#survey-1" data-transition="slide">
+                    我的生活习惯（找病因）
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#smalltips" data-transition="slide">
+                    我的病历（记录症状，专家分析）
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#smalltips" data-transition="slide">
+                    通用根治宝典
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#smalltips" data-transition="slide">
+                    针对性根治宝典
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#smalltips" data-transition="slide">
+                    过往失败案例
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#survey-1" data-transition="slide">
+                    每日咽炎时令食谱
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#welcome" data-transition="slide">
+                    误区提醒（每天一条）
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#ques" data-transition="slide">
+                    在线提问
+                </a>
+            </li>
+            <li data-theme="c">
+                <a href="#vipConfirm" data-transition="slide">
+                  会员服务
+                </a>
+            </li>
+        </ul>
+    </div>
+    <footer data-theme="b" data-role="footer" data-position="fixed">
+        <nav data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="home">首页</a></li>
+                <li><a href="#promote" data-icon="grid">提升</a></li>
+                <li><a href="#task" data-icon="info">任务</a></li>
+                <li><a href="#register" data-icon="Search">账户</a></li>
+            </ul>
+        </nav>
+    </footer>
+</div>
+
+<div data-role="page" id="welcome">
+    something
+    <a href="" data-role="button" data-theme="b" id="sub"  data-icon="arrow-l">ok</a>
+</div>
+
+<div data-role="page" id="promote">
+
+    <div data-role="header" data-theme="b">
+        <h1>提升</h1>
+        <a   data-role="button" href="#register">返回</a>
+    </div><!-- /header -->
+
+    <div data-role="content" data-theme="b">
+
+        <ul data-role="listview"  id="listViewUser">
+            <li><a href="#">
+                <img src="../img/apple.png">
+                <h2>养生</h2>
+                <p>道法自然，天人合一</p>
+                <p class="ui-li-aside">iOS</p>
+            </a></li>
+            <li><a href="#">
+                <img src="../img/blackberry_10.png">
+                <h2>BlackBerry 10</h2>
+                <p>BlackBerry launched the Z10 and Q10 with the new BB10 OS</p>
+                <p class="ui-li-aside">BlackBerry</p>
+            </a></li>
+        </ul>
+
+    </div><!-- /content -->
+
+    <footer data-theme="b" data-role="footer" data-position="fixed">
+        <nav data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="home">首页</a></li>
+                <li><a href="#promote" data-icon="grid">提升</a></li>
+                <li><a href="#task" data-icon="info">任务</a></li>
+                <li><a href="#register" data-icon="Search">账户</a></li>
+            </ul>
+        </nav>
+    </footer>
+</div><!-- /page -->
+
+<div data-role="page" id="userDetail">
+    <div data-theme="b" data-role="header" data-position="fixed" >
+        <h3>
+            咽炎指数测试 1
+        </h3>
+        <a data-role="button" href="#promote">上一步</a>
+    </div>
+    <div data-role="content">
+        <h2 id="detailUsername"></h2>
+        <p id="detailSex">性别：</p>
+        <p id="detailBirthday">年龄：</p>
+        <p id="detailJob">职业：</p>
+        <p id="detailSickDate">病程：</p>
+        <p id="detailSickContent">症状：</p>
+        <div data-role="fieldcontain">
+
+        </div>
+
+    </div>
+    <footer data-theme="b" data-role="footer" data-position="fixed">
+        <nav data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="home">首页</a></li>
+                <li><a href="#promote" data-icon="grid">提升</a></li>
+                <li><a href="#task" data-icon="info">任务</a></li>
+                <li><a href="#register" data-icon="Search">账户</a></li>
+            </ul>
+        </nav>
+    </footer>
+</div>
+<div data-role="page" data-theme="b" id="task" class="my-page">
+
+    <div data-role="header" data-theme="b">
+        <h1>任务</h1>
+        <a href="grid-listview.html" data-shadow="false" data-iconshadow="false" data-icon="arrow-l" data-iconpos="notext" data-rel="back" data-ajax="false">Back</a>
+    </div><!-- /header -->
+
+    <div data-role="content" data-theme="b">
+
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#">
+                <img src="../img/apple.png">
+                <h2>养生</h2>
+                <p>道法自然，天人合一</p>
+                <p class="ui-li-aside">iOS</p>
+            </a></li>
+            <li><a href="#">
+                <img src="../img/blackberry_10.png">
+                <h2>BlackBerry 10</h2>
+                <p>BlackBerry launched the Z10 and Q10 with the new BB10 OS</p>
+                <p class="ui-li-aside">BlackBerry</p>
+            </a></li>
+            <li><a href="#">
+                <img src="../../_assets/img/lumia_800.png">
+                <h2>WP 7.8</h2>
+                <p>Nokia rolls out WP 7.8 to Lumia 800</p>
+                <p class="ui-li-aside">Windows Phone</p>
+            </a></li>
+            <li><a href="#">
+                <img src="../../_assets/img/galaxy_express.png">
+                <h2>Galaxy</h2>
+                <p>New Samsung Galaxy Express</p>
+                <p class="ui-li-aside">Samsung</p>
+            </a></li>
+            <li><a href="#">
+                <img src="../../_assets/img/nexus_7.png">
+                <h2>Nexus 7</h2>
+                <p>Rumours about new full HD Nexus 7</p>
+                <p class="ui-li-aside">Android</p>
+            </a></li>
+            <li><a href="#">
+                <img src="../../_assets/img/firefox_os.png">
+                <h2>Firefox OS</h2>
+                <p>ZTE to launch Firefox OS smartphone at MWC</p>
+                <p class="ui-li-aside">Firefox</p>
+            </a></li>
+            <li><a href="#">
+                <img src="../../_assets/img/tizen.png">
+                <h2>Tizen</h2>
+                <p>First Samsung phones with Tizen can be expected in 2013</p>
+                <p class="ui-li-aside">Tizen</p>
+            </a></li>
+            <li><a href="#">
+                <h2>Symbian</h2>
+                <p>Nokia confirms the end of Symbian</p>
+                <p class="ui-li-aside">Symbian</p>
+            </a></li>
+        </ul>
+
+    </div><!-- /content -->
+
+    <footer data-theme="b" data-role="footer" data-position="fixed">
+        <nav data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="home">首页</a></li>
+                <li><a href="#promote" data-icon="grid">提升</a></li>
+                <li><a href="#task" data-icon="info">任务</a></li>
+                <li><a href="#register" data-icon="Search">账户</a></li>
+            </ul>
+        </nav>
+    </footer>
+</div><!-- /page -->
+
+<div data-role="page" id="survey-1">
+    <div data-theme="b" data-role="header" data-position="fixed" >
+        <h3>
+            咽炎指数测试
+        </h3>
+        <a data-role="button" href="#index">返回</a>
+    </div>
+    <div id="xxx" data-role="content" >
+               <p>1.你吃一顿正餐，无人干扰一般几分钟吃完？</p>
+                     <input type="range" name="slider" id="s1" value="15" min="0" max="30" data-highlight="true" data-mini="true" />
+
+            <p>2.你吃什么主食最多？</p>
+            <fieldset data-role="controlgroup">
+                <input type="radio" name="s2" id="radio1-1" value="1" class="custom" />
+                <label for="radio1-1">米饭</label>
+
+                <input type="radio" name="s2" id="radio1-2" value="2" class="custom" />
+                <label for="radio1-2">粥</label>
+
+                <input type="radio" name="s2" id="radio1-3" value="3" class="custom" />
+                <label for="radio1-3">馒头、饼</label>
+
+                <input type="radio" name="s2" id="radio1-4" value="4" class="custom" />
+                <label for="radio1-4">面条</label>
+            </fieldset>
+            <p>3、饭后散步多少分钟？</p>
+            <input type="range" name="slider" id="s3" value="15" min="0" max="60" data-highlight="true" data-mini="true" />
+
+        <a href="" data-role="button" data-theme="b" id="submit1"  data-icon="arrow-l">确定</a>
+
+    </div>
+    <footer data-theme="b" data-role="footer" data-position="fixed">
+        <nav data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="home">首页</a></li>
+                <li><a href="#promote" data-icon="grid">提升</a></li>
+                <li><a href="#task" data-icon="info">任务</a></li>
+                <li><a href="#register" data-icon="Search">账户</a></li>
+            </ul>
+        </nav>
+    </footer>
+</div>
+
+<div data-role="page" id="survey-2">
+    <div data-theme="b" data-role="header" data-position="fixed">
+        <h3>
+            相似案例查询
+        </h3>
+        <a href="#survey-1" data-role="button">上一步</a>
+    </div>
+    <div data-role="content">
+        <p>4、一般吃饭吃几成饱？</p>
+        <fieldset data-role="controlgroup">
+            <input type="radio" name="s4" id="ss4" value="1"  />
+            <label for="ss4">7成</label>
+
+            <input type="radio" name="s4" id="radio-pet-2a" value="2"  />
+            <label for="radio-pet-2a">8成</label>
+
+            <input type="radio" name="s4" id="radio-pet-3a" value="3"  />
+            <label for="radio-pet-3a">9成</label>
+
+            <input type="radio" name="s4" id="radio-pet-4a" value="4"  />
+            <label for="radio-pet-4a">10成</label>
+        </fieldset>
+        <p>5.一般几点吃晚饭？</p>
+        <fieldset data-role="controlgroup">
+            <input type="radio" name="s5" id="ss5-1" value="6"  />
+            <label for="ss5-1">6点</label>
+
+            <input type="radio" name="s5" id="ss5-2" value="7"  />
+            <label for="ss5-2">7点</label>
+
+            <input type="radio" name="s5" id="ss5-3" value="8"  />
+            <label for="ss5-3">8点</label>
+
+            <input type="radio" name="s5" id="ss5-4" value="9"  />
+            <label for="ss5-4">9点或更晚</label>
+            <input type="radio" name="s5" id="ss5-5" value="10"  />
+            <label for="ss5-5">没有规律</label>
+        </fieldset>
+
+
+    </div>
+    <footer data-theme="b" data-role="footer" data-position="fixed">
+        <nav data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="home">首页</a></li>
+                <li><a href="#promote" data-icon="grid">提升</a></li>
+                <li><a href="#task" data-icon="info">任务</a></li>
+                <li><a href="#register" data-icon="Search">账户</a></li>
+            </ul>
+        </nav>
+    </footer>
+</div>
+
+<div data-role="page" id="survey-3">
+    <div data-theme="b" data-role="header" data-position="fixed">
+        <h3>
+            咽炎指数测试
+        </h3>
+        <a data-role="button" href="#survey-2">上一步</a>
+    </div>
+    <div data-role="content">
+        <p>6.一般晚上几点睡觉？</p>
+        <fieldset data-role="controlgroup">
+            <input type="radio" name="s6" id="ss6-1" value="11"  />
+            <label for="ss6-1">11点或更早</label>
+
+            <input type="radio" name="s6" id="ss6-2" value="12"  />
+            <label for="ss6-2">12点</label>
+
+            <input type="radio" name="s6" id="ss6-3" value="13"  />
+            <label for="ss6-3">1点</label>
+
+            <input type="radio" name="s6" id="ss6-4" value="14"  />
+            <label for="ss6-4">2点或更晚</label>
+        </fieldset>
+
+        <p>7.你喝什么样的水？</p>
+        <fieldset data-role="controlgroup">
+            <input type="radio" name="s7" id="ss7-1" value="10"  />
+            <label for="ss7-1">不常喝水，常喝饮料</label>
+
+            <input type="radio" name="s7" id="ss7-2" value="5"  />
+            <label for="ss7-2">饮水机里的冷水</label>
+
+            <input type="radio" name="s7" id="ss7-3" value="3"  />
+            <label for="ss7-3">饮水机里的开水</label>
+
+            <input type="radio" name="s7" id="ss7-4" value="1"  />
+            <label for="ss7-4">烧开一分钟的自来水</label>
+            <input type="radio" name="s7" id="ss7-5" value="0"  />
+            <label for="ss7-5">喝烧开一分钟的桶装水</label>
+        </fieldset>
+    </div>
+    <div data-theme="b" data-role="footer" data-position="fixed">
+        <h3>
+            Footer
+        </h3>
+    </div>
+</div>
+<div data-role="page" id="survey-4">
+    <div data-theme="b" data-role="header" data-position="fixed">
+        <h3>
+            咽炎指数测试
+        </h3>
+        <a data-role="button" href="#survey-3">上一步</a>
+    </div>
+    <div data-role="content">
+        <p>8.经常吃外卖或快餐？</p>
+        <fieldset data-role="controlgroup">
+            <input type="radio" name="s8" id="ss8-1" value="10"  />
+            <label for="ss8-1">经常</label>
+
+            <input type="radio" name="s8" id="ss8-2" value="3"  />
+            <label for="ss8-2">偶尔</label>
+
+            <input type="radio" name="s8" id="ss8-3" value="0"  />
+            <label for="ss8-3">从不</label>
+        </fieldset>
+
+        <p>9.你在外边吃饭，一下哪种吃的多：</p>
+        <fieldset data-role="controlgroup">
+            <input type="radio" name="s9" id="ss9-1" value="10"  />
+            <label for="ss9-1">路边摊,大排档</label>
+
+            <input type="radio" name="s9" id="ss9-2" value="7"  />
+            <label for="ss9-2">小饭店，或者兰州拉面</label>
+
+            <input type="radio" name="s9" id="ss9-3" value="2"  />
+            <label for="ss9-3">中档饭店或者肯德基</label>
+
+            <input type="radio" name="s9" id="ss9-4" value="0"  />
+            <label for="ss9-4">高档饭店，或人均50以上</label>
+
+        </fieldset>
+
+    </div>
+    <div data-theme="b" data-role="footer" data-position="fixed">
+        <h3>
+            Footer
+        </h3>
+    </div>
+</div>
+<div data-role="page" id="survey-5">
+    <div data-theme="b" data-role="header" data-position="fixed">
+        <h3>
+            咽炎指数测试
+        </h3>
+        <a data-role="button" href="#survey-4">上一步</a>
+    </div>
+    <div data-role="content">
+        <p>10.居住地区的污染程度是：</p>
+        <fieldset data-role="controlgroup">
+            <input type="radio" name="s10" id="ss10-1" value="0"  />
+            <label for="ss10-1">无污染（例如：三亚）</label>
+
+            <input type="radio" name="s10" id="ss10-2" value="2"  />
+            <label for="ss10-2">轻微污染</label>
+
+            <input type="radio" name="s10" id="ss10-3" value="6"  />
+            <label for="ss10-3">中度污染</label>
+            <input type="radio" name="s10" id="ss10-4" value="10"  />
+            <label for="ss10-4">重度污染</label>
+        </fieldset>
+
+        <p>11.你平常说话很多么？</p>
+        <fieldset data-role="controlgroup">
+            <input type="radio" name="s11" id="ss11-1" value="0.5"  />
+            <label for="ss11-1">很少</label>
+
+            <input type="radio" name="s11" id="ss11-2" value="1"  />
+            <label for="ss11-2">一般</label>
+
+            <input type="radio" name="s11" id="ss11-3" value="1.5"  />
+            <label for="ss11-3">很多</label>
+
+            <input type="radio" name="s11" id="ss11-4" value="2"  />
+            <label for="ss11-4">超多</label>
+
+        </fieldset>
+    </div>
+    <div data-theme="b" data-role="footer" data-position="fixed">
+        <h3>
+            Footer
+        </h3>
+    </div>
+</div>
+<div data-role="page" id="survey-6">
+    <div data-theme="b" data-role="header" data-position="fixed">
+        <h3>
+            咽炎指数测试
+        </h3>
+        <a data-role="button" href="#survey-5">上一步</a>
+    </div>
+    <div data-role="content">
+        <p>12.有以下情况（可多选，没有可不选）：</p>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="s12" id="ss12-1" value="1"  />
+            <label for="ss12-1">工作环境恶劣（辐射，空气污染）</label>
+            <input type="checkbox" name="s12" id="ss12-2" value="2"  />
+            <label for="ss12-2">曾经有过重大疾病</label>
+            <input type="checkbox" name="s12" id="ss12-3" value="3"  />
+            <label for="ss12-3">现在还有其他慢性疾病</label>
+            <input type="checkbox" name="s12" id="ss12-4" value="4"  />
+            <label for="ss12-4">有鼻炎</label>
+            <input type="checkbox" name="s12" id="ss12-5" value="5"  />
+            <label for="ss12-5">经常感冒</label>
+            <input type="checkbox" name="s12" id="ss12-6" value="6"  />
+            <label for="ss12-6">长期使用抗生素史</label>
+            <input type="checkbox" name="s12" id="ss12-7" value="7"  />
+            <label for="ss12-7">有或曾有腿部疾病，行走不便</label>
+            <input type="checkbox" name="s12" id="ss12-8" value="8"  />
+            <label for="ss12-8">急躁易怒</label>
+            <input type="checkbox" name="s12" id="ss12-9" value="9"  />
+            <label for="ss12-9">忧伤，情绪低落</label>
+            <input type="checkbox" name="s12" id="ss12-10" value="10"  />
+            <label for="ss12-10">消化不好，胃返酸水</label>                      、
+
+        </fieldset>
+        <a href="#survey-7" data-role="button" data-theme="b" id="submit6" >确定</a>
+
+    </div>
+    <div data-theme="b" data-role="footer" data-position="fixed">
+        <h3>
+            Footer
+        </h3>
+    </div>
+</div>
+
+
+<div data-role="page" id="survey-7">
+    <div data-theme="b" data-role="header" data-position="fixed">
+        <h3>
+            咽炎指数测试
+        </h3>
+        <a data-role="button" href="#survey-6">上一步</a>
+        <a data-role="button" href="#index" >首页</a>
+    </div>
+    <div data-role="content">
+        <p>你的咽炎指数是：</p>
+        <p id="surveyValue"></p>
+
+
+        <a href="#register" data-role="button" data-theme="b" id="submitSurvey" >立即免费注册</a>
+        <p>注册的好处（15秒注册）</p>
+        <p>1、提交你的咽炎指数，查看你的咽炎指数排名，查看咽炎指数统计图。</p>
+        <p>2、获得免费向权威专家提问一次机会。        </p>
+        <p>3、上传你的咽炎指数测试结果，让在线养生师了解你的咽炎根源。</p>
+    </div>
+    <div data-theme="b" data-role="footer" data-position="fixed">
+        <h3>
+            Footer
+        </h3>
+    </div>
+</div>
+
+<div data-role="page" id="success">
+    <div data-theme="b" data-role="header" data-position="fixed">
+        <h3>
+            注册成功！
+        </h3>
+        <a data-role="button" href="#survey-7">上一步</a>
+        <a data-role="button" href="#index" >首页</a>
+    </div>
+    <div data-role="content">
+        <img src="11111.jpg" >
+    </div>
+    <div data-theme="b" data-role="footer" data-position="fixed">
+        <h3>
+            Footer
+        </h3>
+    </div>
+</div>
+<div data-role="page" id="register">
+    <div data-theme="b" data-role="header" data-position="fixed">
+        <h3>
+            手机注册
+        </h3>
+        <a data-role="button" href="#survey-7">上一步</a>
+        <a data-role="button" href="#index" >首页</a>
+    </div>
+    <div data-role="content">
+      <div id="divinputusername">  <input type="text" name="username" id="username" placeholder="用户名" data-clear-btn=true/></div>
+     <div id="divUserName" >亲爱的：<label id="lname"></label></div>
+            <div  data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" >
+                        <legend>性别：</legend>
+                        <input type="radio" name="sex" id="man" value="man" checked="checked">
+                        <label for="man">男</label>
+                        <input type="radio" name="sex" id="woman" value="woman">
+                        <label for="woman">女</label>
+                        </fieldset>
+            </div>
+            <div  data-role="fieldcontain">
+                    <label for="birthday">出生日期：</label><input name="birthday" id="birthday" value="1985-07-01"/>
+            </div>
+    <div  data-role="fieldcontain">
+            <label for="career" class="select">职业：</label>
+            <select id="career" name="career">
+                <option value=""></option>
+                <option value="worker">工人</option>
+                <option value="farmer">农民</option>
+                <option value="teacher">教师</option>
+                <option value="officer">白领</option>
+                <option value="governor">公务员</option>
+                <option value="other">其他</option>
+            </select>
+    </div>
+        <a href="#mysituaton" data-role="button" id="situation" data-theme="b">我的症状</a>
+        <div id="sickContent" hidden="true">dd</div>
+        <a data-role="button" id="regbtn" data-theme="b">确定</a>
+        <a data-role="button" id="clearLocal" data-theme="b">清除</a>
+        <a data-role="button" id="compare" data-theme="b">参考与我相似案例</a>
+    </div>
+    <footer data-theme="b" data-role="footer" data-position="fixed">
+        <nav data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="home">首页</a></li>
+                <li><a href="#promote" data-icon="grid">提升</a></li>
+                <li><a href="#task" data-icon="info">任务</a></li>
+                <li><a href="#register" data-icon="Search">账户</a></li>
+            </ul>
+        </nav>
+    </footer>
+</div>
+<div data-role="page" id="mysituaton">
+    <div data-theme="b" data-role="header" data-position="fixed">
+        <h3>
+            我的症状
+        </h3>
+        <a data-role="button" href="#survey-5">上一步</a>
+    </div>
+    <div data-role="content">
+        <div  data-role="fieldcontain">
+            <label for="sickDate">发病时间：</label>
+            <input name="sickDate" id="sickDate" value='2010-10-10'/>
+        </div>
+        <fieldset data-role="controlgroup">
+            <input type="checkbox" name="my1" id="my-1" value="1"  />
+            <label for="my-1">咽喉红肿</label>
+            <input type="checkbox" name="my1" id="my-2" value="2"  />
+            <label for="my-2">有滤泡</label>
+            <input type="checkbox" name="my1" id="my-3" value="3"  />
+            <label for="my-3">容易感冒</label>
+            <input type="checkbox" name="my1" id="my-4" value="4"  />
+            <label for="my-4">咳嗽</label>
+            <input type="checkbox" name="my1" id="my-5" value="5"  />
+            <label for="my-5">声音沙哑</label>
+            <input type="checkbox" name="my1" id="my-6" value="6"  />
+            <label for="my-6">长期使用抗生素史</label>
+            <input type="checkbox" name="my1" id="my-7" value="7"  />
+            <label for="my-7">异物感</label>
+            <input type="checkbox" name="my1" id="my-8" value="8"  />
+            <label for="my-8">急躁易怒</label>
+            <input type="checkbox" name="my1" id="my-9" value="9"  />
+            <label for="my-9">忧伤情绪低落</label>
+            <input type="checkbox" name="my1" id="my-10" value="10"  />
+            <label for="my-10">消化不好胃返酸水</label>
+            <input type="text" name="name" id="other1" placeholder="其他症状" data-clear-btn=true/>
+
+        </fieldset>
+        <a href="" data-role="button" data-theme="b" id="submitmy" >确定</a>
+
+    </div>
+    <footer data-theme="b" data-role="footer" data-position="fixed">
+        <nav data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="home">首页</a></li>
+                <li><a href="#promote" data-icon="grid">提升</a></li>
+                <li><a href="#task" data-icon="info">任务</a></li>
+                <li><a href="#register" data-icon="Search">账户</a></li>
+            </ul>
+        </nav>
+    </footer>
+</div>
+
+<div data-role="page" id="ques" >
+    <div data-theme="b" data-role="header" data-position="fixed">
+        <h3>
+            咽炎指数测试
+        </h3>
+        <a data-role="button" data-rel="back">上一步</a>
+    </div>
+    <div data-role="content">
+        <p>如果您仍有疑惑，在这里提问，由专家为您一天内解答</p>
+        <div data-role="fieldcontain">
+            <textarea cols="40" rows="8" name="questionToAsk" id="question"></textarea>
+        </div>
+        <a href="" data-role="button" data-theme="b" id="submitques" >确定</a>
+    </div>
+    <div data-theme="b" data-role="footer" data-position="fixed">
+        <h3>
+            Footer
+        </h3>
+    </div>
+</div>
+<div data-role="page" id="smalltips">
+    <div data-theme="b" data-role="header" data-position="fixed" >
+        <h3>
+           咽炎根治小贴士
+        </h3>
+        <a data-role="button" href="#index">返回</a>
+    </div>
+    <div  data-role="content" >
+       <p><h1>1、去三甲医院看病</h1>
+           有病去三甲医院，远离医疗广告和打广告的医院<br />
+           基本所有打广告的医院，都是吞噬金钱和健康的陷阱，甚至相当一部分是黑社会背景的福建莆田游医所开。<br />
+           小题大做，危言耸听都是他们管用伎俩，目的就是骗取钱财。<br />
+           现在医改就是要挂号便宜，药品便宜，然后饿死医生。医生为了摆脱被饿死的命运，只好对患者动手。<br />
+           只有那些大医院的专家才不会为生存发愁，才会有医德！！小医院的医生难免为了改善生活，开一些有提成的药。<br />
+           慢性病就是医生不能马上给你治好的病，对于慢性咽炎，有医德的医生会让你回家锻炼身体，没有医德的会给你开一大堆下火药，打广告的医院会狠狠宰你一刀，给你做手术，让你病情更加复杂。
+           </p>   <p>
+
+           2、避开误区
+           微波，等离子，咽喉皮下注射等“高科技手段”，三甲医院都没有，暂时起效，副作用无穷，过后依然发作。   <br />
+           含片，泡胖大海，罗汉果，金银花等都是急性咽炎的方法，慢性咽炎都要禁用。      <br />
+           有些人因为慢性咽炎导致体质虚弱，就吃补药。这也是大忌。慢性咽炎坚决不可进补。 <br />
+           认为吃药可以强身，得病了就吃点好的（大鱼大肉），这是懒人的愚蠢逻辑。     <br />
+           要强身健体必须靠“适量运动”。            <br />
+
+           3、细嚼慢咽。
+           把吃进的每一口饭吸收掉。得慢性咽炎的大多都是急性子，吃饭飞快，风卷残云。
+           这些人整着吃整着拉，营养都没吸收，身体拿什么来抵抗细菌啊。
+           食物整个吃进去，还会加重肠胃负担，导致“上火”，便秘也就随之而来。
+           养生大师推荐：喝果汁都要和唾液混合后再下咽，更何况食物？？
+
+           4、饭后散步。
+           饭后坐着不动，或者干脆午睡，是慢性咽炎的重大根源，这也是为啥中国人慢性咽炎这么多！！
+           肠子要带着食物在肚子里转几十圈，适当的震动会有助于肠胃蠕动、吸收，所以坐很颠的车容易饿。
+           营养不吸收，拿什么抵抗细菌？
+
+           5、远离垃圾食品。
+           门口小商店里包装的花花绿绿的防腐食物，要坚决杜绝。没有一个能吃，从饼干到方便面，从饮料到牛奶。
+
+           6、远离餐馆、外卖，自己做饭。
+           老鼠肉，连小肥羊这样的知名企业都不能幸免，你说还能吃什么？
+           即使材料是好的，你在家包饺子，饺子掉地上，你肯定就丢了它，在饭店里100%要捡回来。
+           吃不新鲜的肉，会沾在滤泡上，导致咽炎发作。
+           外边的肉，有几家是新鲜的？饺子里的肉，你敢吃？
+           在中国，卖牛奶的不喝牛奶，养猪的不吃猪肉，做饮料的全家不喝饮料，做瓶装水的从来不喝自家产品。
+           这样也少了工人自盗，下班搜身，减少了生产成本。不怕死你就天天上班吃，上班喝！！！
+           吃了不好肉做的饺子，口水会变得很臭，导致咽炎发作。
+           不信可以试试，吃过外边的肉饺子，几小时后把口水放到手背，搓干，闻。会熏死人。
+
+           7.油炸食物是大忌，终生禁食。
+           吃一次发作一次，绝无例外。
+
+
+           8、养生法。
+           顺时针揉肚子。
+           据说可以治百病。有利于胆汁分泌，肠胃蠕动，营养的吸收，咽炎的关键就是食物没有被吸收，反而上火。
+           便秘者一定要揉。强身健体，根治便秘。咽炎患者经常会便秘，此时如果吃药，都会伤害身体，是药三分毒。
+           方法是：睡觉前，躺在床上，顺时针，以肚脐为中心，大力揉100到300下。顺势针是食物在肚子内的运行方向。所以不可逆时针。
+           只要觉得食物没消化，都可以揉。
+
+
+           9.喝好水。（会员可见）
+           普通的瓶装矿泉水，纯净水，都是有细菌含量的，只是没有超标而已。
+           慢性咽炎患者的咽喉滤泡增生，容易滋生细菌，所以纯净水，矿泉水也要烧开了喝。而且不要喝凉水，当然也不能喝过热的水。
+
+           把烧开一分钟的矿泉水放进不锈钢保温壶，随身携带。经常喝水，保持咽喉湿润。
+
+
+
+           10.晚饭与睡觉中间要间隔4小时，多了会饿，影响睡眠质量，少了会影响消化，食物不消化就睡觉，就会上火，然后就嗓子疼。
+           可以准备些生的带皮“生”花生，如果睡前饿了，可以少量吃些，会提高睡眠质量。煮熟的花生不易保存，烘烤的花生火大，慢性咽炎禁食。
+           禁食塑料袋里的垃圾食物，睡前禁食干燥食物或大量饮食，如：馒头，米饭，烙饼，少量吃些好消化的东西，保证不饿即可
+           。
+           11.保证居住环境的清洁。
+           睡前要擦地，擦桌子，减少空气中的灰尘，很多人因此而好转。
+           灰尘需要鼻涕，咽喉的分泌物去处理，而慢性咽炎患者一般阴虚，在灰尘多的屋子里睡觉就会发作。
+           12.小环境很重要。
+           空气质量对慢性咽炎是十分重要的。北京的树林边是比三亚的马路边空气好的。所以选择居室周围的小环境很重要。应该避开马路边，闹市区，人口密度大的社区。
+           有些城乡结合部焚烧垃圾，也不是理想选择。可以选择高校附近，公园附近，树林附近的居室。
+           13.饮食。
+           饮食自然是重中之重。只吃八分饱，最多九分，吃多了后要马上大量散步，吃多了睡觉，马上发作。
+           不吃干燥食物，如：油炸馒头，炸鸡蛋，烙饼，炸薯条，干煸类，爆炒类的。
+           常吃水煮食物，如：手擀面（挂面不好），粥（里边可以放蔬菜，海鲜，肉），炖品。
+           辣椒下饭，人们都会因此吃多，饭后多散步即可（如果吃辣椒，散步至少1小时）。
+
+           14.如果声带红肿，噤声是最好选择，按上面方法根治后再说话。
+           15.如果身体虚弱，不要用残留味道浓的洗发水和沐浴液。可以用强生无色婴儿沐浴洗发露。过热的水洗澡伤身。
+           16，睡前刷牙很重要。要选用小头的牙刷，刷到牙床根部，不留一点死角，保证每一颗牙干净，口腔不卫生也是慢性咽炎的根源之一。
+           17.早睡早起，早睡可以养阴，阴虚肺燥尤其要早睡。11点前都算早睡。
+           18.控制情绪，不与人争吵。发怒最伤身，争吵最伤咽喉。
+           19.如果口水很臭，有滤泡。应该就是吃了不卫生的东西，口含大蒜是做好办法。
+           紫皮独头蒜最辣，最好。含在嘴里，咬破，让蒜汁在嘴里到处杀菌，不要咽下，等蒜汁与口水不辣了，咽下，绝不可吐出。
+           然后再次咬破大蒜，如此反复。
+           滤泡发作，多为吃了地沟油，坏肉，脏东西，反复使用的辣椒油锅底导致。
+           20.急性发作期用好药快速消炎，三天无效就应该换药。
+           如果是点滴，三天就该彻底好，如果不好，就要升级用更好的点滴。
+           不要再小医院小诊所开药，他们可以给你开10天的点滴，大医院只给开2到三天，不好的话，马上换好药。
+           例如：头孢二代三天不好，就要换头孢三代，头孢地嗪是所知对咽喉炎最特效，副作用几乎没有的特效药。
+           好多人都是反复感冒导致的咽喉炎，其实本身用药很多，已经很抗药了，继续用无效的药，对身体伤害很大，还不治病。
+           会导致慢性咽炎更严重
+       </p>
+    </div>
+    <div id="footer1" data-theme="b" data-role="footer" data-position="fixed">
+        <h3>
+            Footer
+        </h3>
+    </div>
+</div>
+
+<div data-role="page" id="vipConfirm" >
+    <div data-theme="b" data-role="header" data-position="fixed">
+        <h3>
+            升级VIP
+        </h3>
+        <a data-role="button" data-rel="back">上一步</a>
+    </div>
+    <div data-role="content">
+        <p>升级理由</p>
+        <div data-role="fieldcontain">
+            <input type="number" name="number" id="phoneNumberVip" value="" />
+        </div>
+        <a href="" data-role="button" data-theme="b" id="submitVip" >在线病历</a>
+    </div>
+    <div data-theme="b" data-role="footer" data-position="fixed">
+        <h3>
+            Footer
+        </h3>
+    </div>
+</div>
+
+</body>
+</html>
