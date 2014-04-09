@@ -201,7 +201,7 @@ $(document).ready(function () {
             } else {
                 $.ajax({
                     type: "get",
-                    url: 'http://localhost/ysrule/survey.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+                    url: 'http://www.ysrule.com/ysrule/survey.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
                     data: {nickname: $("#name").val(), code: $("#phoneNumber").val(), career: $("#career").val(), age: $("#age").val(),
                         sex: $('input[type="radio"][name="sex"]:checked').val(), s1: $('#s1').val(), s2: $('input[type="radio"][name="s2"]:checked').val(), s3: $('#s3').val(), s4: $('input[type="radio"][name="s4"]:checked').val(), s5: $('input[type="radio"][name="s5"]:checked').val(), s6: $('input[type="radio"][name="s6"]:checked').val(), s7: $('input[type="radio"][name="s7"]:checked').val(), s8: $('input[type="radio"][name="s8"]:checked').val(), s9: $('input[type="radio"][name="s9"]:checked').val(), s10: $('input[type="radio"][name="s10"]:checked').val(), s11: $('input[type="radio"][name="s11"]:checked').val(), s12: localStorage.getItem("checks"), surveyValue: localStorage.getItem("surveyValue")
                     },
@@ -240,7 +240,7 @@ $(document).ready(function () {
 
                 $.ajax({
                     type: "get",
-                    url: 'http://localhost/yy/reg.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+                    url: 'http://www.ysrule.com/yy/reg.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
                     data: {userId:localStorage.getItem('userId'),username: escape($("#username").val()), career: $("#career").val(), birthday: $("#birthday").val(),
                         sex: $('input[type="radio"][name="sex"]:checked').val(),sickDate:$("#sickDate").val(),sickContent:escape($("#sickContent").html().substring(15).substr(0,$("#sickContent").html().substring(15).length-5))
                     },
@@ -282,7 +282,7 @@ $(document).ready(function () {
 
             $.ajax({
                 type: "get",
-                url: 'http://localhost/yy/searchFolder.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+                url: 'http://www.ysrule.com/yy/searchFolder.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
                 data: {userId:localStorage.getItem('userId'),username: escape($("#username").val()), career: $("#career").val(), birthday: $("#birthday").val(),
                     sex: $('input[type="radio"][name="sex"]:checked').val(),sickDate:$("#sickDate").val(),sickContent:escape($("#sickContent").html().substring(15).substr(0,$("#sickContent").html().substring(15).length-5))
                 },
@@ -470,7 +470,7 @@ $(document).ready(function () {
 
         $.ajax({
             type: "get",
-            url: 'http://localhost/ysrule/survey.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+            url: 'http://www.ysrule.com/ysrule/survey.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
             data: {id: 10, code: $("#phoneNumber").val()},
             cache: true, //默认值true
             dataType: "jsonp",
@@ -500,7 +500,7 @@ $(document).ready(function () {
         } else {
             $.ajax({
                 type: "get",
-                url: 'http://localhost/ysrule/question.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+                url: 'http://www.ysrule.com/ysrule/question.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
                 data: {id: 10, code: localStorage.getItem('phoneNumber'), question: $('#question').val()},
                 cache: true, //默认值true
                 dataType: "jsonp",
