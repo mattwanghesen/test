@@ -2,13 +2,218 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/action-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/action-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ajax-loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/alert-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/alert-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/arrow-d-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/arrow-d-l-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/arrow-d-l-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/arrow-d-r-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/arrow-d-r-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/arrow-d-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/arrow-l-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/arrow-l-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/arrow-r-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/arrow-r-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/arrow-u-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/arrow-u-l-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/arrow-u-l-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/arrow-u-r-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/arrow-u-r-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/arrow-u-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/audio-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/audio-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/back-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/back-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/bars-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/bars-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/bullets-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/bullets-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/calendar-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/calendar-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/camera-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/camera-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/carat-d-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/carat-d-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/carat-l-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/carat-l-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/carat-r-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/carat-r-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/carat-u-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/carat-u-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/check-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/check-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/clock-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/clock-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/cloud-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/cloud-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/comment-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/comment-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/delete-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/delete-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/edit-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/edit-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/eye-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/eye-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/forbidden-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/forbidden-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/forward-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/forward-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/gear-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/gear-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/grid-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/grid-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/heart-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/heart-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/home-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/home-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/info-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/info-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/location-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/location-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/lock-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/lock-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/mail-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/mail-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/minus-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/minus-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/navigation-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/navigation-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/phone-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/phone-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/plus-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/plus-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/power-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/power-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/recycle-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/recycle-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/refresh-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/refresh-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/search-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/search-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/shop-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/shop-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/star-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/star-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/tag-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/tag-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/user-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/user-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/video-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-png/video-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/action-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/action-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/alert-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/alert-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/arrow-d-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/arrow-d-l-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/arrow-d-l-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/arrow-d-r-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/arrow-d-r-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/arrow-d-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/arrow-l-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/arrow-l-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/arrow-r-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/arrow-r-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/arrow-u-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/arrow-u-l-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/arrow-u-l-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/arrow-u-r-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/arrow-u-r-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/arrow-u-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/audio-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/audio-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/back-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/back-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/bars-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/bars-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/bullets-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/bullets-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/calendar-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/calendar-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/camera-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/camera-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/carat-d-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/carat-d-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/carat-l-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/carat-l-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/carat-r-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/carat-r-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/carat-u-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/carat-u-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/check-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/check-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/clock-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/clock-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/cloud-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/cloud-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/comment-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/comment-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/delete-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/delete-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/edit-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/edit-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/eye-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/eye-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/forbidden-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/forbidden-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/forward-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/forward-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/gear-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/gear-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/grid-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/grid-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/heart-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/heart-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/home-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/home-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/info-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/info-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery.mobile-1.4.2.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery.mobile-1.4.2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/location-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/location-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/lock-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/lock-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/mail-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/mail-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/minus-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/minus-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/navigation-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/navigation-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/phone-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/phone-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/plus-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/plus-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/power-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/power-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/recycle-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/recycle-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/refresh-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/refresh-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/search-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/search-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/shop-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/shop-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/star-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/star-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/tag-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/tag-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/user-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/user-white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/video-black.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/icons-svg/video-white.svg" />
+      <change type="DELETED" beforePath="C:\Users\Java2\test\jquery.mobile-1.3.2.css" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Java2\test\jquery.mobile-1.3.2.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1397190635933" ignored="false" />
-    <file path="/index.html" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1397204278677" ignored="false" />
+    <file path="/Dummy.txt" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1397211574919" ignored="false" />
+    <file path="/index.html" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1397212105907" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,19 +233,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="166" column="62" selection-start="5273" selection-end="5273" vertical-scroll-proportion="-2.4473684">
-              <folding />
+            <state line="241" column="107" selection-start="8543" selection-end="8543" vertical-scroll-proportion="0.6540881">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="303" column="96" selection-start="12652" selection-end="12652" vertical-scroll-proportion="0.76888216">
+            <state line="250" column="55" selection-start="10107" selection-end="10107" vertical-scroll-proportion="-17.0">
               <folding />
             </state>
           </provider>
@@ -64,8 +271,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -236,17 +443,19 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="62" selection-start="5273" selection-end="5273" vertical-scroll-proportion="-2.4473684">
+        <state line="250" column="55" selection-start="10107" selection-end="10107" vertical-scroll-proportion="-17.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="303" column="96" selection-start="12652" selection-end="12652" vertical-scroll-proportion="0.76888216">
-          <folding />
+        <state line="241" column="107" selection-start="8543" selection-end="8543" vertical-scroll-proportion="0.6540881">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
