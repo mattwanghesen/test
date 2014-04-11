@@ -299,7 +299,7 @@ $(document).ready(function () {
 
                     });
 
-                    $.mobile.changePage("#promote", { transition: "none", changeHash: false });
+                    $.mobile.changePage("#similiarCase", { transition: "none", changeHash: false });
                     $("#listViewUser").listview("refresh");
                     var ulHomes = $("#listViewUser")[0].children;
 
