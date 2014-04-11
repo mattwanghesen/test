@@ -21,7 +21,7 @@ $(document).ready(function () {
     };
     $("#sickDate").mobiscroll(opt).date(opt);
     $("#birthday").mobiscroll(opt).date(opt);
-    if(localStorage.getItem('username')!=null&&localStorage.getItem('username')!="null"){
+    if(localStorage.getItem('username')!=null&&localStorage.getItem('username')!="null"&&localStorage.getItem('username')!=""){
         $("#divUserName").show();
         $("#divinputusername").hide();
         $("#username").val(localStorage.getItem('username'));
