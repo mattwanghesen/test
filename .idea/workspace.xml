@@ -2,217 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/fit.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/fit.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/jquery.mobile.icons.min.css" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\action-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\action-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\alert-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\alert-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\arrow-d-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\arrow-d-l-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\arrow-d-l-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\arrow-d-r-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\arrow-d-r-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\arrow-d-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\arrow-l-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\arrow-l-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\arrow-r-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\arrow-r-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\arrow-u-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\arrow-u-l-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\arrow-u-l-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\arrow-u-r-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\arrow-u-r-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\arrow-u-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\audio-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\audio-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\back-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\back-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\bars-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\bars-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\bullets-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\bullets-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\calendar-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\calendar-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\camera-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\camera-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\carat-d-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\carat-d-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\carat-l-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\carat-l-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\carat-r-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\carat-r-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\carat-u-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\carat-u-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\check-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\check-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\clock-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\clock-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\cloud-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\cloud-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\comment-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\comment-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\delete-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\delete-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\edit-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\edit-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\eye-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\eye-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\forbidden-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\forbidden-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\forward-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\forward-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\gear-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\gear-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\grid-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\grid-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\heart-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\heart-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\home-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\home-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\info-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\info-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\location-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\location-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\lock-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\lock-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\mail-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\mail-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\minus-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\minus-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\navigation-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\navigation-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\phone-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\phone-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\plus-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\plus-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\power-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\power-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\recycle-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\recycle-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\refresh-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\refresh-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\search-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\search-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\shop-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\shop-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\star-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\star-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\tag-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\tag-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\user-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\user-white.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\video-black.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\online\test\images\icons-svg\video-white.svg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/fit.css" afterPath="$PROJECT_DIR$/themes/fit.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/fit.min.css" afterPath="$PROJECT_DIR$/themes/fit.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/jquery.mobile.icons.min.css" afterPath="$PROJECT_DIR$/themes/jquery.mobile.icons.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\online\test\images\ajax-loader.gif" afterPath="$PROJECT_DIR$/themes/images/ajax-loader.gif" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\action-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/action-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\action-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/action-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\alert-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/alert-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\alert-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/alert-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\arrow-d-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/arrow-d-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\arrow-d-l-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/arrow-d-l-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\arrow-d-l-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/arrow-d-l-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\arrow-d-r-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/arrow-d-r-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\arrow-d-r-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/arrow-d-r-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\arrow-d-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/arrow-d-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\arrow-l-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/arrow-l-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\arrow-l-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/arrow-l-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\arrow-r-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/arrow-r-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\arrow-r-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/arrow-r-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\arrow-u-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/arrow-u-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\arrow-u-l-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/arrow-u-l-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\arrow-u-l-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/arrow-u-l-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\arrow-u-r-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/arrow-u-r-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\arrow-u-r-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/arrow-u-r-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\arrow-u-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/arrow-u-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\audio-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/audio-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\audio-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/audio-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\back-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/back-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\back-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/back-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\bars-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/bars-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\bars-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/bars-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\bullets-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/bullets-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\bullets-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/bullets-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\calendar-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/calendar-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\calendar-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/calendar-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\camera-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/camera-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\camera-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/camera-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\carat-d-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/carat-d-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\carat-d-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/carat-d-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\carat-l-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/carat-l-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\carat-l-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/carat-l-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\carat-r-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/carat-r-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\carat-r-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/carat-r-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\carat-u-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/carat-u-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\carat-u-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/carat-u-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\check-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/check-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\check-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/check-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\clock-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/clock-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\clock-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/clock-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\cloud-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/cloud-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\cloud-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/cloud-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\comment-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/comment-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\comment-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/comment-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\delete-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/delete-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\delete-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/delete-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\edit-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/edit-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\edit-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/edit-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\eye-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/eye-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\eye-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/eye-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\forbidden-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/forbidden-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\forbidden-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/forbidden-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\forward-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/forward-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\forward-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/forward-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\gear-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/gear-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\gear-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/gear-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\grid-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/grid-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\grid-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/grid-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\heart-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/heart-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\heart-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/heart-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\home-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/home-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\home-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/home-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\info-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/info-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\info-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/info-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\location-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/location-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\location-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/location-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\lock-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/lock-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\lock-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/lock-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\mail-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/mail-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\mail-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/mail-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\minus-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/minus-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\minus-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/minus-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\navigation-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/navigation-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\navigation-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/navigation-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\phone-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/phone-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\phone-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/phone-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\plus-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/plus-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\plus-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/plus-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\power-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/power-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\power-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/power-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\recycle-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/recycle-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\recycle-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/recycle-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\refresh-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/refresh-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\refresh-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/refresh-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\search-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/search-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\search-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/search-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\shop-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/shop-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\shop-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/shop-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\star-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/star-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\star-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/star-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\tag-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/tag-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\tag-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/tag-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\user-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/user-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\user-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/user-white.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\video-black.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/video-black.png" />
-      <change type="MOVED" beforePath="E:\online\test\images\icons-png\video-white.png" afterPath="$PROJECT_DIR$/themes/images/icons-png/video-white.png" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1397280840423" ignored="false" />
-    <file path="/index.html" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1397281051901" ignored="false" />
+    <file path="/Dummy.txt" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1397297005739" ignored="false" />
+    <file path="/index.html" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1397297327947" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +34,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="67" selection-start="273" selection-end="273" vertical-scroll-proportion="0.4045584">
+            <state line="188" column="109" selection-start="6470" selection-end="6470" vertical-scroll-proportion="-1.4285715">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -276,7 +75,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="11" />
+    <option name="x" value="-26" />
+    <option name="y" value="3" />
     <option name="width" value="1382" />
     <option name="height" value="784" />
   </component>
@@ -306,6 +106,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -326,7 +127,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -341,12 +141,12 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="128" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="921" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="921" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="921" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="128" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="129" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
   </component>
   <component name="RecentsManager">
@@ -408,23 +208,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="11" y="0" width="1382" height="784" extended-state="0" />
+    <frame x="-26" y="3" width="1382" height="784" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24944155" sideWeight="0.67255217" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24944155" sideWeight="0.6736" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32744783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3264" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -494,6 +294,22 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="67" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="251" column="51" selection-start="8802" selection-end="8802" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -533,7 +349,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="67" selection-start="273" selection-end="273" vertical-scroll-proportion="0.4045584">
+        <state line="188" column="109" selection-start="6470" selection-end="6470" vertical-scroll-proportion="-1.4285715">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
