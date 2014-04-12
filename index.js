@@ -403,41 +403,41 @@ $(document).ready(function () {
     function getmysitution() {
         var txt = '';
         if (localStorage.getItem('my-1') == "true") {
-            txt = txt + trim($("#my-1").next('label').text());
+            txt = txt + trim($("#my-1").prev('label').text());
         }
         if (localStorage.getItem('my-2') == "true") {
-            txt =txt+',' + trim($("#my-2").next('label').text());
+            txt =txt+',' + trim($("#my-2").prev('label').text());
         }
         if (localStorage.getItem('my-3') == "true") {
-            txt = txt+',' + trim($("#my-3").next('label').text());
+            txt = txt+',' + trim($("#my-3").prev('label').text());
         }
         if (localStorage.getItem('my-4') == "true") {
-            txt = txt+',' + trim($("#my-4").next('label').text());
+            txt = txt+',' + trim($("#my-4").prev('label').text());
         }
         if (localStorage.getItem('my-5') == "true") {
-            txt = txt+',' +trim( $("#my-5").next('label').text());
+            txt = txt+',' +trim( $("#my-5").prev('label').text());
         }
         if (localStorage.getItem('my-6') == "true") {
-            txt = txt+',' + trim($("#my-6").next('label').text());
+            txt = txt+',' + trim($("#my-6").prev('label').text());
         }
         if (localStorage.getItem('my-7') == "true") {
-            txt = txt+',' + trim($("#my-7").next('label').text());
+            txt = txt+',' + trim($("#my-7").prev('label').text());
         }
         if (localStorage.getItem('my-8') == "true") {
-            txt = txt+',' + trim($("#my-8").next('label').text());
+            txt = txt+',' + trim($("#my-8").prev('label').text());
         }
         if (localStorage.getItem('my-9') == "true") {
-            txt = txt+',' + trim($("#my-9").next('label').text());
+            txt = txt+',' + trim($("#my-9").prev('label').text());
         }
         if (localStorage.getItem('my-10') == "true") {
-            txt = txt+',' + trim($("#my-10").next('label').text());
+            txt = txt+',' + trim($("#my-10").prev('label').text());
         }
         $("#sickContent").append('从' + $("#sickDate").val() + '开始： ' + txt + ' 点击修改');
     }
 
     $("#submitmy").click(function () {
 
-        //alert($("#my-1").next('label').text());
+        //alert($("#my-1").prev('label').text());
         localStorage.setItem('my-1', $("#my-1").prop("checked"));
         localStorage.setItem('my-2', $("#my-2").prop("checked"));
         localStorage.setItem('my-3', $("#my-3").prop("checked"));
@@ -450,7 +450,7 @@ $(document).ready(function () {
         localStorage.setItem('my-10', $("#my-10").prop("checked"));
         localStorage.setItem('sickdate', $("sickdate").text());
         $("#situation").hide();
-        //alert($("#my-1").next('label').text());
+        //alert($("#my-1").prev('label').text());
         $("#sickContent").show();
         $("#sickContent").empty();
         getmysitution();
