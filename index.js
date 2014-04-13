@@ -20,6 +20,7 @@ $(document).ready(function () {
         endYear: 2015//结束年份
     };
     $("#sickDate").mobiscroll(opt).date(opt);
+    getDoctors();
     $("#birthday").mobiscroll(opt).date(opt);
     if(localStorage.getItem('username')!=null&&localStorage.getItem('username')!="null"&&localStorage.getItem('username')!=""){
         $("#divUserName").show();
@@ -278,6 +279,64 @@ $(document).ready(function () {
         }
 
     );
+ function getDoctors() {
+
+            $.ajax({
+                type: "get",
+                url: 'http://www.ysrule.com/yy/doctorView.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+                data: {userId:localStorage.getItem('userId')
+                },
+                cache: true, //默认值true
+                dataType: "jsonp",
+                jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+                jsonpCallback: "jsonpCallback",
+                //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
+                //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
+                success: function (json) {
+                    var data = json.magazineTab.records;
+                    $.each(data, function(i, n){
+                        addDoctor(n);
+
+                    });
+                    $("#listDoctor").listview("refresh");
+                    var ulHomes = $("#listDoctor")[0].children;
+
+                    $(ulHomes).each(function(){
+                        $(this).click(function(){
+                            localStorage.setItem('currentID', this.id);
+                            $.each(data, function(i, n){
+                                if(n.ID==localStorage.getItem('currentID')){
+                                    $("#detailUsername")[0].innerText=unescape(n.username);
+                                    $("#detailSex")[0].innerText=$("#detailSex")[0].innerText.substr(0,3)+(unescape(n.sex)=="man"?"男":"女");
+                                    $("#detailBirthday")[0].innerText=$("#detailBirthday")[0].innerText.substr(0,3)+ages(unescape(n.birthday));
+                                    $("#detailJob")[0].innerText=$("#detailJob")[0].innerText.substr(0,3)+unescape(n.job);
+                                    $("#detailSickContent")[0].innerText=$("#detailSickContent")[0].innerText.substr(0,3)+unescape(n.sickContent);
+                                    $("#detailSickDate")[0].innerText=$("#detailSickDate")[0].innerText.substr(0,3)+ages(unescape(n.sickDate));
+
+                                }
+
+                            });
+
+                            $.mobile.changePage("#userDetail", { transition: "slideup", changeHash: false });
+                        });
+
+                    });
+
+                },
+                error: function (error) {
+                    alert("erroe");
+                }
+            });
+
+
+            function jsonpCallback(data) //回调函数
+            {
+                alert(data.message); //
+            }
+
+        }
+
+
     $("#compare").click(function () {
 
             $.ajax({
@@ -360,6 +419,22 @@ $(document).ready(function () {
         href_a.innerHTML="<img src='../img/apple.png'><h2>"+unescape(obj.username)+"</h2><p>"+unescape(obj.sickContent)+"</p> <p class='ui-li-aside'>iOS</p>";
         //href_a.href="javascript:del('"+id+"');";
        // href_a.innerHTML ="del";
+        //li.innerHTML=txt;
+        //li.id=id;
+        li.innerHTML= href_a.outerHTML;
+        li.id=obj.ID;
+        li.class="userListClass";
+        ul[0].innerHTML+=li.outerHTML;
+    }
+    function addDoctor(obj) {
+        var ul=$("#listDoctor");
+        var li= document.createElement("li");
+        var href_a = document.createElement("a");
+        var head = document.createElement("h2");
+        var img = document.createElement("img");
+        href_a.innerHTML="<img src='../img/apple.png'><h2>"+unescape(obj.username)+"</h2><p>"+unescape(obj.remark)+"</p> <p class='ui-li-aside'>iOS</p>";
+        //href_a.href="javascript:del('"+id+"');";
+        // href_a.innerHTML ="del";
         //li.innerHTML=txt;
         //li.id=id;
         li.innerHTML= href_a.outerHTML;
