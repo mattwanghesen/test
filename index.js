@@ -279,6 +279,12 @@ $(document).ready(function () {
         }
 
     );
+    $("#adviceHistory").click(function (){
+         getQuestionList();
+        $.mobile.changePage("#adviceList", { transition: "slideup", changeHash: false });
+
+    });
+
     $("#submitQuestion").click(function () {
 
             $.ajax({
@@ -370,7 +376,65 @@ $(document).ready(function () {
             }
 
         }
+    function getQuestionList() {
 
+        $.ajax({
+            type: "get",
+            url: 'http://www.ysrule.com/yy/questionList.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+            data: {doctorid:localStorage.getItem('currentDoctorID')
+            },
+            cache: true, //默认值true
+            dataType: "jsonp",
+            jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+            jsonpCallback: "jsonpCallback",
+            //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
+            //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
+            success: function (json) {
+                var data = json.magazineTab.records;
+                $.each(data, function(i, n){
+                    addQuestions(n);
+
+                });
+               // $("#incomingMessages").listview("refresh");
+ //               var ulHomes = $("#listDoctor")[0].children;
+
+//                $(ulHomes).each(function(){
+//                    $(this).click(function(){
+//                        localStorage.setItem('currentID', this.id);
+//
+//                        $.each(data, function(i, n){
+//                            if(n.ID==localStorage.getItem('currentID')){
+//                                localStorage.setItem('currentDoctorName', unescape(n.username));
+//                                localStorage.setItem('currentDoctorID', n.ID);
+//                                $("#doctorUsername")[0].innerText=unescape(n.username);
+//                                //$("#doctorSex")[0].innerText=$("#doctorSex")[0].innerText.substr(0,3)+(unescape(n.sex)=="man"?"男":"女");
+//                                //$("#doctorBirthday")[0].innerText=$("#doctorBirthday")[0].innerText.substr(0,3)+ages(unescape(n.birthday));
+//                                //$("#doctorJob")[0].innerText=$("#doctorJob")[0].innerText.substr(0,3)+unescape(n.job);
+//                                //$("#doctorSickContent")[0].innerText=$("#doctorSickContent")[0].innerText.substr(0,3)+unescape(n.sickContent);
+//                                //$("#doctorSickDate")[0].innerText=$("#doctorSickDate")[0].innerText.substr(0,3)+ages(unescape(n.sickDate));
+//
+//                            }
+//
+//                        });
+//
+//                        $.mobile.changePage("#doctorDetail", { transition: "slideup", changeHash: false });
+//                    });
+//
+//                });
+
+            },
+            error: function (error) {
+                alert("erroe");
+            }
+        });
+
+
+        function jsonpCallback(data) //回调函数
+        {
+            alert(data.message); //
+        }
+
+    }
 
     $("#compare").click(function () {
 
@@ -476,6 +540,10 @@ $(document).ready(function () {
         li.id=obj.ID;
         li.class="userListClass";
         ul[0].innerHTML+=li.outerHTML;
+    }
+    function addQuestions(obj) {
+
+        $("#incomingMessages").append("<div class='message'><span class='username'>" + obj.username + ":</span> " + obj.content + "</div>");
     }
     function setMySituation() {
         if (localStorage.getItem('my-1') == "true") {

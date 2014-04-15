@@ -8,8 +8,8 @@
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1397530339219" ignored="false" />
-    <file path="/index.html" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1397550966987" ignored="false" />
-    <file path="/index.js" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1397552343815" ignored="false" />
+    <file path="/index.html" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1397559548938" ignored="false" />
+    <file path="/index.js" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1397559353660" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,10 +29,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="154" column="68" selection-start="5210" selection-end="5221" vertical-scroll-proportion="-4.7843137">
+            <state line="180" column="54" selection-start="6012" selection-end="6012" vertical-scroll-proportion="0.54141104">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -40,10 +40,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="286" column="148" selection-start="11658" selection-end="11658" vertical-scroll-proportion="0.33333334">
+            <state line="298" column="47" selection-start="12183" selection-end="12183" vertical-scroll-proportion="-18.96">
               <folding />
             </state>
           </provider>
@@ -67,8 +67,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -359,19 +359,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="68" selection-start="5210" selection-end="5221" vertical-scroll-proportion="-4.7843137">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="298" column="47" selection-start="12183" selection-end="12183" vertical-scroll-proportion="-18.96">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="286" column="148" selection-start="11658" selection-end="11658" vertical-scroll-proportion="0.33333334">
-          <folding />
+        <state line="180" column="54" selection-start="6012" selection-end="6012" vertical-scroll-proportion="0.54141104">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
