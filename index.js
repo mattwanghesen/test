@@ -20,7 +20,11 @@ $(document).ready(function () {
         endYear: 2015//结束年份
     };
     $("#sickDate").mobiscroll(opt).date(opt);
-    getDoctors();
+
+    $("#task").on("pageinit",function(event){
+
+        getDoctors();
+    });
     $("#birthday").mobiscroll(opt).date(opt);
     if(localStorage.getItem('username')!=null&&localStorage.getItem('username')!="null"&&localStorage.getItem('username')!=""){
         $("#divUserName").show();
