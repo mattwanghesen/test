@@ -547,7 +547,7 @@ $(document).ready(function () {
     }
     function addQuestions(obj) {
 
-        $("#incomingMessages").append("<div class='message'><span class='username'>" + obj.username + ":</span> " + obj.content + "</div>");
+        $("#incomingMessages").append("<div class='message'><span class='username'>" + unescape(obj.username) + ":</span> " + unescape(obj.content) + "</div>");
     }
     function setMySituation() {
         if (localStorage.getItem('my-1') == "true") {
