@@ -279,6 +279,38 @@ $(document).ready(function () {
         }
 
     );
+    $("#submitQuestion").click(function () {
+
+            $.ajax({
+                type: "get",
+                url: 'http://www.ysrule.com/yy/askQuestion.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+                data: {userId:localStorage.getItem('userId'),username: escape($("#username").val()), doctorid: localStorage.getItem('currentDoctorID'), content: escape($("#questionAsk").val()),
+                    doctorname: escape(localStorage.getItem('currentDoctorName'))
+                },
+                cache: true, //默认值true
+                dataType: "jsonp",
+                jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+                jsonpCallback: "jsonpCallback",
+                //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
+                //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
+                success: function (json) {
+                   alert("提问成功！");
+
+                },
+                error: function (error) {
+                    alert("提问失败！");
+                }
+            });
+
+
+            function jsonpCallback(data) //回调函数
+            {
+                alert(data.message); //
+            }
+
+        }
+
+    );
  function getDoctors() {
 
             $.ajax({
@@ -304,20 +336,23 @@ $(document).ready(function () {
                     $(ulHomes).each(function(){
                         $(this).click(function(){
                             localStorage.setItem('currentID', this.id);
+
                             $.each(data, function(i, n){
                                 if(n.ID==localStorage.getItem('currentID')){
-                                    $("#detailUsername")[0].innerText=unescape(n.username);
-                                    $("#detailSex")[0].innerText=$("#detailSex")[0].innerText.substr(0,3)+(unescape(n.sex)=="man"?"男":"女");
-                                    $("#detailBirthday")[0].innerText=$("#detailBirthday")[0].innerText.substr(0,3)+ages(unescape(n.birthday));
-                                    $("#detailJob")[0].innerText=$("#detailJob")[0].innerText.substr(0,3)+unescape(n.job);
-                                    $("#detailSickContent")[0].innerText=$("#detailSickContent")[0].innerText.substr(0,3)+unescape(n.sickContent);
-                                    $("#detailSickDate")[0].innerText=$("#detailSickDate")[0].innerText.substr(0,3)+ages(unescape(n.sickDate));
+                                    localStorage.setItem('currentDoctorName', unescape(n.username));
+                                    localStorage.setItem('currentDoctorID', n.ID);
+                                    $("#doctorUsername")[0].innerText=unescape(n.username);
+                                    //$("#doctorSex")[0].innerText=$("#doctorSex")[0].innerText.substr(0,3)+(unescape(n.sex)=="man"?"男":"女");
+                                    //$("#doctorBirthday")[0].innerText=$("#doctorBirthday")[0].innerText.substr(0,3)+ages(unescape(n.birthday));
+                                    //$("#doctorJob")[0].innerText=$("#doctorJob")[0].innerText.substr(0,3)+unescape(n.job);
+                                    //$("#doctorSickContent")[0].innerText=$("#doctorSickContent")[0].innerText.substr(0,3)+unescape(n.sickContent);
+                                    //$("#doctorSickDate")[0].innerText=$("#doctorSickDate")[0].innerText.substr(0,3)+ages(unescape(n.sickDate));
 
                                 }
 
                             });
 
-                            $.mobile.changePage("#userDetail", { transition: "slideup", changeHash: false });
+                            $.mobile.changePage("#doctorDetail", { transition: "slideup", changeHash: false });
                         });
 
                     });
@@ -432,7 +467,7 @@ $(document).ready(function () {
         var href_a = document.createElement("a");
         var head = document.createElement("h2");
         var img = document.createElement("img");
-        href_a.innerHTML="<img src='../img/apple.png'><h2>"+unescape(obj.username)+"</h2><p>"+unescape(obj.remark)+"</p> <p class='ui-li-aside'>iOS</p>";
+        href_a.innerHTML="<img src='images/apple.jpg'><h2>"+unescape(obj.username)+"</h2><p>"+unescape(obj.remark)+"</p> <p class='ui-li-aside'>iOS</p>";
         //href_a.href="javascript:del('"+id+"');";
         // href_a.innerHTML ="del";
         //li.innerHTML=txt;

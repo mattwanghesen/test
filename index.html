@@ -115,13 +115,13 @@
 
         <ul data-role="listview"  id="listViewUser">
             <li><a href="#">
-                <img src="../img/apple.png">
+                <img src="images/apple.jpg">
                 <h2>养生</h2>
                 <p>道法自然，天人合一</p>
                 <p class="ui-li-aside">iOS</p>
             </a></li>
             <li><a href="#">
-                <img src="../img/blackberry_10.png">
+                <img src="images/apple.jpg">
                 <h2>BlackBerry 10</h2>
                 <p>BlackBerry launched the Z10 and Q10 with the new BB10 OS</p>
                 <p class="ui-li-aside">BlackBerry</p>
@@ -141,7 +141,25 @@
         </nav>
     </footer>
 </div><!-- /page -->
+<div data-role="page" id="adviceOnline" data-theme="b">
+<div data-theme="b" data-role="header" data-position="fixed" >
+    <h3>
+        在线咨询
+    </h3>
+    <a data-role="button" href="#doctorDetail">上一步</a>
+</div>
+<div data-role="content">
 
+    <div data-role="fieldcontain">
+        <label for="questionAsk">提问:</label>
+        <textarea cols="40" rows="8" name="textarea" id="questionAsk" placeholder="请输入咨询内容"></textarea>
+    </div>
+    <a  data-role="button" data-theme="b" id="submitQuestion" >提交</a>
+
+
+
+</div>
+</div>
 <div data-role="page" id="userDetail" data-theme="b">
     <div data-theme="b" data-role="header" data-position="fixed" >
         <h3>
@@ -172,20 +190,24 @@
         </nav>
     </footer>
 </div>
+
 <div data-role="page" id="doctorDetail" data-theme="b">
     <div data-theme="b" data-role="header" data-position="fixed" >
         <h3>
             详细信息
         </h3>
-        <a data-role="button" href="#similiarCase">上一步</a>
+        <a data-role="button" href="#task">上一步</a>
     </div>
     <div data-role="content">
-        <h2 id="detailUsername"></h2>
-        <p id="detailSex">性别：</p>
-        <p id="detailBirthday">年龄：</p>
-        <p id="detailJob">职业：</p>
-        <p id="detailSickDate">病程：</p>
-        <p id="detailSickContent">症状：</p>
+        <h2 id="doctorUsername"></h2>
+        <p id="doctorSex">性别：</p>
+        <p id="doctorBirthday">年龄：</p>
+        <p id="doctorJob">职业：</p>
+
+        <p id="doctorSickContent">症状：</p>
+        <a  data-role="button" data-theme="b" id="adviceHistory" >咨询记录</a>
+        <a href="#adviceOnline"  data-role="button" data-theme="b" id="adviceAsk" >在线咨询</a>
+        <a  data-role="button" data-theme="b" id="advicePhone" >电话咨询</a>
         <div data-role="fieldcontain">
 
         </div>
@@ -213,7 +235,6 @@
 
         <ul data-role="listview" id="listDoctor" >
             <li><a href="#">
-                <img src="../img/apple.png">
                 <h2>养生</h2>
                 <p>道法自然，天人合一</p>
                 <p class="ui-li-aside">iOS</p>
