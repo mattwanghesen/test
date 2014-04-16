@@ -8,12 +8,13 @@
   <title></title>
 
     <link rel="stylesheet" href="themes/fit.min.css" />
-    <link rel="stylesheet" href="css/index.css" />
+
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
     <link href="css/mobiscroll.custom-2.5.0.min.css" rel="stylesheet" type="text/css" />
     <script src="js/mobiscroll.custom-2.5.0.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/index.css" />
 
     <script src="index.js">
 
@@ -170,9 +171,26 @@
         <a data-role="button" href="#doctorDetail">上一步</a>
     </div>
     <div data-role="content">
-        <div id="incomingMessages" name="incomingMessages" class="msgContainerDiv" ></div>
+        <ul data-role="listview" id="messageList" class="ui-listview" data-inset="true" role="listbox" >
+            <li><a href="#">
+                <h2>养生</h2>
+                <p>道法自然，天人合一</p>
+                <p class="ui-li-aside">iOS</p>
+            </a></li>
+        </ul>
+    </div>
+</div>
+<div data-role="page" id="adviceListDetail" data-theme="b">
+    <div data-theme="b" data-role="header" data-position="fixed" >
+        <h3>
+            咨询记录
+        </h3>
+        <a data-role="button" href="#adviceList">上一步</a>
+    </div>
+    <div data-role="content">
+        <div id="messageDetails" name="messageDetails" class="msgContainerDiv" ></div>
         <div data-role="fieldcontain">
-            <label for="questionAsk">继续提问:</label>
+            <label for="questionAsk">追问:</label>
             <textarea cols="40" rows="8" name="textarea" id="questionAskMore" placeholder="请输入咨询内容"></textarea>
         </div>
         <a  data-role="button" data-theme="b" id="submitQuestionMore" >提交</a>
@@ -181,7 +199,6 @@
 
     </div>
 </div>
-
 <div data-role="page" id="userDetail" data-theme="b">
     <div data-theme="b" data-role="header" data-position="fixed" >
         <h3>
@@ -261,7 +278,7 @@
                 <p>道法自然，天人合一</p>
                 <p class="ui-li-aside">iOS</p>
             </a></li>
-
+--------------------------------------------------------------------------------------------------------------------------
         </ul>
 
     </div><!-- /content -->
