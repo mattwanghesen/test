@@ -551,7 +551,6 @@ $(document).ready(function () {
        }else{
            $("#incomingMessages").append("<div class='msgUserDiv'><span class='username'>" + unescape(obj.username) + ":</span> " + unescape(obj.content) + "</div>");
        }
-
     }
     function setMySituation() {
         if (localStorage.getItem('my-1') == "true") {
