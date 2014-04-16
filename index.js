@@ -546,8 +546,12 @@ $(document).ready(function () {
         ul[0].innerHTML+=li.outerHTML;
     }
     function addQuestions(obj) {
+       if(obj.isdoctor){
+           $("#incomingMessages").append("<div class='msgDoctorDiv'><span class='username'>" + unescape(obj.username) + ":</span> " + unescape(obj.content) + "</div>");
+       }else{
+           $("#incomingMessages").append("<div class='msgUserDiv'><span class='username'>" + unescape(obj.username) + ":</span> " + unescape(obj.content) + "</div>");
+       }
 
-        $("#incomingMessages").append("<div class='message'><span class='username'>" + obj.username + ":</span> " + obj.content + "</div>");
     }
     function setMySituation() {
         if (localStorage.getItem('my-1') == "true") {
