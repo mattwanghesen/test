@@ -399,21 +399,13 @@ $(document).ready(function () {
                     addQuestions(n);
 
                 });
-               // $("#incomingMessages").listview("refresh");
- //               var ulHomes = $("#listDoctor")[0].children;
+               $("#messageList").listview("refresh");
+                   var ulHomes = $("#messageList")[0].children;
 
                 $(ulHomes).each(function(){
                     $(this).click(function(){
-                        localStorage.setItem('currentID', this.id);
 
-                        $.each(data, function(i, n){
-                            if(n.ID==localStorage.getItem('currentID')){
-                                //localStorage.setItem('currentDoctorName', unescape(n.username));
-                                getChatListDetails(n.parentid)
-
-                            }
-
-                        });
+                         getmessageDetail(this.id);
 
                         $.mobile.changePage("#adviceListDetail", { transition: "slideup", changeHash: false });
                     });
@@ -433,11 +425,12 @@ $(document).ready(function () {
         }
 
     }
-    function getChatListDetails(parentid){
+
+    function getmessageDetail(parentid){
         $.ajax({
                 type: "get",
                 url: 'http://www.ysrule.com/yy/questionListDetails.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
-                data: {doctorid:localStorage.getItem('currentDoctorID')
+                data: {parentid:parentid
                 },
                 cache: true, //默认值true
                 dataType: "jsonp",
@@ -473,7 +466,7 @@ $(document).ready(function () {
 //
 //                            });
 //
-//                            $.mobile.changePage("#adviceListDetail", { transition: "slideup", changeHash: false });
+                        //   $.mobile.changePage("#adviceListDetail", { transition: "slideup", changeHash: false });
 //                        });
 //
 //                    });
@@ -599,17 +592,12 @@ $(document).ready(function () {
     }
     function addQuestions(obj) {
 
-        var ul=$("#messageList");
-        var li= document.createElement("li");
-        var href_a = document.createElement("a");
-        var head = document.createElement("h2");
-        var img = document.createElement("img");
-
+       var ul=$("#messageList");
        var listStr= "<li data-role='list-divider' role='heading' tabindex='0' class='ui-li ui-li-divider ui-btn ui-bar-b ui-btn-up-c' style='font-size:8pt;font-weight:normal'>"+
            unescape(obj.username)+",time"+
            "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:55px;background: url(../images/comment.png) no-repeat;padding:3px;padding-left:20px'>34</span>"+
            "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:5px;background: url(../images/like.gif) no-repeat;padding:3px;padding-left:20px'>442</span></li>"+
-           "<li role='option' tabindex='0' data-theme='c' >"+
+           "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='c' >"+
             "<a href='#'>"+
                 "<img width='40' height='40' src='images/apple.jpg'/>"+
                 "<div style='font-size:9pt;font-weight:normal;'>"+unescape(obj.content)+"</div></a></li>";
@@ -617,11 +605,28 @@ $(document).ready(function () {
         ul[0].innerHTML+=listStr;
     }
     function addQuestionDetails(obj) {
+        var ul=$("#messageDetails");
+        var listStr="";
         if(obj.isdoctor){
-            $("#messageDetails").append("<div class='msgDoctorDiv'><span class='username'>" + unescape(obj.username) + ":</span> " + unescape(obj.content) + "</div>");
+            listStr= "<li data-role='list-divider' role='heading' tabindex='0' class='ui-li ui-li-divider ui-btn ui-bar-b ui-btn-up-c' style='font-size:8pt;font-weight:normal'>"+
+            unescape(obj.username)+",time"+
+            "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:55px;background: url(../images/comment.png) no-repeat;padding:3px;padding-left:20px'>34</span>"+
+            "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:5px;background: url(../images/like.gif) no-repeat;padding:3px;padding-left:20px'>442</span></li>"+
+            "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='c' >"+
+            "<a href='#'>"+
+            "<img width='40' height='40' src='images/apple.jpg'/>"+
+            "<div style='font-size:9pt;font-weight:normal;'>"+unescape(obj.content)+"</div></a></li>";
         }else{
-            $("#messageDetails").append("<div class='msgUserDiv'><span class='username'>" + unescape(obj.username) + ":</span> " + unescape(obj.content) + "</div>");
+             listStr= "<li data-role='list-divider' role='heading' tabindex='0' class='ui-li ui-li-divider ui-btn ui-bar-b ui-btn-up-c' style='font-size:8pt;font-weight:normal'>"+
+                unescape(obj.username)+",time"+
+                "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:55px;background: url(../images/comment.png) no-repeat;padding:3px;padding-left:20px'>34</span>"+
+                "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:5px;background: url(../images/like.gif) no-repeat;padding:3px;padding-left:20px'>442</span></li>"+
+                "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='c' >"+
+                "<a href='#'>"+
+                "<img width='40' height='40' src='images/apple.jpg'/>"+
+                "<div style='font-size:9pt;font-weight:normal;'>"+unescape(obj.content)+"</div></a></li>";
         }
+        ul[0].innerHTML+=listStr;
     }
     function setMySituation() {
         if (localStorage.getItem('my-1') == "true") {

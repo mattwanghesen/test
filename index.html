@@ -188,7 +188,13 @@
         <a data-role="button" href="#adviceList">上一步</a>
     </div>
     <div data-role="content">
-        <div id="messageDetails" name="messageDetails" class="msgContainerDiv" ></div>
+        <ul data-role="listview" id="messageDetails" class="ui-listview" data-inset="true" role="listbox" >
+            <li><a href="#">
+                <h2>养生</h2>
+                <p>道法自然，天人合一</p>
+                <p class="ui-li-aside">iOS</p>
+            </a></li>
+        </ul>
         <div data-role="fieldcontain">
             <label for="questionAsk">追问:</label>
             <textarea cols="40" rows="8" name="textarea" id="questionAskMore" placeholder="请输入咨询内容"></textarea>
