@@ -301,6 +301,7 @@ $(document).ready(function () {
 
     );
     $("#adviceHistory").click(function (){
+        $("#messageList").empty();
          getQuestionList();
         $.mobile.changePage("#adviceList", { transition: "slideup", changeHash: false });
 
@@ -457,7 +458,7 @@ $(document).ready(function () {
 
                 $(ulHomes).each(function(){
                     $(this).click(function(){
-
+                         $("#messageDetails").empty();
                          getmessageDetail(this.id);
                         localStorage.setItem('currentChatId', this.id);
                         $.mobile.changePage("#adviceListDetail", { transition: "slideup", changeHash: false });
