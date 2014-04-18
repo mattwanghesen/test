@@ -33,7 +33,7 @@
     </div>
     <div data-role="content">
         <div style="width: 100%; height: 100%; position: relative;">
-            <h4>搭建一个平台，向医生咨询，找到慢性咽炎和亚健康的根本原因，然后通过好习惯快速根治。 </h4>
+            <h4>搭建一个平台，向医生咨询，找到慢性咽炎和亚健康的根本原因，然后通过好习惯快速根治。参考相似案例的痊愈经历。留下你的痊愈经历。 </h4>
 
         </div>
         <ul data-role="listview" data-divider-theme="b" data-inset="true">
@@ -171,13 +171,14 @@
         <a data-role="button" href="#doctorDetail">上一步</a>
     </div>
     <div data-role="content">
-        <ul data-role="listview" id="messageList" class="ui-listview" data-inset="true" role="listbox" >
-            <li><a href="#">
-                <h2>养生</h2>
-                <p>道法自然，天人合一</p>
-                <p class="ui-li-aside">iOS</p>
-            </a></li>
-        </ul>
+    <ul data-role="listview" id="messageList" class="ui-listview" data-inset="true" role="listbox">
+        <li><a href="#">
+            <h2>养生</h2>
+            <p>道法自然，天人合一</p>
+            <p class="ui-li-aside">iOS</p>
+        </a></li>
+    </ul>
+
     </div>
 </div>
 <div data-role="page" id="adviceListDetail" data-theme="b">
@@ -245,11 +246,9 @@
     </div>
     <div data-role="content">
         <h2 id="doctorUsername"></h2>
-        <p id="doctorSex">性别：</p>
-        <p id="doctorBirthday">年龄：</p>
-        <p id="doctorJob">职业：</p>
-
-        <p id="doctorSickContent">症状：</p>
+        <p id="doctorTitle"></p>
+        <p id="doctorRemark"></p>
+        <p id="doctorAddress"></p>
         <a  data-role="button" data-theme="b" id="adviceHistory" >咨询记录</a>
         <a href="#adviceOnline"  data-role="button" data-theme="b" id="adviceAsk" >在线咨询</a>
         <a  data-role="button" data-theme="b" id="advicePhone" >电话咨询</a>
@@ -284,7 +283,6 @@
                 <p>道法自然，天人合一</p>
                 <p class="ui-li-aside">iOS</p>
             </a></li>
---------------------------------------------------------------------------------------------------------------------------
         </ul>
 
     </div><!-- /content -->

@@ -7,6 +7,22 @@
  */
 $(document).ready(function () {
 //script goes here
+    function showLoader() {
+
+        $.mobile.loading('show', {
+            text: '加载中...',
+            textVisible: true,
+            theme: 'a',
+            textonly: false,
+            html: ""
+        });
+    }
+
+
+    function hideLoader()
+    {
+        $.mobile.loading('hide');
+    }
     var opt = {
         preset: 'date', //日期
         theme: 'sense-ui', //皮肤样式
@@ -22,8 +38,9 @@ $(document).ready(function () {
     $("#sickDate").mobiscroll(opt).date(opt);
 
     $("#task").on("pageinit",function(event){
-
+        showLoader();
         getDoctors();
+
     });
     $("#birthday").mobiscroll(opt).date(opt);
     if(localStorage.getItem('username')!=null&&localStorage.getItem('username')!="null"&&localStorage.getItem('username')!=""){
@@ -354,7 +371,9 @@ $(document).ready(function () {
                                     $("#doctorUsername")[0].innerText=unescape(n.username);
                                     //$("#doctorSex")[0].innerText=$("#doctorSex")[0].innerText.substr(0,3)+(unescape(n.sex)=="man"?"男":"女");
                                     //$("#doctorBirthday")[0].innerText=$("#doctorBirthday")[0].innerText.substr(0,3)+ages(unescape(n.birthday));
-                                    //$("#doctorJob")[0].innerText=$("#doctorJob")[0].innerText.substr(0,3)+unescape(n.job);
+                                    $("#doctorTitle")[0].innerText=unescape(n.title);
+                                    $("#doctorRemark")[0].innerText=unescape(n.remark);
+                                    $("#doctorAddress")[0].innerText=unescape(n.address);
                                     //$("#doctorSickContent")[0].innerText=$("#doctorSickContent")[0].innerText.substr(0,3)+unescape(n.sickContent);
                                     //$("#doctorSickDate")[0].innerText=$("#doctorSickDate")[0].innerText.substr(0,3)+ages(unescape(n.sickDate));
 
@@ -366,6 +385,7 @@ $(document).ready(function () {
                         });
 
                     });
+                   // hideLoader();
 
                 },
                 error: function (error) {
@@ -380,6 +400,9 @@ $(document).ready(function () {
             }
 
         }
+//    $("#testone").click(function(){
+//        $("#messageList").listview("refresh");
+//    });
     function getQuestionList() {
 
         $.ajax({
@@ -593,6 +616,7 @@ $(document).ready(function () {
     function addQuestions(obj) {
 
        var ul=$("#messageList");
+       //" <ul data-role='listview'  class='ui-listview' data-inset='true' role='listbox' >"+
        var listStr= "<li data-role='list-divider' role='heading' tabindex='0' class='ui-li ui-li-divider ui-btn ui-bar-b ui-btn-up-c' style='font-size:8pt;font-weight:normal'>"+
            unescape(obj.username)+",time"+
            "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:55px;background: url(../images/comment.png) no-repeat;padding:3px;padding-left:20px'>34</span>"+
@@ -601,6 +625,7 @@ $(document).ready(function () {
             "<a href='#'>"+
                 "<img width='40' height='40' src='images/apple.jpg'/>"+
                 "<div style='font-size:9pt;font-weight:normal;'>"+unescape(obj.content)+"</div></a></li>";
+       // $("#messageList").append(listStr);
 
         ul[0].innerHTML+=listStr;
     }
@@ -775,7 +800,7 @@ $(document).ready(function () {
                     }
                 },
                 error: function (error) {
-                    alert("erroe");
+                    alert("error");
                 }
             });
         }
@@ -788,4 +813,5 @@ $(document).ready(function () {
 
 
     });
+
 });
