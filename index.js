@@ -400,9 +400,39 @@ $(document).ready(function () {
             }
 
         }
-//    $("#testone").click(function(){
-//        $("#messageList").listview("refresh");
-//    });
+
+    $("#submitQuestionMore").click(function () {
+
+            $.ajax({
+                type: "get",
+                url: 'http://www.ysrule.com/yy/askMoreQuestion.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+                data: {userId:localStorage.getItem('userId'),username: escape($("#username").val()), doctorid: localStorage.getItem('currentDoctorID'), content: escape($("#questionAskMore").val()),
+                    doctorname: escape(localStorage.getItem('currentDoctorName')),currentChatId:localStorage.getItem('currentChatId')
+                },
+                cache: true, //默认值true
+                dataType: "jsonp",
+                jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+                jsonpCallback: "jsonpCallback",
+                //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
+                //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
+                success: function (json) {
+                    alert("提问成功！");
+
+                },
+                error: function (error) {
+                    alert("提问失败！");
+                }
+            });
+
+
+            function jsonpCallback(data) //回调函数
+            {
+                alert(data.message); //
+            }
+
+        }
+
+    );
     function getQuestionList() {
 
         $.ajax({
@@ -429,7 +459,7 @@ $(document).ready(function () {
                     $(this).click(function(){
 
                          getmessageDetail(this.id);
-
+                        localStorage.setItem('currentChatId', this.id);
                         $.mobile.changePage("#adviceListDetail", { transition: "slideup", changeHash: false });
                     });
 
