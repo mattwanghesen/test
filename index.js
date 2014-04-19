@@ -418,6 +418,9 @@ $(document).ready(function () {
                 //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
                 success: function (json) {
                     alert("提问成功！");
+                    $("#messageDetails").empty();
+                    getmessageDetail( localStorage.getItem('currentChatId'));
+                   // localStorage.setItem('currentChatId', this.id);
 
                 },
                 error: function (error) {
@@ -457,12 +460,14 @@ $(document).ready(function () {
                    var ulHomes = $("#messageList")[0].children;
 
                 $(ulHomes).each(function(){
+                    if(this.id!=""){
                     $(this).click(function(){
                          $("#messageDetails").empty();
                          getmessageDetail(this.id);
                         localStorage.setItem('currentChatId', this.id);
                         $.mobile.changePage("#adviceListDetail", { transition: "slideup", changeHash: false });
                     });
+                    }
 
                 });
 
@@ -644,14 +649,17 @@ $(document).ready(function () {
         li.class="userListClass";
         ul[0].innerHTML+=li.outerHTML;
     }
+
+
     function addQuestions(obj) {
 
        var ul=$("#messageList");
        //" <ul data-role='listview'  class='ui-listview' data-inset='true' role='listbox' >"+
        var listStr= "<li data-role='list-divider' role='heading' tabindex='0' class='ui-li ui-li-divider ui-btn ui-bar-b ui-btn-up-c' style='font-size:8pt;font-weight:normal'>"+
-           unescape(obj.username)+",time"+
+           unescape(obj.username)+" 发布于："+unescape(obj.createtime)+
            "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:55px;background: url(../images/comment.png) no-repeat;padding:3px;padding-left:20px'>34</span>"+
-           "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:5px;background: url(../images/like.gif) no-repeat;padding:3px;padding-left:20px'>442</span></li>"+
+           "<span onclick='spanClick("+obj.ID+");' class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:5px;" +
+           "background: url(images/like.png) no-repeat;padding:4px;padding-left:20px'>"+obj.agreenumber+"</span></li>"+
            "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='c' >"+
             "<a href='#'>"+
                 "<img width='40' height='40' src='images/apple.jpg'/>"+
@@ -664,8 +672,8 @@ $(document).ready(function () {
         var ul=$("#messageDetails");
         var listStr="";
         if(obj.isdoctor){
-            listStr= "<li data-role='list-divider' role='heading' tabindex='0' class='ui-li ui-li-divider ui-btn ui-bar-b ui-btn-up-c' style='font-size:8pt;font-weight:normal'>"+
-            unescape(obj.username)+",time"+
+            listStr= "<li data-role='list-divider' role='heading' tabindex='0' class='ui-li ui-li-divider ui-btn ui-bar-b ui-btn-up-c' style='font-size:8pt;font-weight:normal;color:#008a00'>"+
+            unescape(obj.username)+" 发布于："+unescape(obj.createtime)+
             "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:55px;background: url(../images/comment.png) no-repeat;padding:3px;padding-left:20px'>34</span>"+
             "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:5px;background: url(../images/like.gif) no-repeat;padding:3px;padding-left:20px'>442</span></li>"+
             "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='c' >"+
@@ -674,7 +682,7 @@ $(document).ready(function () {
             "<div style='font-size:9pt;font-weight:normal;'>"+unescape(obj.content)+"</div></a></li>";
         }else{
              listStr= "<li data-role='list-divider' role='heading' tabindex='0' class='ui-li ui-li-divider ui-btn ui-bar-b ui-btn-up-c' style='font-size:8pt;font-weight:normal'>"+
-                unescape(obj.username)+",time"+
+                unescape(obj.username)+" 发布于："+unescape(obj.createtime)+
                 "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:55px;background: url(../images/comment.png) no-repeat;padding:3px;padding-left:20px'>34</span>"+
                 "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:5px;background: url(../images/like.gif) no-repeat;padding:3px;padding-left:20px'>442</span></li>"+
                 "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='c' >"+
