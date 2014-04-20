@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" name="Default" comment="test one 1">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
-    </list>
+    <list default="true" id="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" name="Default" comment="test one 1" />
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1397835034318" ignored="false" />
@@ -33,7 +30,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="28" selection-start="1499" selection-end="1499" vertical-scroll-proportion="0.59484345">
+            <state line="20" column="91" selection-start="871" selection-end="871" vertical-scroll-proportion="0.17495395">
               <folding />
             </state>
           </provider>
@@ -51,7 +48,7 @@
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="663" column="131" selection-start="27480" selection-end="27480" vertical-scroll-proportion="-27.2">
+            <state line="681" column="114" selection-start="28771" selection-end="28771" vertical-scroll-proportion="-11.24">
               <folding>
                 <marker date="1397900018190" expanded="true" signature="26850:26882" placeholder="..." />
                 <marker date="1397900018190" expanded="true" signature="27030:27119" placeholder="..." />
@@ -61,7 +58,7 @@
                 <marker date="1397900018190" expanded="true" signature="27582:27615" placeholder="..." />
                 <marker date="1397900018190" expanded="true" signature="28014:28060" placeholder="..." />
                 <marker date="1397900018190" expanded="true" signature="28210:28299" placeholder="..." />
-                <marker date="1397900018190" expanded="false" signature="28389:28474" placeholder="..." />
+                <marker date="1397900018190" expanded="true" signature="28389:28474" placeholder="..." />
                 <marker date="1397900018190" expanded="false" signature="28694:28727" placeholder="..." />
                 <marker date="1397900018190" expanded="true" signature="28930:28962" placeholder="..." />
                 <marker date="1397900018190" expanded="false" signature="29120:29209" placeholder="..." />
@@ -169,7 +166,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="122" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../doctorui" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="128" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="921" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="921" />
@@ -355,7 +352,7 @@
             <marker date="1397900018190" expanded="true" signature="27582:27615" placeholder="..." />
             <marker date="1397900018190" expanded="true" signature="28014:28060" placeholder="..." />
             <marker date="1397900018190" expanded="true" signature="28210:28299" placeholder="..." />
-            <marker date="1397900018190" expanded="false" signature="28389:28474" placeholder="..." />
+            <marker date="1397900018190" expanded="true" signature="28389:28474" placeholder="..." />
             <marker date="1397900018190" expanded="false" signature="28694:28727" placeholder="..." />
             <marker date="1397900018190" expanded="true" signature="28930:28962" placeholder="..." />
             <marker date="1397900018190" expanded="false" signature="29120:29209" placeholder="..." />
@@ -384,7 +381,7 @@
             <marker date="1397900018190" expanded="true" signature="27582:27615" placeholder="..." />
             <marker date="1397900018190" expanded="true" signature="28014:28060" placeholder="..." />
             <marker date="1397900018190" expanded="true" signature="28210:28299" placeholder="..." />
-            <marker date="1397900018190" expanded="false" signature="28389:28474" placeholder="..." />
+            <marker date="1397900018190" expanded="true" signature="28389:28474" placeholder="..." />
             <marker date="1397900018190" expanded="false" signature="28694:28727" placeholder="..." />
             <marker date="1397900018190" expanded="true" signature="28930:28962" placeholder="..." />
             <marker date="1397900018190" expanded="false" signature="29120:29209" placeholder="..." />
@@ -413,7 +410,7 @@
             <marker date="1397900018190" expanded="true" signature="27582:27615" placeholder="..." />
             <marker date="1397900018190" expanded="true" signature="28014:28060" placeholder="..." />
             <marker date="1397900018190" expanded="true" signature="28210:28299" placeholder="..." />
-            <marker date="1397900018190" expanded="false" signature="28389:28474" placeholder="..." />
+            <marker date="1397900018190" expanded="true" signature="28389:28474" placeholder="..." />
             <marker date="1397900018190" expanded="false" signature="28694:28727" placeholder="..." />
             <marker date="1397900018190" expanded="true" signature="28930:28962" placeholder="..." />
             <marker date="1397900018190" expanded="false" signature="29120:29209" placeholder="..." />
@@ -442,7 +439,7 @@
             <marker date="1397900018190" expanded="true" signature="27582:27615" placeholder="..." />
             <marker date="1397900018190" expanded="true" signature="28014:28060" placeholder="..." />
             <marker date="1397900018190" expanded="true" signature="28210:28299" placeholder="..." />
-            <marker date="1397900018190" expanded="false" signature="28389:28474" placeholder="..." />
+            <marker date="1397900018190" expanded="true" signature="28389:28474" placeholder="..." />
             <marker date="1397900018190" expanded="false" signature="28694:28727" placeholder="..." />
             <marker date="1397900018190" expanded="true" signature="28930:28962" placeholder="..." />
             <marker date="1397900018190" expanded="false" signature="29120:29209" placeholder="..." />
@@ -471,7 +468,7 @@
             <marker date="1397900018190" expanded="true" signature="27582:27615" placeholder="..." />
             <marker date="1397900018190" expanded="true" signature="28014:28060" placeholder="..." />
             <marker date="1397900018190" expanded="true" signature="28210:28299" placeholder="..." />
-            <marker date="1397900018190" expanded="false" signature="28389:28474" placeholder="..." />
+            <marker date="1397900018190" expanded="true" signature="28389:28474" placeholder="..." />
             <marker date="1397900018190" expanded="false" signature="28694:28727" placeholder="..." />
             <marker date="1397900018190" expanded="true" signature="28930:28962" placeholder="..." />
             <marker date="1397900018190" expanded="false" signature="29120:29209" placeholder="..." />
@@ -504,7 +501,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="663" column="131" selection-start="27480" selection-end="27480" vertical-scroll-proportion="-27.2">
+        <state line="681" column="114" selection-start="28771" selection-end="28771" vertical-scroll-proportion="-11.24">
           <folding>
             <marker date="1397900018190" expanded="true" signature="26850:26882" placeholder="..." />
             <marker date="1397900018190" expanded="true" signature="27030:27119" placeholder="..." />
@@ -514,7 +511,7 @@
             <marker date="1397900018190" expanded="true" signature="27582:27615" placeholder="..." />
             <marker date="1397900018190" expanded="true" signature="28014:28060" placeholder="..." />
             <marker date="1397900018190" expanded="true" signature="28210:28299" placeholder="..." />
-            <marker date="1397900018190" expanded="false" signature="28389:28474" placeholder="..." />
+            <marker date="1397900018190" expanded="true" signature="28389:28474" placeholder="..." />
             <marker date="1397900018190" expanded="false" signature="28694:28727" placeholder="..." />
             <marker date="1397900018190" expanded="true" signature="28930:28962" placeholder="..." />
             <marker date="1397900018190" expanded="false" signature="29120:29209" placeholder="..." />
@@ -526,7 +523,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="28" selection-start="1499" selection-end="1499" vertical-scroll-proportion="0.59484345">
+        <state line="20" column="91" selection-start="871" selection-end="871" vertical-scroll-proportion="0.17495395">
           <folding />
         </state>
       </provider>

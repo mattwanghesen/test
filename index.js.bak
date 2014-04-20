@@ -408,7 +408,7 @@ $(document).ready(function () {
                 type: "get",
                 url: 'http://www.ysrule.com/yy/askMoreQuestion.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
                 data: {userId:localStorage.getItem('userId'),username: escape($("#username").val()), doctorid: localStorage.getItem('currentDoctorID'), content: escape($("#questionAskMore").val()),
-                    doctorname: escape(localStorage.getItem('currentDoctorName')),currentChatId:localStorage.getItem('currentChatId'),isDoctor:0
+                    doctorname: escape(localStorage.getItem('currentDoctorName')),currentChatId:localStorage.getItem('currentChatId')
                 },
                 cache: true, //默认值true
                 dataType: "jsonp",
