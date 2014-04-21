@@ -503,7 +503,7 @@ $(document).ready(function () {
                         addQuestionDetails(n);
 
                     });
-                    // $("#incomingMessages").listview("refresh");
+                     $("#messageDetails").listview("refresh");
                     //               var ulHomes = $("#listDoctor")[0].children;
 
 //                    $(ulHomes).each(function(){
@@ -671,18 +671,18 @@ $(document).ready(function () {
     function addQuestionDetails(obj) {
         var ul=$("#messageDetails");
         var listStr="";
-        if(obj.isdoctor){
-            listStr= "<li data-role='list-divider' role='heading' tabindex='0' class='ui-li ui-li-divider ui-btn ui-bar-b ui-btn-up-c' style='font-size:8pt;font-weight:normal;color:#008a00'>"+
-            unescape(obj.username)+" 发布于："+unescape(obj.createtime)+
-            "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:55px;background: url(../images/comment.png) no-repeat;padding:3px;padding-left:20px'>34</span>"+
-            "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:5px;background: url(../images/like.gif) no-repeat;padding:3px;padding-left:20px'>442</span></li>"+
-            "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='c' >"+
-            "<a href='#'>"+
-            "<img width='40' height='40' src='images/apple.jpg'/>"+
-            "<div style='font-size:9pt;font-weight:normal;'>"+unescape(obj.content)+"</div></a></li>";
-        }else{
-             listStr= "<li data-role='list-divider' role='heading' tabindex='0' class='ui-li ui-li-divider ui-btn ui-bar-b ui-btn-up-c' style='font-size:8pt;font-weight:normal'>"+
+        if(obj.isDoctor!="True"){
+            listStr= "<li data-role='list-divider' role='heading' tabindex='0' data-theme='c' class='ui-li ui-li-divider ui-btn ui-bar-e ui-btn-up-d' style='font-size:8pt;font-weight:normal'>"+
                 unescape(obj.username)+" 发布于："+unescape(obj.createtime)+
+                "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:85px;background: url(images/like1.jpg) no-repeat;padding:3px;padding-left:20px'>5</span>"+
+                "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:5px;background: url(images/like1.jpg) no-repeat;padding:3px;padding-left:20px'>442</span></li>"+
+                "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='c' >"+
+                "<a href='#'>"+
+                "<img width='40' height='40' src='images/like.jpg'/>"+
+                "<div style='font-size:9pt;font-weight:normal;'>"+unescape(obj.content)+"</div></a></li>";
+        }else{
+            listStr= "<li data-role='list-divider'  role='heading' tabindex='0' class='ui-li ui-li-divider ui-btn-b ui-bar-e ui-btn-up-c' style='font-size:8pt;font-weight:normal'>"+
+                unescape(obj.doctorname)+" 发布于："+unescape(obj.createtime)+
                 "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:55px;background: url(../images/comment.png) no-repeat;padding:3px;padding-left:20px'>34</span>"+
                 "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:5px;background: url(../images/like.gif) no-repeat;padding:3px;padding-left:20px'>442</span></li>"+
                 "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='c' >"+
