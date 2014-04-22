@@ -7,22 +7,7 @@
  */
 $(document).ready(function () {
 //script goes here
-    function showLoader() {
 
-        $.mobile.loading('show', {
-            text: '加载中...',
-            textVisible: true,
-            theme: 'a',
-            textonly: false,
-            html: ""
-        });
-    }
-
-
-    function hideLoader()
-    {
-        $.mobile.loading('hide');
-    }
     var opt = {
         preset: 'date', //日期
         theme: 'sense-ui', //皮肤样式
@@ -37,8 +22,8 @@ $(document).ready(function () {
     };
     $("#sickDate").mobiscroll(opt).date(opt);
 
-    $("#task").on("pageinit",function(event){
-        showLoader();
+    $("#task").on("pagebeforeshow",function(event){
+
         getDoctors();
 
     });
@@ -340,7 +325,7 @@ $(document).ready(function () {
 
     );
  function getDoctors() {
-
+     showLoader();
             $.ajax({
                 type: "get",
                 url: 'http://www.ysrule.com/yy/doctorView.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
