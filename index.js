@@ -22,7 +22,7 @@ $(document).ready(function () {
     };
     $("#sickDate").mobiscroll(opt).date(opt);
 
-    $("#task").on("pagebeforeshow",function(event){
+    $("#task").on("pageinit",function(event){
 
         getDoctors();
 
@@ -640,15 +640,15 @@ $(document).ready(function () {
 
        var ul=$("#messageList");
        //" <ul data-role='listview'  class='ui-listview' data-inset='true' role='listbox' >"+
-       var listStr= "<li data-role='list-divider' role='heading' tabindex='0' class='ui-li ui-li-divider ui-btn ui-bar-b ui-btn-up-c' style='font-size:8pt;font-weight:normal'>"+
+       var listStr= "<li data-role='list-divider' role='heading' tabindex='0' class='ui-li ui-li-divider ui-btn ui-bar-b ui-btn-up-c' style='white-space:normal;font-size:8pt;font-weight:normal'>"+
            unescape(obj.username)+" 发布于："+unescape(obj.createtime)+
-           "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:55px;background: url(../images/comment.png) no-repeat;padding:3px;padding-left:20px'>34</span>"+
+           "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:55px;background: url(../images/comment.png) no-repeat;padding:3px;padding-left:20px'>"+obj.commentNum+"</span>"+
            "<span onclick='spanClick("+obj.ID+");' class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:5px;" +
-           "background: url(images/like.png) no-repeat;padding:4px;padding-left:20px'>"+obj.agreenumber+"</span></li>"+
+           "background: url(images/like1.jpg) no-repeat;padding:4px;padding-left:20px'>"+obj.agreenumber+"</span></li>"+
            "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='c' >"+
             "<a href='#'>"+
                 "<img width='40' height='40' src='images/apple.jpg'/>"+
-                "<div style='font-size:9pt;font-weight:normal;'>"+unescape(obj.content)+"</div></a></li>";
+                "<div style='font-size:9pt;font-weight:normal;white-space:normal;'>"+unescape(obj.content)+"</div></a></li>";
        // $("#messageList").append(listStr);
 
         ul[0].innerHTML+=listStr;
@@ -657,23 +657,21 @@ $(document).ready(function () {
         var ul=$("#messageDetails");
         var listStr="";
         if(obj.isDoctor!="True"){
-            listStr= "<li data-role='list-divider' role='heading' tabindex='0' data-theme='c' class='ui-li ui-li-divider ui-btn ui-bar-e ui-btn-up-d' style='font-size:8pt;font-weight:normal'>"+
+            listStr= "<li data-role='list-divider' role='heading' tabindex='0' data-theme='c' class='ui-li ui-li-divider ui-btn ui-bar-e ui-btn-up-d' style='font-size:8pt;font-weight:normal;white-space:normal;'>"+
                 unescape(obj.username)+" 发布于："+unescape(obj.createtime)+
-                "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:85px;background: url(images/like1.jpg) no-repeat;padding:3px;padding-left:20px'>5</span>"+
                 "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:5px;background: url(images/like1.jpg) no-repeat;padding:3px;padding-left:20px'>442</span></li>"+
                 "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='c' >"+
                 "<a href='#'>"+
                 "<img width='40' height='40' src='images/like.jpg'/>"+
-                "<div style='font-size:9pt;font-weight:normal;'>"+unescape(obj.content)+"</div></a></li>";
+                "<div style='font-size:9pt;font-weight:normal;white-space:normal;'>"+unescape(obj.content)+"</div></a></li>";
         }else{
             listStr= "<li data-role='list-divider'  role='heading' tabindex='0' class='ui-li ui-li-divider ui-btn-b ui-bar-e ui-btn-up-c' style='font-size:8pt;font-weight:normal'>"+
                 unescape(obj.doctorname)+" 发布于："+unescape(obj.createtime)+
-                "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:55px;background: url(../images/comment.png) no-repeat;padding:3px;padding-left:20px'>34</span>"+
-                "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:5px;background: url(../images/like.gif) no-repeat;padding:3px;padding-left:20px'>442</span></li>"+
+                "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:5px;background: url(images/like1.jpg) no-repeat;padding:3px;padding-left:20px'>442</span></li>"+
                 "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='c' >"+
                 "<a href='#'>"+
                 "<img width='40' height='40' src='images/apple.jpg'/>"+
-                "<div style='font-size:9pt;font-weight:normal;'>"+unescape(obj.content)+"</div></a></li>";
+                "<div style='font-size:9pt;font-weight:normal;white-space:normal;'>"+unescape(obj.content)+"</div></a></li>";
         }
         ul[0].innerHTML+=listStr;
     }
