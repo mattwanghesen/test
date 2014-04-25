@@ -53,7 +53,7 @@
             //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
             success: function (json) {
                alert("赞一下成功！");
-
+                $.mobile.loading('hide');
 
             },
             error: function (error) {
