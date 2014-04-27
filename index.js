@@ -407,7 +407,7 @@ $(document).ready(function () {
                     hideLoader();
                     alert("提问成功！");
                     $("#messageDetails").empty();
-                    //getmessageDetail( localStorage.getItem('currentChatId'));
+                    getmessageDetail( localStorage.getItem('currentChatId'));
                    // localStorage.setItem('currentChatId', this.id);
 
                 },
