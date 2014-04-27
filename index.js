@@ -390,7 +390,7 @@ $(document).ready(function () {
         }
 
     $("#submitQuestionMore").click(function () {
-
+           showLoader();
             $.ajax({
                 type: "get",
                 url: 'http://www.ysrule.com/yy/askMoreQuestion.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
@@ -404,13 +404,15 @@ $(document).ready(function () {
                 //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
                 //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
                 success: function (json) {
+                    hideLoader();
                     alert("提问成功！");
                     $("#messageDetails").empty();
-                    getmessageDetail( localStorage.getItem('currentChatId'));
+                    //getmessageDetail( localStorage.getItem('currentChatId'));
                    // localStorage.setItem('currentChatId', this.id);
 
                 },
                 error: function (error) {
+                    hideLoader();
                     alert("提问失败！");
                 }
             });
