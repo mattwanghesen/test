@@ -405,8 +405,9 @@ $(document).ready(function () {
                 //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
                 success: function (json) {
                     hideLoader();
-                    alert("提问成功！");
                     $("#messageDetails").empty();
+                    alert("提问成功！");
+                   // $("#messageDetails").empty();
                     getmessageDetail( localStorage.getItem('currentChatId'));
                    // localStorage.setItem('currentChatId', this.id);
 
