@@ -22,7 +22,7 @@ $(document).ready(function () {
     };
     $("#sickDate").mobiscroll(opt).date(opt);
 
-    $("#task").on("pageinit",function(event){
+    $("#task").on("pageshow",function(event){
 
         getDoctors();
 
@@ -32,7 +32,7 @@ $(document).ready(function () {
         $("#divUserName").show();
         $("#divinputusername").hide();
         $("#username").val(localStorage.getItem('username'));
-        $("#lname").text(localStorage.getItem('username'));
+        $("#divUserName").append(localStorage.getItem('username'));
         if( localStorage.getItem('sex')=='woman'){
             $('input[id=woman]').attr('checked','checked');
         }
@@ -338,6 +338,7 @@ $(document).ready(function () {
                 //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
                 //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
                 success: function (json) {
+                    var ul=$("#listDoctor").empty();
                     var data = json.magazineTab.records;
                     $.each(data, function(i, n){
                         addDoctor(n);
@@ -345,7 +346,7 @@ $(document).ready(function () {
                     });
                     $("#listDoctor").listview("refresh");
                     var ulHomes = $("#listDoctor")[0].children;
-
+                    hideLoader();
                     $(ulHomes).each(function(){
                         $(this).click(function(){
                             localStorage.setItem('currentID', this.id);
@@ -375,7 +376,8 @@ $(document).ready(function () {
 
                 },
                 error: function (error) {
-                    alert("erroe");
+                    hideLoader();
+                    alert("网络连接失败！");
                 }
             });
 
@@ -530,7 +532,7 @@ $(document).ready(function () {
         }
 
     $("#compare").click(function () {
-
+           showLoader();
             $.ajax({
                 type: "get",
                 url: 'http://www.ysrule.com/yy/searchFolder.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
@@ -544,6 +546,7 @@ $(document).ready(function () {
                 //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
                 //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
                 success: function (json) {
+                    hideLoader()
                     var data = json.magazineTab.records;
                     $.each(data, function(i, n){
                         addLi(n);
@@ -577,7 +580,8 @@ $(document).ready(function () {
 
                 },
                 error: function (error) {
-                    alert("erroe");
+                    hideLoader();
+                    alert("error");
                 }
             });
 
@@ -608,10 +612,10 @@ $(document).ready(function () {
         var href_a = document.createElement("a");
         var head = document.createElement("h2");
         var img = document.createElement("img");
-        href_a.innerHTML="<img src='../img/apple.png'><h2>"+unescape(obj.username)+"</h2><p>"+unescape(obj.sickContent)+"</p> <p class='ui-li-aside'>iOS</p>";
+        href_a.innerHTML="<img src='../img/apple.png'><h2>"+unescape(obj.username)+"</h2><p>"+unescape(obj.sickContent)+"</p> <p class='ui-li-aside'>"+unescape(obj.sex)+"</p>";
         //href_a.href="javascript:del('"+id+"');";
-       // href_a.innerHTML ="del";
-        //li.innerHTML=txt;
+       // href_a.innerHTML ="del";                         t
+        //li.innerHTML=txt;                                est
         //li.id=id;
         li.innerHTML= href_a.outerHTML;
         li.id=obj.ID;
@@ -740,7 +744,7 @@ $(document).ready(function () {
         if (localStorage.getItem('my-10') == "true") {
             txt = txt+',' + trim($("#my-10").prev('label').text());
         }
-        $("#sickContent").append('从' + $("#sickDate").val() + '开始： ' + txt + ' 点击修改');
+        $("#sickContent").append('从' + $("#sickDate").val() + '开始： ' + txt + '<p style="color:#FF0000">点击修改</p>');
     }
 
     $("#submitmy").click(function () {
