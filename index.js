@@ -405,10 +405,18 @@ $(document).ready(function () {
                 //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
                 success: function (json) {
                     hideLoader();
-                    $("#messageDetails").empty();
-                    alert("提问成功！");
                    // $("#messageDetails").empty();
-                    getmessageDetail( localStorage.getItem('currentChatId'));
+                    var msg=new Object();
+                    msg.createtime= new Date();
+                    msg.content= $("#questionAskMore").val();
+                    msg.ID=900000;
+                    msg.agreenumber=0;
+                    msg.username=$("#username").val();
+                    addQuestionDetails(msg);
+                    $("#messageDetails").listview("refresh");
+                   // alert("提问成功！");
+                   // $("#messageDetails").empty();
+                    //getmessageDetail( localStorage.getItem('currentChatId'));
                    // localStorage.setItem('currentChatId', this.id);
 
                 },
