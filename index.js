@@ -27,6 +27,19 @@ $(document).ready(function () {
         getDoctors();
 
     });
+    $("#register").on("pageinit",function(event){
+        if(localStorage.getItem("my-1")!=null||localStorage.getItem("my-1")!=""){
+            $("#situation").hide();
+            //alert($("#my-1").prev('label').text());
+            $("#sickContent").show();
+            $("#sickContent").val(localStorage.getItem("sickContent"));
+
+            $("#sickContent").click(function () {
+                $.mobile.changePage("#mysituaton", { transition: "none", changeHash: false });
+            });
+        }
+    });
+
     $("#birthday").mobiscroll(opt).date(opt);
     if(localStorage.getItem('username')!=null&&localStorage.getItem('username')!="null"&&localStorage.getItem('username')!=""){
         $("#divUserName").show();
@@ -243,48 +256,58 @@ $(document).ready(function () {
         localStorage.setItem('sex',null);
         localStorage.setItem('birthday', null);
     });
-    $("#regbtn").click(function () {
+    function saveUserInfo(){
+        $.ajax({
+            type: "get",
+            url: 'http://www.ysrule.com/yy/reg.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+            data: {userId:localStorage.getItem('userId'),username: escape($("#username").val()), career: $("#career").val(), birthday: $("#birthday").val(),
+                sex: $('input[type="radio"][name="sex"]:checked').val(),sickDate:$("#sickDate").val(),sickContent:escape($("#sickContent").html().substring(15).substr(0,$("#sickContent").html().substring(15).length-5))
+            },
+            cache: true, //默认值true
+            dataType: "jsonp",
+            jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+            jsonpCallback: "jsonpCallback",
+            //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
+            //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
+            success: function (json) {
+                var data = json.magazineTab.records;
+                $.each(data, function(i, n){
+                    localStorage.setItem('userId', n.ID);
+                    localStorage.setItem('username', $("#username").val());
+                    localStorage.setItem('career', $("#career").val());
+                    localStorage.setItem('sex', $('input[type="radio"][name="sex"]:checked').val());
+                    localStorage.setItem('birthday', $("#birthday").val());
+                    localStorage.setItem('sickDate', $("#sickDate").val());
+                    localStorage.setItem('sickContent', $("#sickContent").html());
 
-                $.ajax({
-                    type: "get",
-                    url: 'http://www.ysrule.com/yy/reg.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
-                    data: {userId:localStorage.getItem('userId'),username: escape($("#username").val()), career: $("#career").val(), birthday: $("#birthday").val(),
-                        sex: $('input[type="radio"][name="sex"]:checked').val(),sickDate:$("#sickDate").val(),sickContent:escape($("#sickContent").html().substring(15).substr(0,$("#sickContent").html().substring(15).length-5))
-                    },
-                    cache: true, //默认值true
-                    dataType: "jsonp",
-                    jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
-                    jsonpCallback: "jsonpCallback",
-                    //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
-                    //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
-                    success: function (json) {
-                        var data = json.magazineTab.records;
-                        $.each(data, function(i, n){
-                            localStorage.setItem('userId', n.ID);
-                            localStorage.setItem('username', $("#username").val());
-                            localStorage.setItem('career', $("#career").val());
-                            localStorage.setItem('sex', $('input[type="radio"][name="sex"]:checked').val());
-                            localStorage.setItem('birthday', $("#birthday").val());
-                            localStorage.setItem('sickDate', $("#sickDate").val());
-                            localStorage.setItem('sickContent', $("#sickContent").html());
-
-                        });
-
-                    },
-                    error: function (error) {
-                        alert("erroe");
-                    }
                 });
 
+            },
+            error: function (error) {
+                alert("erroe");
+            }
+        });
 
-                function jsonpCallback(data) //回调函数
-                {
-                    alert(data.message); //
-                }
+
+        function jsonpCallback(data) //回调函数
+        {
+            alert(data.message); //
+        }
+
+    }
+
+    $("#regbtn").click(function () {
+            saveUserInfo();
 
         }
 
     );
+    $("#career").change(function(){
+        saveUserInfo();
+    });
+    $("#username").blur(function(){
+        saveUserInfo();
+    });
     $("#adviceHistory").click(function (){
         $("#messageList").empty();
          getQuestionList();
