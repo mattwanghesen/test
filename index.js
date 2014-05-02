@@ -30,9 +30,9 @@ $(document).ready(function () {
     $("#register").on("pageinit",function(event){
         if(localStorage.getItem("my-1")!=null||localStorage.getItem("my-1")!=""){
             $("#situation").hide();
-            //alert($("#my-1").prev('label').text());
             $("#sickContent").show();
-            $("#sickContent").val(localStorage.getItem("sickContent"));
+            $("#sickContent").empty();
+            $("#sickContent").append(localStorage.getItem("sickContent"));
 
             $("#sickContent").click(function () {
                 $.mobile.changePage("#mysituaton", { transition: "none", changeHash: false });
@@ -314,6 +314,12 @@ $(document).ready(function () {
         $.mobile.changePage("#adviceList", { transition: "slideup", changeHash: false });
 
     });
+    $("#myQuestions").click(function (){
+        $("#messageList").empty();
+        getMyQuestionList(localStorage.getItem('userId'));
+        $.mobile.changePage("#adviceList", { transition: "slideup", changeHash: false });
+
+    });
 
     $("#submitQuestion").click(function () {
 
@@ -458,12 +464,12 @@ $(document).ready(function () {
         }
 
     );
-    function getQuestionList() {
+    function getMyQuestionList(userid) {
 
         $.ajax({
             type: "get",
-            url: 'http://www.ysrule.com/yy/questionList.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
-            data: {doctorid:localStorage.getItem('currentDoctorID')
+            url: 'http://www.ysrule.com/yy/myQuestionList.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+            data: {userId:userid
             },
             cache: true, //默认值true
             dataType: "jsonp",
@@ -505,6 +511,54 @@ $(document).ready(function () {
         }
 
     }
+    function getQuestionList() {
+
+        $.ajax({
+            type: "get",
+            url: 'http://www.ysrule.com/yy/questionList.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+            data: {doctorid:localStorage.getItem('currentDoctorID')
+            },
+            cache: true, //默认值true
+            dataType: "jsonp",
+            jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+            jsonpCallback: "jsonpCallback",
+            //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
+            //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
+            success: function (json) {
+                var data = json.magazineTab.records;
+                $.each(data, function(i, n){
+                    addQuestions(n);
+
+                });
+                $("#messageList").listview("refresh");
+                var ulHomes = $("#messageList")[0].children;
+
+                $(ulHomes).each(function(){
+                    if(this.id!=""){
+                        $(this).click(function(){
+                            $("#messageDetails").empty();
+                            getmessageDetail(this.id);
+                            localStorage.setItem('currentChatId', this.id);
+                            $.mobile.changePage("#adviceListDetail", { transition: "slideup", changeHash: false });
+                        });
+                    }
+
+                });
+
+            },
+            error: function (error) {
+                alert("erroe");
+            }
+        });
+
+
+        function jsonpCallback(data) //回调函数
+        {
+            alert(data.message); //
+        }
+
+    }
+
 
     function getmessageDetail(parentid){
         $.ajax({
@@ -600,8 +654,15 @@ $(document).ready(function () {
                                    $("#detailSex")[0].innerText=$("#detailSex")[0].innerText.substr(0,3)+(unescape(n.sex)=="man"?"男":"女");
                                    $("#detailBirthday")[0].innerText=$("#detailBirthday")[0].innerText.substr(0,3)+ages(unescape(n.birthday));
                                    $("#detailJob")[0].innerText=$("#detailJob")[0].innerText.substr(0,3)+unescape(n.job);
-                                   $("#detailSickContent")[0].innerText=$("#detailSickContent")[0].innerText.substr(0,3)+unescape(n.sickContent);
+                                   var sc=unescape(n.sickContent);
+                                   $("#detailSickContent")[0].innerText=$("#detailSickContent")[0].innerText.substr(0,3)+(sc.substr(0,sc.length-28));
                                    $("#detailSickDate")[0].innerText=$("#detailSickDate")[0].innerText.substr(0,3)+ages(unescape(n.sickDate));
+                                   $("#hisQuestion").click(function(){
+                                       $("#messageList").empty();
+                                       getMyQuestionList(n.ID);
+                                       $.mobile.changePage("#adviceList", { transition: "slideup", changeHash: false });
+
+                                   })
 
                                }
 
@@ -637,7 +698,7 @@ $(document).ready(function () {
         {
             var Y = new Date().getFullYear();
             return (Y-r[1]);
-        }
+        }                                                  t
         return "error";
     }
     function addLi(obj) {
@@ -646,7 +707,8 @@ $(document).ready(function () {
         var href_a = document.createElement("a");
         var head = document.createElement("h2");
         var img = document.createElement("img");
-        href_a.innerHTML="<img src='../img/apple.png'><h2>"+unescape(obj.username)+"</h2><p>"+unescape(obj.sickContent)+"</p> <p class='ui-li-aside'>"+unescape(obj.sex)+"</p>";
+        var sc=unescape(obj.sickContent);
+        href_a.innerHTML="<img src='../img/apple.png'><h2>"+unescape(obj.username)+"</h2><p>"+sc.substr(0,sc.length-28)+"</p> <p class='ui-li-aside'>"+unescape(obj.sex)+"</p>";
         //href_a.href="javascript:del('"+id+"');";
        // href_a.innerHTML ="del";                         t
         //li.innerHTML=txt;                                est
@@ -803,7 +865,7 @@ $(document).ready(function () {
         $("#sickContent").click(function () {
             $.mobile.changePage("#mysituaton", { transition: "none", changeHash: false });
         });
-
+       saveUserInfo();
         $.mobile.changePage("#register", { transition: "none", changeHash: false });
     });
 
