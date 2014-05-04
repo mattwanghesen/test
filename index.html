@@ -77,13 +77,12 @@
     </div>
     <div data-role="content">
         <div style="width: 100%; height: 100%; position: relative;">
-            <h4>1.问医生，找病因。   <br>
-                2.问医生，改掉不知道的坏习惯，养成好习惯。<br>
-                3.参考别人(与你相似)的痊愈经历。                  <br>
-                4.问医生，定制生活习惯和养生法。                    <br>
-                原因不明，怎能乱吃药。                                  <br>
-                （中国最大的慢性咽炎案例库。）                              <br>
+            <a href="#article" data-transition="slide">
+            <h4>只有找不到的病因，没有好不了的咽炎<br>
             </h4>
+             </a>
+            寻找相似案例痊愈案例，同时留下你的足迹供后人参考，打造案例库，造福你我他。<br>
+            大量详实慢性咽炎案例，希望你也是其中完美一个。
 
         </div>
         <ul data-role="listview" data-divider-theme="b" data-inset="true">
@@ -123,6 +122,36 @@
     </footer>
 </div>
 
+<div data-role="page" id="article" data-theme="b">
+    <div data-theme="b" data-role="header" data-position="fixed"  >
+        <h3 >
+            好习惯治咽炎
+        </h3>
+    </div>
+    <div data-role="content">
+        <div style="width: 100%; height: 100%; position: relative;">
+            <h4>1.问医生，找病因。   <br>
+                2.问医生，改掉不知道的坏习惯，养成好习惯。<br>
+                3.参考别人(与你相似)的痊愈经历。                  <br>
+                4.问医生，定制生活习惯和养生法。                    <br>
+                原因不明，怎能乱吃药。                                  <br>
+                （中国最大的慢性咽炎案例库。）                              <br>
+            </h4>
+
+        </div>
+
+    </div>
+    <footer  data-role="footer" data-position="fixed">
+        <nav data-role="navbar">
+            <ul>
+                <li><a href="#index" class="ui-btn-active" data-icon="home">首页</a></li>
+                <li><a href="#task" data-icon="grid">在线医生</a></li>
+                <li><a href="#similiarCase" data-icon="info">相似案例</a></li>
+                <li><a href="#register"  data-icon="gear">账户</a></li>
+            </ul>
+        </nav>
+    </footer>
+</div>
 <div data-role="page" id="welcome" data-theme="b">
     something
     <a href="" data-role="button" data-theme="b" id="sub"  data-icon="arrow-l">ok</a>
@@ -191,7 +220,7 @@
         <h3>
             咨询记录
         </h3>
-        <a data-role="button" data-rel="back">上一步</a>
+        <a data-role="button" id="preButton">上一步</a>
     </div>
     <div data-role="content">
     <ul data-role="listview" id="messageList" class="ui-listview" data-inset="true" role="listbox">
