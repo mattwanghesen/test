@@ -328,7 +328,10 @@ $(document).ready(function () {
     });
 
     $("#submitQuestion").click(function () {
-
+            if($("#questionAsk").val().length<8){
+                alert("最少8个字！");
+                return;
+            }
             $.ajax({
                 type: "get",
                 url: 'http://www.ysrule.com/yy/askQuestion.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
@@ -342,6 +345,7 @@ $(document).ready(function () {
                 //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
                 //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
                 success: function (json) {
+                    $("#questionAsk").val("");
                    alert("提问成功！");
 
                 },
@@ -425,6 +429,10 @@ $(document).ready(function () {
         }
 
     $("#submitQuestionMore").click(function () {
+            if($("#questionAskMore").val().length<8){
+                alert("最少8个字！");
+                return;
+            }
            showLoader();
             $.ajax({
                 type: "get",
@@ -631,7 +639,8 @@ $(document).ready(function () {
             $.ajax({
                 type: "get",
                 url: 'http://www.ysrule.com/yy/searchFolder.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
-                data: {userId:localStorage.getItem('userId'),username: escape($("#username").val()), career: $("#career").val(), birthday: $("#birthday").val(),
+                data: {userId:localStorage.getItem('userId'),username: escape($("#username").val()), career: $("#career").val(), birthday: $("#birthday").val(),t1:localStorage.getItem('my-1'),t2:localStorage.getItem('my-2'),
+                    t3:localStorage.getItem('my-3'),t4:localStorage.getItem('my-4'),t5:localStorage.getItem('my-5'),t6:localStorage.getItem('my-6'),t7:localStorage.getItem('my-7'),t8:localStorage.getItem('my-8'),t9:localStorage.getItem('my-9'),t10:localStorage.getItem('my-10'),
                     sex: $('input[type="radio"][name="sex"]:checked').val(),sickDate:$("#sickDate").val(),sickContent:escape($("#sickContent").html().substring(15).substr(0,$("#sickContent").html().substring(15).length-5))
                 },
                 cache: true, //默认值true
