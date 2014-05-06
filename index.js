@@ -33,7 +33,12 @@ $(document).ready(function () {
             $("#sickContent").show();
             $("#sickContent").empty();
             $("#sickContent").append(localStorage.getItem("sickContent"));
-
+            $("#description").show();
+            $("#description").empty();
+            $("#description").append(localStorage.getItem("description"));
+            $("#sickDesc").show();
+            $("#sickDesc").empty();
+            $("#sickDesc").append(localStorage.getItem("description"));
             $("#sickContent").click(function () {
                 $.mobile.changePage("#mysituaton", { transition: "none", changeHash: false });
             });
@@ -260,7 +265,7 @@ $(document).ready(function () {
         $.ajax({
             type: "get",
             url: 'http://www.ysrule.com/yy/reg.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
-            data: {userId:localStorage.getItem('userId'),username: escape($("#username").val()), career: $("#career").val(), birthday: $("#birthday").val(),t1:localStorage.getItem('my-1'),t2:localStorage.getItem('my-2'),
+            data: {userId:localStorage.getItem('userId'),description:escape($("#description").val()),username: escape($("#username").val()), career: $("#career").val(), birthday: $("#birthday").val(),t1:localStorage.getItem('my-1'),t2:localStorage.getItem('my-2'),
                 t3:localStorage.getItem('my-3'),t4:localStorage.getItem('my-4'),t5:localStorage.getItem('my-5'),t6:localStorage.getItem('my-6'),t7:localStorage.getItem('my-7'),t8:localStorage.getItem('my-8'),t9:localStorage.getItem('my-9'),t10:localStorage.getItem('my-10'),
                 sex: $('input[type="radio"][name="sex"]:checked').val(),sickDate:$("#sickDate").val(),sickContent:escape($("#sickContent").html().substring(15).substr(0,$("#sickContent").html().substring(15).length-33))
             },
@@ -672,7 +677,7 @@ $(document).ready(function () {
                                    $("#detailBirthday")[0].innerText=$("#detailBirthday")[0].innerText.substr(0,3)+ages(unescape(n.birthday));
                                    $("#detailJob")[0].innerText=$("#detailJob")[0].innerText.substr(0,3)+unescape(n.job);
                                    var sc=unescape(n.sickContent);
-                                   $("#detailSickContent")[0].innerText=$("#detailSickContent")[0].innerText.substr(0,3)+(sc.substr(0,sc.length-28));
+                                   $("#detailSickContent")[0].innerText=$("#detailSickContent")[0].innerText.substr(0,3)+(sc.substr(0,sc.length));
                                    $("#detailSickDate")[0].innerText=$("#detailSickDate")[0].innerText.substr(0,3)+ages(unescape(n.sickDate));
                                    $("#hisQuestion").unbind();
                                    $("#hisQuestion").click(function(){
@@ -718,7 +723,7 @@ $(document).ready(function () {
         {
             var Y = new Date().getFullYear();
             return (Y-r[1]);
-        }                                                  t
+        }
         return "error";
     }
     function addLi(obj) {
@@ -728,7 +733,14 @@ $(document).ready(function () {
         var head = document.createElement("h2");
         var img = document.createElement("img");
         var sc=unescape(obj.sickContent);
-        href_a.innerHTML="<img src='../img/apple.png'><h2>"+unescape(obj.username)+"</h2><p>"+sc.substr(0,sc.length-28)+"</p> <p class='ui-li-aside'>"+unescape(obj.sex)+"</p>";
+        var sexType=unescape(obj.sex);
+        var imageStr;
+        if(sexType=="man"){
+            imageStr= "images/man.jpg";
+        }else{
+            imageStr= "images/woman.jpg";
+        }
+        href_a.innerHTML="<img width='100%' height='100%' src='"+imageStr+"'><h2>"+unescape(obj.username)+"</h2><p>"+sc.substr(0,sc.length)+"</p> <p class='ui-li-aside'>"+unescape(obj.job)+"</p>";
         //href_a.href="javascript:del('"+id+"');";
        // href_a.innerHTML ="del";                         t
         //li.innerHTML=txt;                                est
@@ -861,6 +873,9 @@ $(document).ready(function () {
             txt = txt+',' + trim($("#my-10").prev('label').text());
         }
         $("#sickContent").append('从' + $("#sickDate").val() + '开始： ' + txt + '<p style="color:#FF0000">点击修改</p>');
+        $("#sickDesc").show();
+        $("#sickDesc").empty();
+        $("#sickDesc").append(localStorage.getItem('description'));
     }
 
     $("#submitmy").click(function () {
@@ -876,7 +891,8 @@ $(document).ready(function () {
         localStorage.setItem('my-8', $("#my-8").prop("checked"));
         localStorage.setItem('my-9', $("#my-9").prop("checked"));
         localStorage.setItem('my-10', $("#my-10").prop("checked"));
-        localStorage.setItem('sickdate', $("sickdate").text());
+        localStorage.setItem('sickDate', $("#sickDate").text());
+        localStorage.setItem('description',$("#description").val());
         $("#situation").hide();
         //alert($("#my-1").prev('label').text());
         $("#sickContent").show();
