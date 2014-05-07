@@ -27,6 +27,19 @@ $(document).ready(function () {
         getDoctors();
 
     });
+    $("#similiarCase").on("pageshow",function(event){
+
+        initSimiliarCase();
+
+    });
+   function initSimiliarCase(){
+        if(localStorage.getItem('username')!=null&&localStorage.getItem('username')!="null"&&localStorage.getItem('username')!=""){
+            compare();
+        }else{
+            alert("请先描述你的情况！");
+            $.mobile.changePage("#register", { transition: "none", changeHash: false });
+        }
+   }
     $("#register").on("pageinit",function(event){
         if(localStorage.getItem("my-1")!=null||localStorage.getItem("my-1")!=""){
             $("#situation").hide();
@@ -44,8 +57,78 @@ $(document).ready(function () {
             });
         }
     });
+    $("#survey-1").on("pageinit",function(){
+        setSurvey();
+    });
+    $("#survey-2").on("pageinit",function(){
+       if(localStorage.getItem('s4') != undefined){
+            $('input[name="s4"][value="' + localStorage.getItem('s4') + '"]').prop('checked', true).checkboxradio("refresh");
+        }
+        if(localStorage.getItem('s5') != undefined){
+            $('input[name="s5"][value="' + localStorage.getItem('s5') + '"]').prop('checked', true).checkboxradio("refresh");
+        }
+    });
+    $("#survey-3").on("pageinit",function(){
+        if(localStorage.getItem('s6') != undefined){
+            $('input[name="s6"][value="' + localStorage.getItem('s6') + '"]').prop('checked', true).checkboxradio("refresh");
+        }
+        if(localStorage.getItem('s7') != undefined){
+            $('input[name="s7"][value="' + localStorage.getItem('s7') + '"]').prop('checked', true).checkboxradio("refresh");
+        }
+    });
+    $("#survey-4").on("pageinit",function(){
+        if(localStorage.getItem('s8') != undefined){
+            $('input[name="s8"][value="' + localStorage.getItem('s8') + '"]').prop('checked', true).checkboxradio("refresh");
+        }
+        if(localStorage.getItem('s9') != undefined){
+            $('input[name="s9"][value="' + localStorage.getItem('s9') + '"]').prop('checked', true).checkboxradio("refresh");
+        }
+    });
+    $("#survey-5").on("pageinit",function(){
+        if(localStorage.getItem('s10') != undefined){
+            $('input[name="s10"][value="' + localStorage.getItem('s10') + '"]').prop('checked', true).checkboxradio("refresh");
+        }
+        if(localStorage.getItem('s11') != undefined){
+            $('input[name="s11"][value="' + localStorage.getItem('s11') + '"]').prop('checked', true).checkboxradio("refresh");
+        }
+    });
+    $("#survey-6").on("pageinit",function(){
+        if (localStorage.getItem('ss12-1') == "true") {
+            $("#ss12-1").attr('checked','true') ;
+        }
+        if (localStorage.getItem('ss12-2') == "true") {
+            $("#ss12-2").attr('checked','true') ;
+        }
+        if (localStorage.getItem('ss12-3') == "true") {
+            $("#ss12-3").attr('checked','true') ;
+        }
+        if (localStorage.getItem('ss12-4') == "true") {
+            $("#ss12-4").attr('checked','true') ;
+        }
+        if (localStorage.getItem('ss12-5') == "true") {
+            $("#ss12-5").attr('checked','true') ;
+        }
+        if (localStorage.getItem('ss12-6') == "true") {
+            $("#ss12-6").attr('checked','true') ;
+        }
+        if (localStorage.getItem('ss12-7') == "true") {
+            $("#ss12-7").attr('checked','true') ;
+        }
+        if (localStorage.getItem('ss12-8') == "true") {
+            $("#ss12-8").attr('checked','true') ;
+        }
+        if (localStorage.getItem('ss12-9') == "true") {
+            $("#ss12-9").attr('checked','true') ;
+        }
+        if (localStorage.getItem('ss12-10') == "true") {
+            $("#ss12-10").attr('checked','true') ;
+        }
+    });
+
+
 
     $("#birthday").mobiscroll(opt).date(opt);
+
     if(localStorage.getItem('username')!=null&&localStorage.getItem('username')!="null"&&localStorage.getItem('username')!=""){
         $("#divUserName").show();
         $("#divinputusername").hide();
@@ -81,47 +164,55 @@ $(document).ready(function () {
         localStorage.setItem('s1', $("#s1").val());
         localStorage.setItem('s2', $('input[type="radio"][name="s2"]:checked').val());
         localStorage.setItem('s3', $('#s3').val());
-        localStorage.setItem('s4', $('input[type="radio"][name="s4"]:checked').val());
+
 
 
         $.mobile.changePage("#survey-2", { transition: "slideup", changeHash: false });
     });
     $('input[type="radio"][name="s4"]').click(function () {
+        localStorage.setItem('s4', $('input[type="radio"][name="s4"]:checked').val());
         if ($('input[type="radio"][name="s5"]:checked').val() != undefined) {
             $.mobile.changePage("#survey-3", { transition: "slideup", changeHash: false });
         }
     });
     $('input[type="radio"][name="s5"]').click(function () {
+        localStorage.setItem('s5', $('input[type="radio"][name="s5"]:checked').val());
         if ($('input[type="radio"][name="s4"]:checked').val() != undefined) {
             $.mobile.changePage("#survey-3", { transition: "slideup", changeHash: false });
         }
     });
     $('input[type="radio"][name="s6"]').click(function () {
+        localStorage.setItem('s6', $('input[type="radio"][name="s6"]:checked').val());
         if ($('input[type="radio"][name="s7"]:checked').val() != undefined) {
             $.mobile.changePage("#survey-4", { transition: "slideup", changeHash: false });
         }
     });
     $('input[type="radio"][name="s7"]').click(function () {
+        localStorage.setItem('s7', $('input[type="radio"][name="s7"]:checked').val());
         if ($('input[type="radio"][name="s6"]:checked').val() != undefined) {
             $.mobile.changePage("#survey-4", { transition: "slideup", changeHash: false });
         }
     });
     $('input[type="radio"][name="s8"]').click(function () {
+        localStorage.setItem('s8', $('input[type="radio"][name="s8"]:checked').val());
         if ($('input[type="radio"][name="s9"]:checked').val() != undefined) {
             $.mobile.changePage("#survey-5", { transition: "slideup", changeHash: false });
         }
     });
     $('input[type="radio"][name="s9"]').click(function () {
+        localStorage.setItem('s9', $('input[type="radio"][name="s9"]:checked').val());
         if ($('input[type="radio"][name="s8"]:checked').val() != undefined) {
             $.mobile.changePage("#survey-5", { transition: "slideup", changeHash: false });
         }
     });
     $('input[type="radio"][name="s10"]').click(function () {
+        localStorage.setItem('s10', $('input[type="radio"][name="s10"]:checked').val());
         if ($('input[type="radio"][name="s11"]:checked').val() != undefined) {
             $.mobile.changePage("#survey-6", { transition: "slideup", changeHash: false });
         }
     });
     $('input[type="radio"][name="s11"]').click(function () {
+        localStorage.setItem('s11', $('input[type="radio"][name="s11"]:checked').val());
         if ($('input[type="radio"][name="s10"]:checked').val() != undefined) {
             $.mobile.changePage("#survey-6", { transition: "slideup", changeHash: false });
         }
@@ -218,6 +309,17 @@ $(document).ready(function () {
 
 
     $("#submit6").click(function () {
+        localStorage.setItem('ss12-1', $("#ss12-1").prop("checked"));
+        localStorage.setItem('ss12-2', $("#ss12-2").prop("checked"));
+        localStorage.setItem('ss12-3', $("#ss12-3").prop("checked"));
+        localStorage.setItem('ss12-4', $("#ss12-4").prop("checked"));
+        localStorage.setItem('ss12-5', $("#ss12-5").prop("checked"));
+        localStorage.setItem('ss12-6', $("#ss12-6").prop("checked"));
+        localStorage.setItem('ss12-7', $("#ss12-7").prop("checked"));
+        localStorage.setItem('ss12-8', $("#ss12-8").prop("checked"));
+        localStorage.setItem('ss12-9', $("#ss12-9").prop("checked"));
+        localStorage.setItem('ss12-10', $("#ss12-10").prop("checked"));
+
         calculateValue();
     });
     $("#surveybtn").click(function () {
@@ -640,80 +742,84 @@ $(document).ready(function () {
         }
 
     $("#compare").click(function () {
-           showLoader();
-            $.ajax({
-                type: "get",
-                url: 'http://www.ysrule.com/yy/searchFolder.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
-                data: {userId:localStorage.getItem('userId'),username: escape($("#username").val()), career: $("#career").val(), birthday: $("#birthday").val(),t1:localStorage.getItem('my-1'),t2:localStorage.getItem('my-2'),
-                    t3:localStorage.getItem('my-3'),t4:localStorage.getItem('my-4'),t5:localStorage.getItem('my-5'),t6:localStorage.getItem('my-6'),t7:localStorage.getItem('my-7'),t8:localStorage.getItem('my-8'),t9:localStorage.getItem('my-9'),t10:localStorage.getItem('my-10'),
-                    sex: $('input[type="radio"][name="sex"]:checked').val(),sickDate:$("#sickDate").val(),sickContent:escape($("#sickContent").html().substring(15).substr(0,$("#sickContent").html().substring(15).length-5))
-                },
-                cache: true, //默认值true
-                dataType: "jsonp",
-                jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
-                jsonpCallback: "jsonpCallback",
-                //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
-                //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
-                success: function (json) {
-                    hideLoader();
-                    $("#listViewUser").empty();
-                    var data = json.magazineTab.records;
-                    $.each(data, function(i, n){
-                        addLi(n);
 
-                    });
-
-                    $.mobile.changePage("#similiarCase", { transition: "none", changeHash: false });
-                    $("#listViewUser").listview("refresh");
-                    var ulHomes = $("#listViewUser")[0].children;
-
-                    $(ulHomes).each(function(){
-                        $(this).click(function(){
-                            localStorage.setItem('currentID', this.id);
-                            $.each(data, function(i, n){
-                               if(n.ID==localStorage.getItem('currentID')){
-                                   $("#detailUsername")[0].innerText=unescape(n.username);
-                                   $("#detailSex")[0].innerText=$("#detailSex")[0].innerText.substr(0,3)+(unescape(n.sex)=="man"?"男":"女");
-                                   $("#detailBirthday")[0].innerText=$("#detailBirthday")[0].innerText.substr(0,3)+ages(unescape(n.birthday));
-                                   $("#detailJob")[0].innerText=$("#detailJob")[0].innerText.substr(0,3)+unescape(n.job);
-                                   var sc=unescape(n.sickContent);
-                                   $("#detailSickContent")[0].innerText=$("#detailSickContent")[0].innerText.substr(0,3)+(sc.substr(0,sc.length));
-                                   $("#detailSickDate")[0].innerText=$("#detailSickDate")[0].innerText.substr(0,3)+ages(unescape(n.sickDate));
-                                   $("#hisQuestion").unbind();
-                                   $("#hisQuestion").click(function(){
-                                       $("#messageList").empty();
-                                       getMyQuestionList(localStorage.getItem('currentID'));
-                                       $.mobile.changePage("#adviceList", { transition: "slideup", changeHash: false });
-
-                                   })
-
-                               }
-
-                            });
-                            $("#preButton").click(function(){
-                                $.mobile.changePage("#userDetail", { transition: "none", changeHash: false });
-                            });
-                            $.mobile.changePage("#userDetail", { transition: "slideup", changeHash: false });
-                        });
-
-                    });
-
-                },
-                error: function (error) {
-                    hideLoader();
-                    alert("error");
-                }
-            });
-
-
-            function jsonpCallback(data) //回调函数
-            {
-                alert(data.message); //
-            }
-
+            compare();
         }
 
     );
+
+    function compare(){
+        showLoader();
+        $.ajax({
+            type: "get",
+            url: 'http://www.ysrule.com/yy/searchFolder.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+            data: {userId:localStorage.getItem('userId'),username: escape($("#username").val()), career: $("#career").val(), birthday: $("#birthday").val(),t1:localStorage.getItem('my-1'),t2:localStorage.getItem('my-2'),
+                t3:localStorage.getItem('my-3'),t4:localStorage.getItem('my-4'),t5:localStorage.getItem('my-5'),t6:localStorage.getItem('my-6'),t7:localStorage.getItem('my-7'),t8:localStorage.getItem('my-8'),t9:localStorage.getItem('my-9'),t10:localStorage.getItem('my-10'),
+                sex: $('input[type="radio"][name="sex"]:checked').val(),sickDate:$("#sickDate").val(),sickContent:escape($("#sickContent").html().substring(15).substr(0,$("#sickContent").html().substring(15).length-5))
+            },
+            cache: true, //默认值true
+            dataType: "jsonp",
+            jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+            jsonpCallback: "jsonpCallback",
+            //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
+            //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
+            success: function (json) {
+                hideLoader();
+                $("#listViewUser").empty();
+                var data = json.magazineTab.records;
+                $.each(data, function(i, n){
+                    addLi(n);
+
+                });
+
+                $.mobile.changePage("#similiarCase", { transition: "none", changeHash: false });
+                $("#listViewUser").listview("refresh");
+                var ulHomes = $("#listViewUser")[0].children;
+
+                $(ulHomes).each(function(){
+                    $(this).click(function(){
+                        localStorage.setItem('currentID', this.id);
+                        $.each(data, function(i, n){
+                            if(n.ID==localStorage.getItem('currentID')){
+                                $("#detailUsername")[0].innerText=unescape(n.username);
+                                $("#detailSex")[0].innerText=$("#detailSex")[0].innerText.substr(0,3)+(unescape(n.sex)=="man"?"男":"女");
+                                $("#detailBirthday")[0].innerText=$("#detailBirthday")[0].innerText.substr(0,3)+ages(unescape(n.birthday));
+                                $("#detailJob")[0].innerText=$("#detailJob")[0].innerText.substr(0,3)+unescape(n.job);
+                                var sc=unescape(n.sickContent);
+                                $("#detailSickContent")[0].innerText=$("#detailSickContent")[0].innerText.substr(0,3)+(sc.substr(0,sc.length));
+                                $("#detailSickDate")[0].innerText=$("#detailSickDate")[0].innerText.substr(0,3)+ages(unescape(n.sickDate));
+                                $("#hisQuestion").unbind();
+                                $("#hisQuestion").click(function(){
+                                    $("#messageList").empty();
+                                    getMyQuestionList(localStorage.getItem('currentID'));
+                                    $.mobile.changePage("#adviceList", { transition: "slideup", changeHash: false });
+
+                                })
+
+                            }
+
+                        });
+                        $("#preButton").click(function(){
+                            $.mobile.changePage("#userDetail", { transition: "none", changeHash: false });
+                        });
+                        $.mobile.changePage("#userDetail", { transition: "slideup", changeHash: false });
+                    });
+
+                });
+
+            },
+            error: function (error) {
+                hideLoader();
+                alert("error");
+            }
+        });
+
+
+        function jsonpCallback(data) //回调函数
+        {
+            alert(data.message); //
+        }
+    }
     function  ages(str)
     {
         var r =  str.match(/^(\d{1,4})(-|\/)(\d{1,2})\2(\d{1,2})$/);
@@ -766,10 +872,7 @@ $(document).ready(function () {
         li.class="userListClass";
         ul[0].innerHTML+=li.outerHTML;
     }
-
-
     function addQuestions(obj) {
-
        var ul=$("#messageList");
        //" <ul data-role='listview'  class='ui-listview' data-inset='true' role='listbox' >"+
        var listStr= "<li data-role='list-divider' role='heading' tabindex='0' class='ui-li ui-li-divider ui-btn ui-bar-b ui-btn-up-c' style='white-space:normal;font-size:8pt;font-weight:normal'>"+
@@ -806,6 +909,17 @@ $(document).ready(function () {
                 "<div style='font-size:9pt;font-weight:normal;word-break:break-all;white-space:normal;'>"+unescape(obj.content)+"</div></a></li>";
         }
         ul[0].innerHTML+=listStr;
+    }
+    function setSurvey(){
+        if(localStorage.getItem('s1') != undefined){
+            $("#s1").val(localStorage.getItem('s1')).slider("refresh");
+        }
+        if(localStorage.getItem('s2') != undefined){
+            $('input[name="s2"][value="' + localStorage.getItem('s2') + '"]').prop('checked', true).checkboxradio("refresh");
+        }
+        if(localStorage.getItem('s3') != undefined){
+            $("#s3").val(localStorage.getItem('s3')).slider("refresh");
+        }
     }
     function setMySituation() {
         if (localStorage.getItem('my-1') == "true") {
