@@ -45,7 +45,7 @@ $(document).ready(function () {
             $("#situation").hide();
             $("#sickContent").show();
             $("#sickContent").empty();
-            $("#sickContent").append(localStorage.getItem("sickContent"));
+            $("#sickContent").append("症状：").append(localStorage.getItem("sickContent"));
             $("#description").show();
             $("#description").empty();
             $("#description").append(localStorage.getItem("description"));
@@ -787,7 +787,8 @@ $(document).ready(function () {
                                 $("#detailBirthday")[0].innerText=$("#detailBirthday")[0].innerText.substr(0,3)+ages(unescape(n.birthday));
                                 $("#detailJob")[0].innerText=$("#detailJob")[0].innerText.substr(0,3)+unescape(n.job);
                                 var sc=unescape(n.sickContent);
-                                $("#detailSickContent")[0].innerText=$("#detailSickContent")[0].innerText.substr(0,3)+(sc.substr(0,sc.length));
+                                $("#detailSickContent")[0].innerText=$("#detailSickContent")[0].innerText.substr(0,3)+sc;
+                                $("#detailSickDesc")[0].innerText=$("#detailSickDesc")[0].innerText.substr(0,3)+ unescape(n.description);
                                 $("#detailSickDate")[0].innerText=$("#detailSickDate")[0].innerText.substr(0,3)+ages(unescape(n.sickDate));
                                 $("#hisQuestion").unbind();
                                 $("#hisQuestion").click(function(){
@@ -990,7 +991,7 @@ $(document).ready(function () {
         $("#sickContent").append('从' + $("#sickDate").val() + '开始： ' + txt + '<p style="color:#FF0000">点击修改</p>');
         $("#sickDesc").show();
         $("#sickDesc").empty();
-        $("#sickDesc").append(localStorage.getItem('description'));
+        $("#sickDesc").append("详细描述：").append(localStorage.getItem('description'));
     }
 
     $("#submitmy").click(function () {

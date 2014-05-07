@@ -72,18 +72,18 @@
 <div data-role="page" id="index" data-theme="b">
     <div data-theme="b" data-role="header" data-position="fixed"  >
         <h3 >
-            好习惯治咽炎
+           慢性咽炎案例库
         </h3>
     </div>
     <div data-role="content">
         <div style="width: 100%; height: 100%; position: relative;">
             <a href="#article" data-transition="slide">
-            <h4>只有找不到的病因，没有好不了的咽炎<br>
-            </h4>
+
              </a>
             寻找相似案例痊愈案例，同时留下你的足迹供后人参考，打造案例库，造福你我他。<br>
-            大量详实慢性咽炎案例，希望你也是其中完美一个。
-
+            大量详实慢性咽炎案例，希望你也是其中完美一个。<br>
+            <h4>只有找不到的病因，没有好不了的咽炎
+            </h4>
         </div>
         <ul data-role="listview" data-divider-theme="b" data-inset="true">
             <li data-theme="b">
@@ -113,7 +113,7 @@
     <footer  data-role="footer" data-position="fixed">
         <nav data-role="navbar">
             <ul>
-                <li><a href="#index" data-role="button" data-icon="home">首页</a></li>
+                <li><a href="#index"  data-icon="home">首页</a></li>
                 <li><a href="#task" data-icon="grid">在线医生</a></li>
                 <li><a href="#similiarCase" data-icon="info">相似案例</a></li>
                 <li><a href="#register"  data-icon="gear">账户</a></li>
@@ -144,7 +144,7 @@
     <footer  data-role="footer" data-position="fixed">
         <nav data-role="navbar">
             <ul>
-                <li><a href="#index" data-role="button" data-icon="home">首页</a></li>
+                <li><a href="#index"  data-icon="home">首页</a></li>
                 <li><a href="#task" data-icon="grid">在线医生</a></li>
                 <li><a href="#similiarCase" data-icon="info">相似案例</a></li>
                 <li><a href="#register"  data-icon="gear">账户</a></li>
@@ -272,6 +272,7 @@
         <p id="detailJob">职业：</p>
         <p id="detailSickDate">病程：</p>
         <p id="detailSickContent">症状：</p>
+        <p id="detailSickDesc">描述：</p>
         <a  data-role="button" data-theme="b" id="hisQuestion" >咨询医生记录</a>
         <div data-role="fieldcontain">
 
@@ -711,9 +712,10 @@
             </select>
     </div>
         <a href="#mysituaton" data-role="button" id="situation" data-theme="b">填写我的症状</a>
-        <div id="sickContent" hidden="true">dd</div>
-        <div id="sickDesc" hidden="true">dd</div>
+        <div id="sickContent" hidden="true">症状：</div>
+        <div id="sickDesc" hidden="true">详情：</div>
         <a data-role="button" id="clearLocal" data-theme="b">qingchu</a>
+        <a data-role="button" id="yyNumber" data-theme="b">我的咽炎指数</a>
         <a data-role="button" id="myQuestions" data-theme="b">我的问医生记录</a>
         <a data-role="button" id="compare" data-theme="b">参考与我相似案例</a>
     </div>
@@ -761,9 +763,11 @@
             <label for="my-9">忧伤情绪低落</label>
             <input type="checkbox" name="my1" id="my-10" value="10"  />
             <label for="my-10">消化不好胃返酸水</label>
-            <textarea type="text" name="name" id="description" placeholder="详细描述" data-clear-btn=true>
+            <div data-role="fieldcontain">
+                <label for="description">详情:</label>
+            <textarea type="text" name="name" id="description" placeholder="如果足够详细，有机会获得医生的免费咨询时间" data-clear-btn=true>
             </textarea>
-
+            </div>
         </fieldset>
         <a href="" data-role="button" data-theme="b" id="submitmy" >确定</a>
 
