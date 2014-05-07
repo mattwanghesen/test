@@ -92,7 +92,7 @@ $(document).ready(function () {
             $('input[name="s11"][value="' + localStorage.getItem('s11') + '"]').prop('checked', true).checkboxradio("refresh");
         }
     });
-    $("#survey-6").on("pageinit",function(){
+  function setSurvey6(){
         if (localStorage.getItem('ss12-1') == "true") {
             $("#ss12-1").attr('checked','true') ;
         }
@@ -123,7 +123,7 @@ $(document).ready(function () {
         if (localStorage.getItem('ss12-10') == "true") {
             $("#ss12-10").attr('checked','true') ;
         }
-    });
+    }
 
 
 
@@ -140,6 +140,7 @@ $(document).ready(function () {
         $("#birthday").val(localStorage.getItem('birthday'));
         $("#career").val(localStorage.getItem('career'));
         setMySituation();
+        setSurvey6();
     } else{
         $("#divUserName").hide();
         $("#username").show();
