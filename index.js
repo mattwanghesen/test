@@ -218,9 +218,18 @@ $(document).ready(function () {
             $.mobile.changePage("#survey-6", { transition: "slideup", changeHash: false });
         }
     });
+    $("#yyNumber").click(function(){
+       if(localStorage.getItem("surveyValue")!=undefined&&localStorage.getItem("surveyValue")!="null"&&localStorage.getItem("surveyValue")!=null){
+           calculateValue();
+           $.mobile.changePage("#survey-7", { transition: "slideup", changeHash: false });
+       }else{
+           $.mobile.changePage("#survey-1", { transition: "slideup", changeHash: false });
+       }
+
+    });
     function calculateValue() {
         var s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12;
-        var value1 = $("#s1").val();
+        var value1 = localStorage.getItem('s1');
         s1 = 0;
         if (value1 < 10) {
             s1 = 2;
@@ -231,7 +240,7 @@ $(document).ready(function () {
         if (value1 <= 3) {
             s1 = 10;
         }
-        var value2 = $('input[type="radio"][name="s2"]:checked').val();
+        var value2 = localStorage.getItem('s2');
         s2 = 0;
         if (value2 == 1) {
             s2 = 3;
@@ -239,7 +248,7 @@ $(document).ready(function () {
         if (value2 == 3) {
             s2 = 4;
         }
-        var value3 = $("#s3").val();
+        var value3 = localStorage.getItem('s3');
         s3 = 0;
         if (value3 <= 3) {
             s3 = 10;
@@ -247,7 +256,7 @@ $(document).ready(function () {
         if (value3 <= 5) {
             s3 = 5;
         }
-        var value4 = $('input[type="radio"][name="s4"]:checked').val();
+        var value4 = localStorage.getItem('s4');
         s4 = 0;
         if (value4 == 3) {
             s4 = 5;
@@ -256,7 +265,7 @@ $(document).ready(function () {
             s4 = 10;
         }
 
-        var value5 = $('input[type="radio"][name="s5"]:checked').val();
+        var value5 = localStorage.getItem('s5');
         s5 = 0;
         if (value5 == 9 || value5 == 10) {
             s5 = 10;
@@ -264,7 +273,7 @@ $(document).ready(function () {
         if (value5 == 8) {
             s5 = 5;
         }
-        var value6 = $('input[type="radio"][name="s6"]:checked').val();
+        var value6 = localStorage.getItem('s6');
         s6 = 0;
         if (value6 == 12) {
             s6 = 1;
@@ -287,21 +296,21 @@ $(document).ready(function () {
             value00 = 3;
         }
         s6 = s6 + value00;
-        s7 = parseInt($('input[type="radio"][name="s7"]:checked').val());
-        s8 = parseInt($('input[type="radio"][name="s8"]:checked').val());
-        s9 = parseInt($('input[type="radio"][name="s9"]:checked').val());
-        s10 = parseInt($('input[type="radio"][name="s10"]:checked').val());
-        s11 = parseInt($('input[type="radio"][name="s11"]:checked').val());
+        s7 = parseInt(localStorage.getItem('s7'));
+        s8 = parseInt(localStorage.getItem('s8'));
+        s9 = parseInt(localStorage.getItem('s9'));
+        s10 = parseInt(localStorage.getItem('s10'));
+        s11 = parseInt(localStorage.getItem('s11'));
         var xx = 0;
         var checks = "";
         $("input[name='s12']:checkbox").each(function () {
             if (this.checked) {
                 xx = xx + 1;
-                checks += $(this).val() + "|";
+                checks += $(this).val() + "*";
             }
         })
         s12 = xx * 10;
-        var sall = (s1 + s2 + s3 + s4 + s5 + s6 + s7 + s8 + s9 + s10 + s12) * s11;
+        var sall = (s1 + s2 + s3 + s4+s3*s4 + s5 + s6 + s7 + s8 + s9 + s10 + s12) * s11;
         $('#surveyValue').text(sall);
         localStorage.setItem('checks', checks);
         localStorage.setItem('checkNum', xx);
@@ -322,16 +331,14 @@ $(document).ready(function () {
         localStorage.setItem('ss12-10', $("#ss12-10").prop("checked"));
 
         calculateValue();
+        submitSurvey();
     });
-    $("#surveybtn").click(function () {
-            if (localStorage.getItem('phoneNumber') != "") {
-                $.mobile.changePage("#success", { transition: "slideup", changeHash: false });
-            } else {
+ function submitSurvey() {
                 $.ajax({
                     type: "get",
-                    url: 'http://www.ysrule.com/ysrule/survey.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
-                    data: {nickname: $("#name").val(), code: $("#phoneNumber").val(), career: $("#career").val(), age: $("#age").val(),
-                        sex: $('input[type="radio"][name="sex"]:checked').val(), s1: $('#s1').val(), s2: $('input[type="radio"][name="s2"]:checked').val(), s3: $('#s3').val(), s4: $('input[type="radio"][name="s4"]:checked').val(), s5: $('input[type="radio"][name="s5"]:checked').val(), s6: $('input[type="radio"][name="s6"]:checked').val(), s7: $('input[type="radio"][name="s7"]:checked').val(), s8: $('input[type="radio"][name="s8"]:checked').val(), s9: $('input[type="radio"][name="s9"]:checked').val(), s10: $('input[type="radio"][name="s10"]:checked').val(), s11: $('input[type="radio"][name="s11"]:checked').val(), s12: localStorage.getItem("checks"), surveyValue: localStorage.getItem("surveyValue")
+                    url: 'http://www.ysrule.com/yy/survey.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+                    data: {userId:localStorage.getItem('userId'),
+                        s1: localStorage.getItem('s1'), s2: localStorage.getItem('s2'), s3: localStorage.getItem('s3'), s4: localStorage.getItem('s4'), s5: localStorage.getItem('s5'), s6: localStorage.getItem('s6'), s7: localStorage.getItem('s7'), s8: localStorage.getItem('s8'), s9: localStorage.getItem('s9'), s10: localStorage.getItem('s10'), s11: localStorage.getItem('s11'), s12: localStorage.getItem("checks"), surveyValue: localStorage.getItem("surveyValue")
                     },
                     cache: true, //默认值true
                     dataType: "jsonp",
@@ -340,11 +347,13 @@ $(document).ready(function () {
                     //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
                     //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
                     success: function (json) {
-                        localStorage.setItem('phoneNumber', $('#phoneNumber').val());
+                       // localStorage.setItem('phoneNumber', $('#phoneNumber').val());
+                        //$.mobile.changePage("#success", { transition: "slideup", changeHash: false });
+                        alert("成功上传！");
                         $.mobile.changePage("#success", { transition: "slideup", changeHash: false });
                     },
                     error: function (error) {
-                        alert("erroe2");
+                        alert("网络连接错误！");
                     }
                 });
 
@@ -353,16 +362,16 @@ $(document).ready(function () {
                 {
                     alert(data.message); //
                 }
-            }
         }
 
-    );
+
     $("#clearLocal").click(function(){
         localStorage.setItem('userId', null);
         localStorage.setItem('username', null);
         localStorage.setItem('career', null);
         localStorage.setItem('sex',null);
         localStorage.setItem('birthday', null);
+        localStorage.setItem('surveyValue', null);
     });
     function saveUserInfo(){
         $.ajax({
@@ -393,7 +402,7 @@ $(document).ready(function () {
 
             },
             error: function (error) {
-                alert("erroe3");
+                alert("网络连接错误！");
             }
         });
 
@@ -458,7 +467,7 @@ $(document).ready(function () {
 
                 },
                 error: function (error) {
-                    alert("提问失败！");
+                    alert("网络连接错误！");
                 }
             });
 
@@ -524,7 +533,7 @@ $(document).ready(function () {
                 },
                 error: function (error) {
                     hideLoader();
-                    alert("网络连接失败！");
+                    alert("网络连接错误！");
                 }
             });
 
@@ -574,7 +583,7 @@ $(document).ready(function () {
                 },
                 error: function (error) {
                     hideLoader();
-                    alert("提问失败！");
+                    alert("网络连接错误！");
                 }
             });
 
@@ -623,7 +632,7 @@ $(document).ready(function () {
 
             },
             error: function (error) {
-                alert("erroe4"+userid);
+                alert("网络连接错误！");
             }
         });
 
@@ -670,7 +679,7 @@ $(document).ready(function () {
 
             },
             error: function (error) {
-                alert("erroe5");
+                alert("网络连接错误！");
             }
         });
 
@@ -730,7 +739,7 @@ $(document).ready(function () {
 
                 },
                 error: function (error) {
-                    alert("erroe6");
+                    alert("网络连接错误！");
                 }
             });
 
@@ -812,7 +821,7 @@ $(document).ready(function () {
             },
             error: function (error) {
                 hideLoader();
-                alert("error");
+                alert("网络连接错误！");
             }
         });
 
