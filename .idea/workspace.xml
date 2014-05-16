@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" name="Default" comment="test one 1">
-      <change type="DELETED" beforePath="D:\sss\onlinetwo\test\themes\fit.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\sss\onlinetwo\test\themes\fit.min.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/jquery.mobile.icons.min.css" afterPath="$PROJECT_DIR$/themes/jquery.mobile.icons.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" name="Default" comment="test one 1" />
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1400120054163" ignored="false" />
@@ -36,10 +30,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="84" selection-start="3147" selection-end="3147" vertical-scroll-proportion="0.756135">
+            <state line="100" column="59" selection-start="3108" selection-end="3108" vertical-scroll-proportion="-9.0">
               <folding />
             </state>
           </provider>
@@ -61,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="227" column="41" selection-start="9493" selection-end="9493" vertical-scroll-proportion="0.0">
+            <state line="924" column="115" selection-start="39979" selection-end="39979" vertical-scroll-proportion="0.83480823">
               <folding>
                 <marker date="1399882431631" expanded="false" signature="37057:37108" placeholder="..." />
                 <marker date="1399882431631" expanded="false" signature="37256:37343" placeholder="..." />
@@ -449,9 +443,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="100" column="59" selection-start="3108" selection-end="3108" vertical-scroll-proportion="-9.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="227" column="41" selection-start="9493" selection-end="9493" vertical-scroll-proportion="0.0">
+        <state line="924" column="115" selection-start="39979" selection-end="39979" vertical-scroll-proportion="0.83480823">
           <folding>
             <marker date="1399882431631" expanded="false" signature="37057:37108" placeholder="..." />
             <marker date="1399882431631" expanded="false" signature="37256:37343" placeholder="..." />
@@ -462,13 +463,6 @@
             <marker date="1399882431631" expanded="false" signature="39733:39806" placeholder="..." />
             <marker date="1399882431631" expanded="false" signature="43002:43015" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="84" selection-start="3147" selection-end="3147" vertical-scroll-proportion="0.756135">
-          <folding />
         </state>
       </provider>
     </entry>
