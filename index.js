@@ -891,9 +891,9 @@ $(document).ready(function () {
            "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:55px;background: url(images/comments.jpg) no-repeat;padding:3px;padding-left:20px'>"+obj.commentNum+"</span>"+
            "<span onclick='spanClick("+obj.ID+");' class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:5px;" +
            "background: url(images/like1.jpg) no-repeat;padding:4px;padding-left:20px'>"+obj.agreenumber+"</span></li>"+
-           "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='c' >"+
+           "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='e' >"+
             "<a href='#'>"+
-                "<img width='40' height='40' src='images/apple.jpg'/>"+
+               // "<img width='40' height='40' src='images/apple.jpg'/>"+
                 "<div style='font-size:9pt;font-weight:normal;white-space:normal;word-break:break-all;'>"+unescape(obj.content)+"</div></a></li>";
        // $("#messageList").append(listStr);
 
@@ -903,20 +903,20 @@ $(document).ready(function () {
         var ul=$("#messageDetails");
         var listStr="";
         if(obj.isDoctor!="True"){
-            listStr= "<li data-role='list-divider' role='heading' tabindex='0' data-theme='c' class='ui-li ui-li-divider ui-btn ui-bar-e ui-btn-up-d' style='font-size:8pt;font-weight:normal;white-space:normal;'>"+
+            listStr= "<li data-role='list-divider' role='heading' tabindex='0'  class='ui-li ui-li-divider ui-btn ui-bar-e ui-btn-up-d' style='font-size:8pt;font-weight:normal;white-space:normal;'>"+
                 unescape(obj.username)+" 发布于："+unescape(obj.createtime)+
-                "<span onclick='spanClick("+obj.ID+");' class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:5px;background: url(images/like1.jpg) no-repeat;padding:3px;padding-left:20px'>"+obj.agreenumber+"</span></li>"+
-                "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='c' >"+
+                "<span onclick='spanClick("+obj.ID+");' class='ui-li-count ui-btn-up-e ui-btn-corner-all' style='right:5px;background: url(images/like1.jpg) no-repeat;padding:3px;padding-left:20px'>"+obj.agreenumber+"</span></li>"+
+                "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='e' >"+
                 "<a href='#'>"+
-                "<img width='40' height='40' src='images/like.jpg'/>"+
+                //"<img width='40' height='40' src='images/like.jpg'/>"+
                 "<div style='font-size:9pt;font-weight:normal;word-break:break-all;white-space:normal;'>"+unescape(obj.content)+"</div></a></li>";
         }else{
-            listStr= "<li data-role='list-divider'  role='heading' tabindex='0' class='ui-li ui-li-divider ui-btn-b ui-bar-e ui-btn-up-c' style='font-size:8pt;font-weight:normal'>"+
+            listStr= "<li data-role='list-divider'  role='heading' tabindex='0' class='ui-li ui-li-divider ui-btn-c ui-bar-c ui-btn-up-c' style='font-size:8pt;font-weight:normal'>"+
                 unescape(obj.doctorname)+" 发布于："+unescape(obj.createtime)+
                 "<span onclick='spanClick("+obj.ID+");' class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:5px;background: url(images/like1.jpg) no-repeat;padding:3px;padding-left:20px'>"+obj.agreenumber+"</span></li>"+
-                "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='c' >"+
+                "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='e' >"+
                 "<a href='#'>"+
-                "<img width='40' height='40' src='images/apple.jpg'/>"+
+                //"<img width='40' height='40' src='images/apple.jpg'/>"+
                 "<div style='font-size:9pt;font-weight:normal;word-break:break-all;white-space:normal;'>"+unescape(obj.content)+"</div></a></li>";
         }
         ul[0].innerHTML+=listStr;
