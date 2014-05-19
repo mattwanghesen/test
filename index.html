@@ -69,14 +69,18 @@
 <body>
 
 <!-- Home -->
-<div data-role="page" id="index" data-theme="b">
-    <div data-theme="b" data-role="header" data-position="fixed"  >
-        <h3 >
+<div data-role="page" id="index" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed" style="color: white;border: white"  >
+        <h3 style="" >
            慢性咽炎案例库
         </h3>
     </div>
-    <div data-role="content">
-        <img src="images/flow1.jpg" width="100%">
+    <div data-role="content" style="background-image:url('images/demo0519_bj.png')">
+        <a href="#register" data-transition="slide"><img src="images/botton_fill-in_1.png" width="100%"> </a>
+        <a href="#survey-1" data-transition="slide"><img src="images/botton_test_2.png" width="100%">  </a>
+        <a href="#similiarCase" data-transition="slide"><img src="images/botton_search_3.png" width="100%"> </a>
+        <a href="#task" data-transition="slide"><img src="images/botton_online_4.png" width="100%"> </a>
+        <img src="images/recommend_all.png" width="100%">
         <div style="width: 100%; height: 100%; position: relative;">
             <a href="#article" data-transition="slide">
 
@@ -84,43 +88,13 @@
 
             寻找相似案例痊愈案例，同时留下你的足迹供后人参考，打造案例库，造福你我他。<br>
             大量详实慢性咽炎案例，希望你也是其中完美一个。<br>
-            <h4>只有找不到的病因，没有好不了的咽炎
-            </h4>
+            <a href="#smalltipone" data-transition="slide"> <img src="images/botton_story.png" width="100%"></a>
             <h4>同病相助，他山之石可以攻玉
             </h4>
         </div>
-        <ul data-role="listview" data-divider-theme="b" data-inset="true">
-            <li data-theme="b">
-                <a href="#register" data-transition="slide">
-                    填写我的症状
-                </a>
-            </li>
 
-            <li data-theme="b">
-                <a href="#survey-1" data-transition="slide">
-                    慢性咽炎指数（我的生活习惯）
-                </a>
-            </li>
-            <li data-theme="b">
-                <a href="#similiarCase" data-transition="slide">
-                    搜索与我相似案例
-                </a>
-            </li>
-            <li data-theme="b">
-                <a href="#task" data-transition="slide">
-                    在线问医生
-                </a>
-            </li>
-            <li data-theme="b">
-                <a href="#smalltipone" data-transition="slide">
-                    故事：不找病因，将会怎样
-                </a>
-            </li>
-
-
-        </ul>
     </div>
-    <footer  data-role="footer" data-position="fixed">
+    <footer  data-role="footer" data-position="fixed" data-theme="c">
         <nav data-role="navbar">
             <ul>
                 <li><a href="#index"  data-icon="home">首页</a></li>
@@ -132,8 +106,8 @@
     </footer>
 </div>
 
-<div data-role="page" id="article" data-theme="b">
-    <div data-theme="b" data-role="header" data-position="fixed"  >
+<div data-role="page" id="article" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed"  >
         <h3 >
             好习惯治咽炎
         </h3>
@@ -162,19 +136,19 @@
         </nav>
     </footer>
 </div>
-<div data-role="page" id="welcome" data-theme="b">
+<div data-role="page" id="welcome" data-theme="a">
     something
-    <a href="" data-role="button" data-theme="b" id="sub"  data-icon="arrow-l">ok</a>
+    <a href="" data-role="button" data-theme="a" id="sub"  data-icon="arrow-l">ok</a>
 </div>
 
-<div data-role="page" id="similiarCase" data-theme="b">
+<div data-role="page" id="similiarCase" data-theme="a">
 
-    <div data-role="header" data-theme="b">
+    <div data-role="header" data-theme="a">
         <h1>与我相似案例</h1>
         <a   data-role="button" href="#register">返回</a>
     </div><!-- /header -->
 
-    <div data-role="content" data-theme="b">
+    <div data-role="content" data-theme="a">
 
         <ul data-role="listview"  id="listViewUser">
             <li><a href="#">
@@ -204,8 +178,8 @@
         </nav>
     </footer>
 </div><!-- /page -->
-<div data-role="page" id="adviceOnline" data-theme="b">
-<div data-theme="b" data-role="header" data-position="fixed" >
+<div data-role="page" id="adviceOnline" data-theme="a">
+<div data-theme="a" data-role="header" data-position="fixed" >
     <h3>
         在线咨询
     </h3>
@@ -217,15 +191,15 @@
         <label for="questionAsk">提问:</label>
         <textarea cols="40" rows="8" name="textarea" id="questionAsk" placeholder="请输入咨询内容"></textarea>
     </div>
-    <a  data-role="button" data-theme="b" id="submitQuestion" >提交</a>
+    <a  data-role="button" data-theme="a" id="submitQuestion" >提交</a>
 
 
 
 </div>
 </div>
 
-<div data-role="page" id="adviceList" data-theme="b">
-    <div data-theme="b" data-role="header" data-position="fixed" >
+<div data-role="page" id="adviceList" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed" >
 
         <h3>
             咨询记录
@@ -243,8 +217,8 @@
 
     </div>
 </div>
-<div data-role="page" id="adviceListDetail" data-theme="b">
-    <div data-theme="b" data-role="header" data-position="fixed" >
+<div data-role="page" id="adviceListDetail" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed" >
         <h3>
             咨询记录
         </h3>
@@ -262,14 +236,14 @@
             <label for="questionAsk">追问:</label>
             <textarea cols="40" rows="8" name="textarea" id="questionAskMore" placeholder="请输入咨询内容"></textarea>
         </div>
-        <a  data-role="button" data-theme="b" id="submitQuestionMore" >提交</a>
+        <a  data-role="button" data-theme="a" id="submitQuestionMore" >提交</a>
 
 
 
     </div>
 </div>
-<div data-role="page" id="userDetail" data-theme="b">
-    <div data-theme="b" data-role="header" data-position="fixed" >
+<div data-role="page" id="userDetail" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed" >
         <h3>
             详细信息
         </h3>
@@ -283,13 +257,13 @@
         <p id="detailSickDate">病程：</p>
         <p id="detailSickContent">症状：</p>
         <p id="detailSickDesc">描述：</p>
-        <a  data-role="button" data-theme="b" id="hisQuestion" >咨询医生记录</a>
+        <a  data-role="button" data-theme="a" id="hisQuestion" >咨询医生记录</a>
         <div data-role="fieldcontain">
 
         </div>
 
     </div>
-    <footer data-theme="b" data-role="footer" data-position="fixed">
+    <footer data-theme="a" data-role="footer" data-position="fixed">
         <nav data-role="navbar">
             <ul>
                 <li><a href="#index" data-icon="home">首页</a></li>
@@ -301,8 +275,8 @@
     </footer>
 </div>
 
-<div data-role="page" id="doctorDetail" data-theme="b">
-    <div data-theme="b" data-role="header" data-position="fixed" >
+<div data-role="page" id="doctorDetail" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed" >
         <h3>
             详细信息
         </h3>
@@ -313,15 +287,15 @@
         <p id="doctorTitle"></p>
         <p id="doctorRemark"></p>
         <p id="doctorAddress"></p>
-        <a  data-role="button" data-theme="b" id="adviceHistory" >咨询记录</a>
-        <a href="#adviceOnline"  data-role="button" data-theme="b" id="adviceAsk" >在线咨询</a>
-        <a  data-role="button" data-theme="b" id="advicePhone" >电话咨询</a>
+        <a  data-role="button" data-theme="a" id="adviceHistory" >咨询记录</a>
+        <a href="#adviceOnline"  data-role="button" data-theme="a" id="adviceAsk" >在线咨询</a>
+        <a  data-role="button" data-theme="a" id="advicePhone" >电话咨询</a>
         <div data-role="fieldcontain">
 
         </div>
 
     </div>
-    <footer data-theme="b" data-role="footer" data-position="fixed">
+    <footer data-theme="a" data-role="footer" data-position="fixed">
         <nav data-role="navbar">
             <ul>
                 <li><a href="#index" data-icon="home">首页</a></li>
@@ -332,14 +306,14 @@
         </nav>
     </footer>
 </div>
-<div data-role="page" data-theme="b" id="task" class="my-page">
+<div data-role="page" data-theme="a" id="task" class="my-page">
 
-    <div data-role="header" data-theme="b">
+    <div data-role="header" data-theme="a">
         <h1>在线医生</h1>
         <a href="grid-listview.html" data-shadow="false" data-iconshadow="false" data-icon="arrow-l" data-iconpos="notext" data-rel="back" data-ajax="false">Back</a>
     </div><!-- /header -->
 
-    <div data-role="content" data-theme="b">
+    <div data-role="content" data-theme="a">
 
         <ul data-role="listview" id="listDoctor" >
             <li><a href="#">
@@ -351,7 +325,7 @@
 
     </div><!-- /content -->
 
-    <footer data-theme="b" data-role="footer" data-position="fixed">
+    <footer data-theme="a" data-role="footer" data-position="fixed">
         <nav data-role="navbar">
             <ul>
                 <li><a href="#index" data-icon="home">首页</a></li>
@@ -363,8 +337,8 @@
     </footer>
 </div><!-- /page -->
 
-<div data-role="page" id="survey-1" data-theme="b">
-    <div data-theme="b" data-role="header" data-position="fixed" >
+<div data-role="page" id="survey-1" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed" >
         <h3>
             咽炎指数测试
         </h3>
@@ -391,10 +365,10 @@
             <p>3、饭后散步多少分钟？</p>
             <input type="range" name="slider" id="s3" value="15" min="0" max="60" data-highlight="true" data-mini="true" />
 
-        <a href="" data-role="button" data-theme="b" id="submit1"  data-icon="arrow-l">确定</a>
+        <a href="" data-role="button" data-theme="a" id="submit1"  data-icon="arrow-l">确定</a>
 
     </div>
-    <footer data-theme="b" data-role="footer" data-position="fixed">
+    <footer data-theme="a" data-role="footer" data-position="fixed">
         <nav data-role="navbar">
             <ul>
                 <li><a href="#index">首页</a></li>
@@ -406,8 +380,8 @@
     </footer>
 </div>
 
-<div data-role="page" id="survey-2" data-theme="b">
-    <div data-theme="b" data-role="header" data-position="fixed">
+<div data-role="page" id="survey-2" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed">
         <h3>
             相似案例查询
         </h3>
@@ -447,7 +421,7 @@
 
 
     </div>
-    <footer data-theme="b" data-role="footer" data-position="fixed">
+    <footer data-theme="a" data-role="footer" data-position="fixed">
         <nav data-role="navbar">
             <ul>
                 <li><a href="#index">首页</a></li>
@@ -459,8 +433,8 @@
     </footer>
 </div>
 
-<div data-role="page" id="survey-3" data-theme="b">
-    <div data-theme="b" data-role="header" data-position="fixed">
+<div data-role="page" id="survey-3" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed">
         <h3>
             咽炎指数测试
         </h3>
@@ -499,14 +473,14 @@
             <label for="ss7-5">喝烧开一分钟的桶装水</label>
         </fieldset>
     </div>
-    <div data-theme="b" data-role="footer" data-position="fixed">
+    <div data-theme="a" data-role="footer" data-position="fixed">
         <h3>
             Footer
         </h3>
     </div>
 </div>
-<div data-role="page" id="survey-4" data-theme="b">
-    <div data-theme="b" data-role="header" data-position="fixed">
+<div data-role="page" id="survey-4" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed">
         <h3>
             咽炎指数测试
         </h3>
@@ -542,14 +516,14 @@
         </fieldset>
 
     </div>
-    <div data-theme="b" data-role="footer" data-position="fixed">
+    <div data-theme="a" data-role="footer" data-position="fixed">
         <h3>
             Footer
         </h3>
     </div>
 </div>
-<div data-role="page" id="survey-5" data-theme="b">
-    <div data-theme="b" data-role="header" data-position="fixed">
+<div data-role="page" id="survey-5" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed">
         <h3>
             咽炎指数测试
         </h3>
@@ -586,14 +560,14 @@
 
         </fieldset>
     </div>
-    <div data-theme="b" data-role="footer" data-position="fixed">
+    <div data-theme="a" data-role="footer" data-position="fixed">
         <h3>
             Footer
         </h3>
     </div>
 </div>
-<div data-role="page" id="survey-6" data-theme="b">
-    <div data-theme="b" data-role="header" data-position="fixed">
+<div data-role="page" id="survey-6" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed">
         <h3>
             咽炎指数测试
         </h3>
@@ -624,10 +598,10 @@
             <label for="ss12-10">消化不好，胃返酸水</label>
 
         </fieldset>
-        <a href="#survey-7" data-role="button" data-theme="b" id="submit6" >确定</a>
+        <a href="#survey-7" data-role="button" data-theme="a" id="submit6" >确定</a>
 
     </div>
-    <div data-theme="b" data-role="footer" data-position="fixed">
+    <div data-theme="a" data-role="footer" data-position="fixed">
         <h3>
             Footer
         </h3>
@@ -635,8 +609,8 @@
 </div>
 
 
-<div data-role="page" id="survey-7" data-theme="b">
-    <div data-theme="b" data-role="header" data-position="fixed">
+<div data-role="page" id="survey-7" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed">
         <h3>
             咽炎指数测试
         </h3>
@@ -654,7 +628,7 @@
 
 
     </div>
-    <div data-theme="b" data-role="footer" data-position="fixed">
+    <div data-theme="a" data-role="footer" data-position="fixed">
         <nav data-role="navbar">
             <ul>
                 <li><a href="#index" class="ui-btn-active" data-icon="home">首页</a></li>
@@ -666,8 +640,8 @@
     </div>
 </div>
 
-<div data-role="page" id="success" data-theme="b">
-    <div data-theme="b" data-role="header" data-position="fixed">
+<div data-role="page" id="success" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed">
         <h3>
             注册成功！
         </h3>
@@ -677,7 +651,7 @@
     <div data-role="content">
         <img src="images/apple.jpg" >
     </div>
-    <div data-theme="b" data-role="footer" data-position="fixed">
+    <div data-theme="a" data-role="footer" data-position="fixed">
         <nav data-role="navbar">
             <ul>
                 <li><a href="#index" data-icon="home">首页</a></li>
@@ -688,8 +662,8 @@
         </nav>
     </div>
 </div>
-<div data-role="page" id="register" data-theme="b">
-    <div data-theme="b" data-role="header" data-position="fixed">
+<div data-role="page" id="register" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed">
         <h3>
             我的资料
         </h3>
@@ -697,7 +671,7 @@
     <div data-role="content">
       <div id="divinputusername">  <input type="text" name="username" id="username" placeholder="用户名" data-clear-btn=true/></div>
      <div id="divUserName" >你好，</div>
-            <div  data-role="fieldcontain" >
+            <div  data-role="fieldcontain" style="display:inline-block;width:50%;margin:0 0 0 0;">
                     <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" >
                         <legend>性别：</legend>
                         <input type="radio" name="sex" id="man" value="man" checked="checked" class="ui-btn-inline">
@@ -721,15 +695,15 @@
                 <option value="other">其他</option>
             </select>
     </div>
-        <a href="#mysituaton" data-role="button" id="situation" data-theme="b">填写我的症状</a>
+        <a href="#mysituaton" data-role="button" id="situation" data-theme="a">填写我的症状</a>
         <div id="sickContent" hidden="true">症状：</div>
         <div id="sickDesc" hidden="true">详情：</div>
 
-        <a data-role="button" id="yyNumber" data-theme="b">我的咽炎指数</a>
-        <a data-role="button" id="myQuestions" data-theme="b">我的问医生记录</a>
-        <a data-role="button" id="compare" data-theme="b">参考与我相似案例</a>
+        <a data-role="button" id="yyNumber" data-theme="a">我的咽炎指数</a>
+        <a data-role="button" id="myQuestions" data-theme="a">我的问医生记录</a>
+        <a data-role="button" id="compare" data-theme="a">参考与我相似案例</a>
     </div>
-    <footer data-theme="b" data-role="footer" data-position="fixed">
+    <footer data-theme="a" data-role="footer" data-position="fixed">
         <nav data-role="navbar">
             <ul>
                 <li><a href="#index" data-icon="home">首页</a></li>
@@ -740,8 +714,8 @@
         </nav>
     </footer>
 </div>
-<div data-role="page" id="mysituaton" data-theme="b">
-    <div data-theme="b" data-role="header" data-position="fixed">
+<div data-role="page" id="mysituaton" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed">
         <h3>
             我的症状
         </h3>
@@ -779,10 +753,10 @@
             </textarea>
             </div>
         </fieldset>
-        <a href="" data-role="button" data-theme="b" id="submitmy" >确定</a>
+        <a href="" data-role="button" data-theme="a" id="submitmy" >确定</a>
 
     </div>
-    <footer data-theme="b" data-role="footer" data-position="fixed">
+    <footer data-theme="a" data-role="footer" data-position="fixed">
         <nav data-role="navbar">
             <ul>
                 <li><a href="#index" data-icon="home">首页</a></li>
@@ -794,8 +768,8 @@
     </footer>
 </div>
 
-<div data-role="page" id="ques" data-theme="b">
-    <div data-theme="b" data-role="header" data-position="fixed">
+<div data-role="page" id="ques" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed">
         <h3>
             咽炎指数测试
         </h3>
@@ -806,16 +780,16 @@
         <div data-role="fieldcontain">
             <textarea cols="40" rows="8" name="questionToAsk" id="question"></textarea>
         </div>
-        <a href="" data-role="button" data-theme="b" id="submitques" >确定</a>
+        <a href="" data-role="button" data-theme="a" id="submitques" >确定</a>
     </div>
-    <div data-theme="b" data-role="footer" data-position="fixed">
+    <div data-theme="a" data-role="footer" data-position="fixed">
         <h3>
             Footer
         </h3>
     </div>
 </div>
-<div data-role="page" id="smalltipone" data-theme="b">
-    <div data-theme="b" data-role="header" data-position="fixed" >
+<div data-role="page" id="smalltipone" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed" >
         <h3>
             找不到病因会怎样？
         </h3>
@@ -841,15 +815,15 @@
 
        </p>
     </div>
-    <div id="footer" data-theme="b" data-role="footer" data-position="fixed">
+    <div id="footer" data-theme="a" data-role="footer" data-position="fixed">
         <h3>
             Footer
         </h3>
 
     </div>
 </div>
-<div data-role="page" id="smalltiptwo" data-theme="b">
-    <div data-theme="b" data-role="header" data-position="fixed" >
+<div data-role="page" id="smalltiptwo" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed" >
         <h3>
             使用指南
         </h3>
@@ -864,15 +838,15 @@
         <h1> 5、订制生活习惯和养生法</h1> <br>
         </p>
     </div>
-    <div id="footer1" data-theme="b" data-role="footer" data-position="fixed">
+    <div id="footer1" data-theme="a" data-role="footer" data-position="fixed">
         <h3>
             Footer
         </h3>
     </div>
 </div>
 
-<div data-role="page" id="vipConfirm" data-theme="b">
-    <div data-theme="b" data-role="header" data-position="fixed">
+<div data-role="page" id="vipConfirm" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed">
         <h3>
             升级VIP
         </h3>
@@ -883,9 +857,9 @@
         <div data-role="fieldcontain">
             <input type="number" name="number" id="phoneNumberVip" value="" />
         </div>
-        <a href="" data-role="button" data-theme="b" id="submitVip" >在线病历</a>
+        <a href="" data-role="button" data-theme="a" id="submitVip" >在线病历</a>
     </div>
-    <div data-theme="b" data-role="footer" data-position="fixed">
+    <div data-theme="a" data-role="footer" data-position="fixed">
         <h3>
             Footer
         </h3>

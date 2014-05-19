@@ -873,7 +873,7 @@ $(document).ready(function () {
         var href_a = document.createElement("a");
         var head = document.createElement("h2");
         var img = document.createElement("img");
-        href_a.innerHTML="<img src='images/apple.jpg'><h2>"+unescape(obj.username)+"</h2><p>"+unescape(obj.remark)+"</p> <p class='ui-li-aside'>iOS</p>";
+        href_a.innerHTML="<img src='images/apple.jpg'><h2>"+unescape(obj.username)+"</h2><p>"+unescape(obj.remark)+"</p> <p class='ui-li-aside'>主治医师</p>";
         //href_a.href="javascript:del('"+id+"');";
         // href_a.innerHTML ="del";
         //li.innerHTML=txt;
