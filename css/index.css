@@ -10,3 +10,9 @@
 #index ul{
     border-color:#FEFEFE;
 }
+.ui-controlgroup-label{
+    width: 200;
+}
+.ui-controlgroup-controls{
+    width: 1000;
+}
