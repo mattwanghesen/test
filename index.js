@@ -51,7 +51,7 @@ $(document).ready(function () {
             $("#description").append(localStorage.getItem("description"));
             $("#sickDesc").show();
             $("#sickDesc").empty();
-            $("#sickDesc").append(localStorage.getItem("description"));
+            $("#sickDesc").append("详情：").append(localStorage.getItem("description"));
             $("#sickContent").click(function () {
                 $.mobile.changePage("#mysituaton", { transition: "none", changeHash: false });
             });
@@ -873,7 +873,7 @@ $(document).ready(function () {
         var href_a = document.createElement("a");
         var head = document.createElement("h2");
         var img = document.createElement("img");
-        href_a.innerHTML="<img src='http://www.ysrule.com/yy/pic/"+obj.image+"'><h2>"+unescape(obj.username)+"</h2><p>"+unescape(obj.remark)+"</p> <p class='ui-li-aside'>主治医师</p>";
+        href_a.innerHTML="<img class='image'  src='http://www.ysrule.com/yy/pic/"+obj.image+"'><h2>"+unescape(obj.username)+"</h2><p>"+unescape(obj.remark)+"</p> <p class='ui-li-aside'>主治医师</p>";
         //href_a.href="javascript:del('"+id+"');";
         // href_a.innerHTML ="del";
         //li.innerHTML=txt;
@@ -997,7 +997,7 @@ $(document).ready(function () {
         if (localStorage.getItem('my-10') == "true") {
             txt = txt+',' + trim($("#my-10").prev('label').text());
         }
-        $("#sickContent").append('从' + $("#sickDate").val() + '开始： ' + txt + '<p style="color:#FF0000">点击修改</p>');
+        $("#sickContent").append('从' + $("#sickDate").val() + '开始： ' + txt + '<p style="color:#6DCFC0;text-align:right;">点击修改</p>');
         $("#sickDesc").show();
         $("#sickDesc").empty();
         $("#sickDesc").append("详细描述：").append(localStorage.getItem('description'));

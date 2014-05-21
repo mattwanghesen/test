@@ -7,12 +7,33 @@
 #index ul li a{
     border-color:#FEFEFE;
 }
-#index ul{
+#similiarCase ul li a{
     border-color:#FEFEFE;
 }
-.ui-controlgroup-label{
-    width: 200;
+#register ul li a{
+    border-color:#FEFEFE;
 }
-.ui-controlgroup-controls{
-    width: 1000;
+#task ul li a{
+    border-color:#FEFEFE;
+}
+.ui-bar-a{
+    color: white;
+    border: white;
+}
+.ui-page-theme-c{
+    background:url('../images/demo0519_bj.png')
+}
+.image{
+    width:70px;
+    height:70px;
+    border-radius:60px;
+    border-width: 3px;
+    border-color: #6cd0bf;
+    vertical-align: middle;
+}
+#taskDoctor ul li a{
+   border-color: #AAAAAA;
+}
+#similiarUser ul li a{
+    border-color: #AAAAAA;
 }
