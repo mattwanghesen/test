@@ -221,7 +221,7 @@ $(document).ready(function () {
     $("#yyNumber").click(function(){
        if(localStorage.getItem("surveyValue")!=undefined&&localStorage.getItem("surveyValue")!="null"&&localStorage.getItem("surveyValue")!=null){
            calculateValue();
-           $.mobile.changePage("#survey-7", { transition: "slideup", changeHash: false });
+           $.mobile.changePage("#survey-1", { transition: "slideup", changeHash: false });
        }else{
            $.mobile.changePage("#survey-1", { transition: "slideup", changeHash: false });
        }
