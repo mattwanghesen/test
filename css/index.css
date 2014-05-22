@@ -16,6 +16,9 @@
 #task ul li a{
     border-color:#FEFEFE;
 }
+#survey-7 ul li a{
+    border-color:#FEFEFE;
+}
 .ui-bar-a{
     color: white;
     border: white;
@@ -31,9 +34,20 @@
     border-color: #6cd0bf;
     vertical-align: middle;
 }
+.imagesmall{
+    width:20px;
+    height:20px;
+    border-radius:20px;
+    border-width: 3px;
+    border-color: #6cd0bf;
+    vertical-align: middle;
+}
 #taskDoctor ul li a{
    border-color: #AAAAAA;
 }
 #similiarUser ul li a{
     border-color: #AAAAAA;
+}
+.messageList{
+
 }

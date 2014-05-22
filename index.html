@@ -196,7 +196,7 @@
 </div>
 </div>
 
-<div data-role="page" id="adviceList" data-theme="a">
+<div data-role="page" id="adviceList">
     <div data-theme="a" data-role="header" data-position="fixed" >
 
         <h3>
@@ -204,7 +204,7 @@
         </h3>
         <a data-role="button" id="preButton">上一步</a>
     </div>
-    <div data-role="content">
+    <div data-role="content" id="divMessageList">
     <ul data-role="listview" id="messageList" class="ui-listview" data-inset="true" role="listbox">
         <li><a href="#">
             <h2>养生</h2>
@@ -222,7 +222,7 @@
         </h3>
         <a data-role="button" href="#adviceList">上一步</a>
     </div>
-    <div data-role="content">
+    <div data-role="content" id="divMessageDetails">
         <ul data-role="listview" id="messageDetails" class="ui-listview" data-inset="true" role="listbox" >
             <li><a href="#">
                 <h2>养生</h2>
@@ -230,14 +230,16 @@
                 <p class="ui-li-aside">iOS</p>
             </a></li>
         </ul>
+
+
+
+    </div>
+    <div>
         <div data-role="fieldcontain">
             <label for="questionAsk">追问:</label>
             <textarea cols="40" rows="8" name="textarea" id="questionAskMore" placeholder="请输入咨询内容"></textarea>
         </div>
         <a  data-role="button" data-theme="a" id="submitQuestionMore" >提交</a>
-
-
-
     </div>
 </div>
 <div data-role="page" id="userDetail" data-theme="a">
@@ -342,11 +344,11 @@
         </h3>
         <a data-role="button" href="#index">返回</a>
     </div>
-    <div id="xxx" data-role="content" >
+    <div id="xxx" data-role="content" data-theme="c" >
                <p>1.你吃一顿正餐，无人干扰一般几分钟吃完？</p>
                      <input type="range" name="slider" id="s1" value="15" min="0" max="30" data-highlight="true" data-mini="true" />
 
-            <p>2.你吃什么主食最多？</p>
+            <p>2.你晚餐吃什么主食最多？</p>
             <fieldset data-role="controlgroup">
                 <input type="radio" name="s2" id="radio1-1" value="1" class="custom" />
                 <label for="radio1-1">米饭</label>
@@ -366,16 +368,6 @@
         <a href="" data-role="button" data-theme="a" id="submit1"  data-icon="arrow-l">确定</a>
 
     </div>
-    <footer  data-role="footer" data-position="fixed" data-theme="c" style="border-color: #fefefe">
-        <nav data-role="navbar">
-            <ul>
-                <li><a href="#index"  data-icon="home">首页</a></li>
-                <li><a href="#task" data-icon="grid">在线医生</a></li>
-                <li><a href="#similiarCase" data-icon="info">相似案例</a></li>
-                <li><a href="#register"  data-icon="gear">账户</a></li>
-            </ul>
-        </nav>
-    </footer>
 </div>
 
 <div data-role="page" id="survey-2" data-theme="a">
@@ -385,7 +377,7 @@
         </h3>
         <a href="#survey-1" data-role="button">上一步</a>
     </div>
-    <div data-role="content">
+    <div data-role="content" data-theme="c" >
         <p>4、一般吃饭吃几成饱？</p>
         <fieldset data-role="controlgroup">
             <input type="radio" name="s4" id="ss4" value="1"  />
@@ -416,19 +408,7 @@
             <input type="radio" name="s5" id="ss5-5" value="10"  />
             <label for="ss5-5">没有规律</label>
         </fieldset>
-
-
     </div>
-    <footer data-theme="a" data-role="footer" data-position="fixed">
-        <nav data-role="navbar">
-            <ul>
-                <li><a href="#index">首页</a></li>
-                <li><a href="#task">在线医生</a></li>
-                <li><a href="#similiarCase">相似案例</a></li>
-                <li><a href="#register">账户</a></li>
-            </ul>
-        </nav>
-    </footer>
 </div>
 
 <div data-role="page" id="survey-3" data-theme="a">
@@ -438,7 +418,7 @@
         </h3>
         <a data-role="button" href="#survey-2">上一步</a>
     </div>
-    <div data-role="content">
+    <div data-role="content" data-theme="c">
         <p>6.一般晚上几点睡觉？</p>
         <fieldset data-role="controlgroup">
             <input type="radio" name="s6" id="ss6-1" value="11"  />
@@ -471,11 +451,7 @@
             <label for="ss7-5">喝烧开一分钟的桶装水</label>
         </fieldset>
     </div>
-    <div data-theme="a" data-role="footer" data-position="fixed">
-        <h3>
-            Footer
-        </h3>
-    </div>
+
 </div>
 <div data-role="page" id="survey-4" data-theme="a">
     <div data-theme="a" data-role="header" data-position="fixed">
@@ -484,7 +460,7 @@
         </h3>
         <a data-role="button" href="#survey-3">上一步</a>
     </div>
-    <div data-role="content">
+    <div data-role="content" data-theme="c">
         <p>8.经常吃外卖或快餐？</p>
         <fieldset data-role="controlgroup">
             <input type="radio" name="s8" id="ss8-1" value="10"  />
@@ -514,11 +490,7 @@
         </fieldset>
 
     </div>
-    <div data-theme="a" data-role="footer" data-position="fixed">
-        <h3>
-            Footer
-        </h3>
-    </div>
+
 </div>
 <div data-role="page" id="survey-5" data-theme="a">
     <div data-theme="a" data-role="header" data-position="fixed">
@@ -527,7 +499,7 @@
         </h3>
         <a data-role="button" href="#survey-4">上一步</a>
     </div>
-    <div data-role="content">
+    <div data-role="content" data-theme="c">
         <p>10.居住地区的污染程度是：</p>
         <fieldset data-role="controlgroup">
             <input type="radio" name="s10" id="ss10-1" value="0"  />
@@ -558,11 +530,7 @@
 
         </fieldset>
     </div>
-    <div data-theme="a" data-role="footer" data-position="fixed">
-        <h3>
-            Footer
-        </h3>
-    </div>
+
 </div>
 <div data-role="page" id="survey-6" data-theme="a">
     <div data-theme="a" data-role="header" data-position="fixed">
@@ -571,7 +539,7 @@
         </h3>
         <a data-role="button" href="#survey-5">上一步</a>
     </div>
-    <div data-role="content">
+    <div data-role="content" data-theme="c">
         <p>12.有以下情况（可多选，没有可不选）：</p>
         <fieldset data-role="controlgroup">
             <input type="checkbox" name="s12" id="ss12-1" value="1"  />
@@ -599,11 +567,7 @@
         <a href="#survey-7" data-role="button" data-theme="a" id="submit6" >确定</a>
 
     </div>
-    <div data-theme="a" data-role="footer" data-position="fixed">
-        <h3>
-            Footer
-        </h3>
-    </div>
+
 </div>
 
 
