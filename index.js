@@ -615,8 +615,10 @@ $(document).ready(function () {
                     addQuestions(n);
 
                 });
-               $("#messageList").listview("refresh");
-                   var ulHomes = $("#messageList")[0].children;
+                $("div[data-role=content] ul").listview({ defaults: true });
+                var uls=$("#divMessageList")[0].children;
+                $(uls).each(function(){
+                        var ulHomes = this.children;
 
                 $(ulHomes).each(function(){
                     if(this.id!=""){
@@ -628,6 +630,7 @@ $(document).ready(function () {
                     });
                     }
 
+                });
                 });
 
             },
