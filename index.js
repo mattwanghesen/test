@@ -436,7 +436,9 @@ $(document).ready(function () {
 
     });
     $("#myQuestions").click(function (){
-        $("#messageList").empty();
+        localStorage.setItem('topic', "我的");
+       // $("#questionTopic").empty();
+       // $("#messageList").html(localStorage.getItem('topic')+"咨询记录").trigger( "pagecreate" );;
         getMyQuestionList(localStorage.getItem('userId'));
         $.mobile.changePage("#adviceList", { transition: "slideup", changeHash: false });
         $("#preButton").click(function(){
@@ -510,6 +512,7 @@ $(document).ready(function () {
                             $.each(data, function(i, n){
                                 if(n.ID==localStorage.getItem('currentID')){
                                     localStorage.setItem('currentDoctorName', unescape(n.username));
+                                    localStorage.setItem('topic', unescape(n.username)+"医生的");
                                     localStorage.setItem('currentDoctorID', n.ID);
                                     $("#doctorUsername")[0].innerText=unescape(n.username);
                                     //$("#doctorSex")[0].innerText=$("#doctorSex")[0].innerText.substr(0,3)+(unescape(n.sex)=="man"?"男":"女");
@@ -573,7 +576,7 @@ $(document).ready(function () {
                     msg.agreenumber=0;
                     msg.username=$("#username").val();
                     addQuestionDetails(msg);
-                    $("#messageDetails").listview("refresh");
+                    $("div[data-role=content] ul").listview({ defaults: true });
                     $("#questionAskMore").val("");
                     // alert("提问成功！");
                    // $("#messageDetails").empty();
@@ -801,6 +804,7 @@ $(document).ready(function () {
                         $.each(data, function(i, n){
                             if(n.ID==localStorage.getItem('currentID')){
                                 $("#detailUsername")[0].innerText=unescape(n.username);
+                                localStorage.setItem('topic', unescape(n.username)+"的");
                                 $("#detailSex")[0].innerText=$("#detailSex")[0].innerText.substr(0,3)+(unescape(n.sex)=="man"?"男":"女");
                                 $("#detailBirthday")[0].innerText=$("#detailBirthday")[0].innerText.substr(0,3)+ages(unescape(n.birthday));
                                 $("#detailJob")[0].innerText=$("#detailJob")[0].innerText.substr(0,3)+unescape(n.job);
