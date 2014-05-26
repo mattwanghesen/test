@@ -660,7 +660,7 @@
         <a href="#mysituaton" data-role="button" id="situation" data-theme="a">填写我的症状</a>
         <div id="sickContent" hidden="true">症状：</div>
         <div id="sickDesc" hidden="true">详情：</div>
-
+        <a data-role="button" id="clearLocal" data-theme="a">clearLocal</a>
         <a data-role="button" id="yyNumber" data-theme="a">我的咽炎指数</a>
         <a data-role="button" id="myQuestions" data-theme="a">我的问医生记录</a>
         <a data-role="button" id="compare" data-theme="a">参考与我相似案例</a>
@@ -764,9 +764,20 @@
 
 
 
-        如果这个患者去医院看病，然后开一堆药，是药三分毒，吃了药后身体虚弱，结果将会怎样？最轻的----一个慢性咽炎就这样造成了。<br><br>
+        <h4>如果这个患者去医院看病，<strong style="color: red">针对症状治疗</strong>，然后开一堆药，是药三分毒，结果将会怎样？</h4><br><br>
+        三言两语问清症状，就开药，不问病因，懒得多说一句话，不求有功，但求无过。难道我们排队2小时，看病5分钟，等到的竟是这样结果？           <br>
+        调查（参与调查，获健康值，可抵消问医生"求病因"费用）：<br>
+        我感冒发烧时去医院，医生是告诉了我致病的原因：<br>
+        <fieldset data-role="controlgroup">
+            <input type="radio" name="reason" id="isReason1" value="1"  />
+            <label for="isReason1">告诉我了</label>
 
-       </p>
+            <input type="radio" name="reason" id="isReason2" value="0"  />
+            <label for="isReason2">没有告诉</label>
+        </fieldset>
+
+
+
     </div>
     <footer  data-role="footer" data-position="fixed" data-theme="c" style="border-color: #fefefe">
         <nav data-role="navbar">
@@ -778,6 +789,31 @@
             </ul>
         </nav>
     </footer>
+</div>
+<div data-role="page" id="surveyResult" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed" >
+        <h3>
+            调查结果
+        </h3>
+        <a data-role="button" href="#index">返回</a>
+    </div>
+    <div  data-role="content" >
+        <label for="slider-2"></label>
+        <input type="range" name="slider-2" id="slider-2" data-highlight="true" min="0" max="100" value="2">
+        <div class="ui-grid-b">
+            <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:60px">告诉2%</div></div>
+            <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:60px"></div></div>
+            <div class="ui-block-c"><div class="ui-bar ui-bar-a" style="height:60px">不告诉98%</div></div>
+        </div><!-- /grid-b -->
+        <p>
+        <h1>1、咽炎指数测试(供医生参考) </h1> <br>
+        <h1>2、我的咽炎症状 </h1>  <br>
+        <h1> 3、相似案例</h1><br>
+        <h1> 4、问医生</h1> <br>
+        <h1> 5、订制生活习惯和养生法</h1> <br>
+        </p>
+    </div>
+
 </div>
 <div data-role="page" id="smalltiptwo" data-theme="a">
     <div data-theme="a" data-role="header" data-position="fixed" >
