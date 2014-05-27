@@ -3,16 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" name="Default" comment="test one 1">
       <change type="DELETED" beforePath="D:\sss\onlinetwo\test\images\apple.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1400826656615" ignored="false" />
     <file path="/index.html" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1401093810499" ignored="false" />
-    <file path="/index.js" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1401099456758" ignored="false" />
+    <file path="/index.js" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1401157222338" ignored="false" />
     <file path="/index.css" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1400744842364" ignored="false" />
-    <file path="$PROJECT_DIR$/../doctorui/index.js" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1401098379892" ignored="false" />
+    <file path="$PROJECT_DIR$/../doctorui/index.js" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1401159061203" ignored="false" />
     <file path="$PROJECT_DIR$/../doctorui/index.html" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1401074136900" ignored="false" />
     <file path="/a.dummy" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1400641948090" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -86,16 +85,16 @@
       <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="720" column="52" selection-start="29195" selection-end="29195" vertical-scroll-proportion="0.35800603">
+            <state line="925" column="120" selection-start="40073" selection-end="40073" vertical-scroll-proportion="0.43504533">
               <folding>
-                <marker date="1401099461409" expanded="true" signature="38074:38125" placeholder="..." />
-                <marker date="1401099461409" expanded="true" signature="38273:38360" placeholder="..." />
-                <marker date="1401099461409" expanded="true" signature="38842:38915" placeholder="..." />
-                <marker date="1401099461409" expanded="true" signature="39355:39407" placeholder="..." />
-                <marker date="1401099461409" expanded="true" signature="39934:40007" placeholder="..." />
-                <marker date="1401099461409" expanded="true" signature="40310:40342" placeholder="..." />
-                <marker date="1401099461409" expanded="true" signature="40968:41041" placeholder="..." />
-                <marker date="1401099461409" expanded="true" signature="44243:44274" placeholder="..." />
+                <marker date="1401154052967" expanded="true" signature="38122:38173" placeholder="..." />
+                <marker date="1401154052967" expanded="true" signature="38321:38408" placeholder="..." />
+                <marker date="1401154052967" expanded="true" signature="38890:38963" placeholder="..." />
+                <marker date="1401154052967" expanded="true" signature="39403:39455" placeholder="..." />
+                <marker date="1401154052967" expanded="true" signature="39982:40055" placeholder="..." />
+                <marker date="1401154052967" expanded="true" signature="40358:40390" placeholder="..." />
+                <marker date="1401154052967" expanded="true" signature="41016:41089" placeholder="..." />
+                <marker date="1401154052967" expanded="true" signature="44291:44322" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -377,14 +376,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="250" column="55" selection-start="10107" selection-end="10107" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1401099461409" expanded="true" signature="38074:38125" placeholder="..." />
-            <marker date="1401099461409" expanded="true" signature="38273:38360" placeholder="..." />
-            <marker date="1401099461409" expanded="true" signature="38842:38915" placeholder="..." />
-            <marker date="1401099461409" expanded="true" signature="39355:39407" placeholder="..." />
-            <marker date="1401099461409" expanded="true" signature="39934:40007" placeholder="..." />
-            <marker date="1401099461409" expanded="true" signature="40310:40342" placeholder="..." />
-            <marker date="1401099461409" expanded="true" signature="40968:41041" placeholder="..." />
-            <marker date="1401099461409" expanded="true" signature="44243:44274" placeholder="..." />
+            <marker date="1401154052967" expanded="true" signature="38122:38173" placeholder="..." />
+            <marker date="1401154052967" expanded="true" signature="38321:38408" placeholder="..." />
+            <marker date="1401154052967" expanded="true" signature="38890:38963" placeholder="..." />
+            <marker date="1401154052967" expanded="true" signature="39403:39455" placeholder="..." />
+            <marker date="1401154052967" expanded="true" signature="39982:40055" placeholder="..." />
+            <marker date="1401154052967" expanded="true" signature="40358:40390" placeholder="..." />
+            <marker date="1401154052967" expanded="true" signature="41016:41089" placeholder="..." />
+            <marker date="1401154052967" expanded="true" signature="44291:44322" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -484,16 +483,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="720" column="52" selection-start="29195" selection-end="29195" vertical-scroll-proportion="0.35800603">
+        <state line="925" column="120" selection-start="40073" selection-end="40073" vertical-scroll-proportion="0.43504533">
           <folding>
-            <marker date="1401099461409" expanded="true" signature="38074:38125" placeholder="..." />
-            <marker date="1401099461409" expanded="true" signature="38273:38360" placeholder="..." />
-            <marker date="1401099461409" expanded="true" signature="38842:38915" placeholder="..." />
-            <marker date="1401099461409" expanded="true" signature="39355:39407" placeholder="..." />
-            <marker date="1401099461409" expanded="true" signature="39934:40007" placeholder="..." />
-            <marker date="1401099461409" expanded="true" signature="40310:40342" placeholder="..." />
-            <marker date="1401099461409" expanded="true" signature="40968:41041" placeholder="..." />
-            <marker date="1401099461409" expanded="true" signature="44243:44274" placeholder="..." />
+            <marker date="1401154052967" expanded="true" signature="38122:38173" placeholder="..." />
+            <marker date="1401154052967" expanded="true" signature="38321:38408" placeholder="..." />
+            <marker date="1401154052967" expanded="true" signature="38890:38963" placeholder="..." />
+            <marker date="1401154052967" expanded="true" signature="39403:39455" placeholder="..." />
+            <marker date="1401154052967" expanded="true" signature="39982:40055" placeholder="..." />
+            <marker date="1401154052967" expanded="true" signature="40358:40390" placeholder="..." />
+            <marker date="1401154052967" expanded="true" signature="41016:41089" placeholder="..." />
+            <marker date="1401154052967" expanded="true" signature="44291:44322" placeholder="..." />
           </folding>
         </state>
       </provider>

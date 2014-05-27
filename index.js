@@ -650,7 +650,7 @@ $(document).ready(function () {
 
     }
     function getQuestionList() {
-
+        $("div[data-role=content] ul").remove();
         $.ajax({
             type: "get",
             url: 'http://www.ysrule.com/yy/questionList.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
