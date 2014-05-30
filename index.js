@@ -127,7 +127,7 @@ $(document).ready(function () {
 
 
 
-    $("#birthday").mobiscroll(opt).date(opt);
+   // $("#birthday").mobiscroll(opt).date(opt);
 
     if(localStorage.getItem('username')!=null&&localStorage.getItem('username')!="null"&&localStorage.getItem('username')!=""){
         $("#divUserName").show();
@@ -137,7 +137,7 @@ $(document).ready(function () {
         if( localStorage.getItem('sex')=='woman'){
             $('input[id=woman]').attr('checked','checked');
         }
-        $("#birthday").val(localStorage.getItem('birthday'));
+      //  $("#birthday").val(localStorage.getItem('birthday'));
         $("#career").val(localStorage.getItem('career'));
         setMySituation();
         setSurvey6();

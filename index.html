@@ -583,7 +583,7 @@
         <p>你的咽炎指数是：</p>
         <p id="surveyValue"></p>
         <p>您的指数比50%的人高</p>
-        <p>（越高越不好，越高越容易得慢性咽炎）</p>
+        <p>（越低越好）</p>
 
 
         <p>下图是访问本应用的人员位置分布图，可见慢性咽炎与气候，地域无关。与污染有一点关系，但是关系不大。</p>
@@ -633,7 +633,6 @@
     <div data-role="content">
       <div id="divinputusername">  <input type="text" name="username" id="username" placeholder="用户名" data-clear-btn=true/></div>
      <div id="divUserName" >你好，</div>
-            <div  data-role="fieldcontain" style="display:inline-block;width:50%;margin:0 0 0 0;">
                     <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" >
                         <legend>性别：</legend>
                         <input type="radio" name="sex" id="man" value="man" checked="checked" class="ui-btn-inline">
@@ -641,9 +640,11 @@
                         <input type="radio" name="sex" id="woman" value="woman">
                         <label for="woman">女</label>
                         </fieldset>
-            </div>
-            <div  data-role="fieldcontain">
-                    <label for="birthday">出生日期：</label><input name="birthday" id="birthday" value="1985-07-01"/>
+        <div class="ui-grid-b">
+            <div class="ui-block-a">
+                    <label for="birthday">出生年：</label>     </div>
+                <div class="ui-block-b"><input name="birthday" type="year" id="birthday" value="1975"/>  </div>
+            <div class="ui-block-c"> </div>
             </div>
     <div  data-role="fieldcontain">
             <label for="career" class="select">职业：</label>
@@ -686,7 +687,7 @@
     <div data-role="content">
         <div  data-role="fieldcontain">
             <label for="sickDate">发病时间：</label>
-            <input name="sickDate" id="sickDate" value='2010-10-10'/>
+            <input name="sickDate" id="sickDate" value='2'/>
         </div>
         <fieldset data-role="controlgroup">
             <input type="checkbox" name="my1" id="my-1" value="1"  />
