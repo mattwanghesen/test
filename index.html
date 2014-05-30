@@ -640,13 +640,8 @@
                         <input type="radio" name="sex" id="woman" value="woman">
                         <label for="woman">女</label>
                         </fieldset>
-        <div class="ui-grid-b">
-            <div class="ui-block-a">
-                    <label for="birthday">出生年：</label>     </div>
-                <div class="ui-block-b"><input name="birthday" type="year" id="birthday" value="1975"/>  </div>
-            <div class="ui-block-c"> </div>
-            </div>
-    <div  data-role="fieldcontain">
+                    <label for="birthday">年龄：</label>
+                <input name="birthday" type="number" id="birthday" />
             <label for="career" class="select">职业：</label>
             <select id="career" name="career">
                 <option value=""></option>
@@ -657,7 +652,6 @@
                 <option value="governor">公务员</option>
                 <option value="other">其他</option>
             </select>
-    </div>
         <a href="#mysituaton" data-role="button" id="situation" data-theme="a">填写我的症状</a>
         <div id="sickContent" hidden="true">症状：</div>
         <div id="sickDesc" hidden="true">详情：</div>
