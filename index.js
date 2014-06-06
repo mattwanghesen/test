@@ -910,7 +910,7 @@ $(document).ready(function () {
            "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='c' >"+
             "<a href='#'>"+
                // "<img width='40' height='40' src='images/apple.jpg'/>"+
-                "<div style='font-size:9pt;font-weight:normal;white-space:normal;word-break:break-all;'>"+unescape(obj.content)+"</div></a></li></ul>";
+                "<div style='font-size:11pt;font-weight:normal;white-space:normal;word-break:break-all;'>"+unescape(obj.content)+"</div></a></li></ul>";
         div[0].innerHTML +=listStr;
     }
     function addQuestionDetails(obj) {
@@ -923,7 +923,7 @@ $(document).ready(function () {
                 "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='c' >"+
                 "<a href='#'>"+
                 //"<img width='40' height='40' src='images/like.jpg'/>"+
-                "<div style='font-size:9pt;font-weight:normal;word-break:break-all;white-space:normal;'>"+unescape(obj.content)+"</div></a></li></ul>";
+                "<div style='font-size:11pt;font-weight:normal;word-break:break-all;white-space:normal;'>"+unescape(obj.content)+"</div></a></li></ul>";
         }else{
             listStr= "<ul data-role='listview'  class='ui-listview' data-inset='true' role='listbox'><li data-role='list-divider' data-theme='d' role='heading' tabindex='0' class='ui-li ui-li-divider ui-btn-c ui-bar-c ui-btn-up-c' style='font-size:8pt;font-weight:normal'>"+
                // "<img class='imagesmall'  src='http://www.ysrule.com/yy/pic/"+obj.image+"'>"+
@@ -932,7 +932,7 @@ $(document).ready(function () {
                 "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='c' >"+
                 "<a href='#'>"+
                 //"<img width='40' height='40' src='images/apple.jpg'/>"+
-                "<div style='font-size:9pt;font-weight:normal;word-break:break-all;white-space:normal;'>"+unescape(obj.content)+"</div></a></li></ul>";
+                "<div style='font-size:11pt;font-weight:normal;word-break:break-all;white-space:normal;'>"+unescape(obj.content)+"</div></a></li></ul>";
         }
         div[0].innerHTML+=listStr;
     }
