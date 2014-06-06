@@ -81,6 +81,7 @@
         <a href="#similiarCase" data-transition="slide"><img src="images/botton_search_3.png" width="100%"> </a>
         <a href="#task" data-transition="slide"><img src="images/botton_online_4.png" width="100%"> </a>
         <img src="images/recommend_all.png" width="100%">
+        <a href="#daily" data-transition="slide"><img src="images/botton_online_4.png" width="100%"> </a>
         <div style="width: 100%; height: 100%; position: relative;">
             <a href="#article" data-transition="slide">
 
@@ -623,6 +624,48 @@
             </ul>
         </nav>
     </div>
+</div>
+<div data-role="page" id="daily" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed" >
+        <h3>
+            我的日记
+        </h3>
+        <a data-role="button" href="#index" class="ui-btn ui-icon-carat-l ui-btn-icon-notext" style="border-color: #6cd0bf">上一步</a>
+    </div>
+    <div data-role="content" id="dailyContent">
+        <div>
+            <div data-role="fieldcontain">
+                <label for="dailyText" id="dailyLabel">日期：</label>
+                <textarea cols="40" rows="8" name="textarea" id="dailyText" placeholder="请输入咨询内容"></textarea>
+            </div>
+            <a  data-role="button" data-theme="a" id="dailySubmit" >保存</a>
+            <a  data-role="button" data-theme="a" id="dailyHistory" >显示我的所有日记</a>
+            <a  data-role="button" data-theme="a" id="dailyRefer" >参考与我相似痊愈者的日记</a>
+        </div>
+
+    </div>
+
+</div>
+<div data-role="page" id="dailyList" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed" >
+        <h3>
+            咨询记录-明细
+        </h3>
+        <a data-role="button" href="#adviceList" class="ui-btn ui-icon-carat-l ui-btn-icon-notext" style="border-color: #6cd0bf">上一步</a>
+    </div>
+    <div data-role="content" id="dailyListContent">
+        <ul data-role="listview" id="dailyListDetail" class="ui-listview" data-inset="true" role="listbox" >
+            <li><a href="#">
+                <h2>养生</h2>
+                <p>道法自然，天人合一</p>
+                <p class="ui-li-aside">iOS</p>
+            </a></li>
+        </ul>
+
+
+
+    </div>
+
 </div>
 <div data-role="page" id="register" data-theme="c">
     <div data-theme="a" data-role="header" data-position="fixed" data-theme="a" style="color: white;border: white">
