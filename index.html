@@ -81,7 +81,7 @@
         <a href="#similiarCase" data-transition="slide"><img src="images/botton_search_3.png" width="100%"> </a>
         <a href="#task" data-transition="slide"><img src="images/botton_online_4.png" width="100%"> </a>
         <img src="images/recommend_all.png" width="100%">
-        <a href="#daily" data-transition="slide"><img src="images/botton_online_4.png" width="100%"> </a>
+        <a href="#daily" data-transition="slide"><img src="images/botton_love_5.png" width="100%"> </a>
         <div style="width: 100%; height: 100%; position: relative;">
             <a href="#article" data-transition="slide">
 
@@ -259,6 +259,7 @@
         <p id="detailSickContent">症状：</p>
         <p id="detailSickDesc">描述：</p>
         <a  data-role="button" data-theme="a" id="hisQuestion" >咨询医生记录</a>
+        <a  data-role="button" data-theme="a" id="hisDaily" >咽炎日记</a>
         <div data-role="fieldcontain">
 
         </div>
@@ -628,19 +629,21 @@
 <div data-role="page" id="daily" data-theme="a">
     <div data-theme="a" data-role="header" data-position="fixed" >
         <h3>
-            我的日记
+            我的咽炎日记
         </h3>
         <a data-role="button" href="#index" class="ui-btn ui-icon-carat-l ui-btn-icon-notext" style="border-color: #6cd0bf">上一步</a>
     </div>
     <div data-role="content" id="dailyContent">
         <div>
+            <span>记下自己的饮食、休息、运动、天气、卫生.......等情况，有利于医生更好的给你提供帮助，同时可以留下你痊愈痕迹，供人参考。</span>
+            <span>记录30天详实记录，可免费获得问医生（签约医生，有丰富慢性咽炎康复经验）机会，可参与抽奖，可获赠免费咨询，直至痊愈。</span>
             <div data-role="fieldcontain">
                 <label for="dailyText" id="dailyLabel">日期：</label>
-                <textarea cols="40" rows="8" name="textarea" id="dailyText" placeholder="请输入咨询内容"></textarea>
+                <textarea cols="40" rows="8" name="textarea" id="dailyText" placeholder="请输入日记内容"></textarea>
             </div>
             <a  data-role="button" data-theme="a" id="dailySubmit" >保存</a>
             <a  data-role="button" data-theme="a" id="dailyHistory" >显示我的所有日记</a>
-            <a  data-role="button" data-theme="a" id="dailyRefer" >参考与我相似痊愈者的日记</a>
+            <a  data-role="button" data-theme="a"  id="dailyRefer" >参考与我相似痊愈者的日记</a>
         </div>
 
     </div>
@@ -649,9 +652,9 @@
 <div data-role="page" id="dailyList" data-theme="a">
     <div data-theme="a" data-role="header" data-position="fixed" >
         <h3>
-            咨询记录-明细
+            咽炎日记
         </h3>
-        <a data-role="button" href="#adviceList" class="ui-btn ui-icon-carat-l ui-btn-icon-notext" style="border-color: #6cd0bf">上一步</a>
+        <a data-role="button" id="preDaily"  class="ui-btn ui-icon-carat-l ui-btn-icon-notext" style="border-color: #6cd0bf">上一步</a>
     </div>
     <div data-role="content" id="dailyListContent">
         <ul data-role="listview" id="dailyListDetail" class="ui-listview" data-inset="true" role="listbox" >
@@ -675,6 +678,7 @@
     </div>
     <div data-role="content">
       <div id="divinputusername">  <input type="text" name="username" id="username" placeholder="用户名" data-clear-btn=true/></div>
+        <input type="text" name="userid" id="userid" placeholder="userid" data-clear-btn=true/>
      <div id="divUserName" >你好，</div>
                     <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" >
                         <legend>性别：</legend>
@@ -724,7 +728,7 @@
     <div data-role="content">
         <div  data-role="fieldcontain">
             <label for="sickDate">发病时间：</label>
-            <input name="sickDate" id="sickDate" value='2'/>
+            <input name="sickDate" id="sickDate" value='2010-07-15'/>
         </div>
         <fieldset data-role="controlgroup">
             <input type="checkbox" name="my1" id="my-1" value="1"  />

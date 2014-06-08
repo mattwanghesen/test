@@ -3,13 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" name="Default" comment="test one 1">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
     </list>
     <ignored path="test.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1401844121283" ignored="false" />
-    <file path="/index.html" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1402048714562" ignored="false" />
-    <file path="/index.js" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1401157222338" ignored="false" />
+    <file path="/Dummy.txt" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1402121724719" ignored="false" />
+    <file path="/index.html" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1402215969065" ignored="false" />
+    <file path="/index.js" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1402158032218" ignored="false" />
     <file path="/index.css" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1400744842364" ignored="false" />
     <file path="$PROJECT_DIR$/../doctorui/index.js" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1401159061203" ignored="false" />
     <file path="$PROJECT_DIR$/../doctorui/index.html" changelist="9ab0088f-b38e-4c0f-a15a-2181ab6862a6" time="1401074136900" ignored="false" />
@@ -36,7 +36,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="642" column="96" selection-start="24275" selection-end="24275" vertical-scroll-proportion="0.5738994">
+            <state line="89" column="98" selection-start="3148" selection-end="3148" vertical-scroll-proportion="0.60714287">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -99,16 +99,19 @@
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="366" column="58" selection-start="14507" selection-end="14507" vertical-scroll-proportion="-14.24">
+            <state line="761" column="69" selection-start="30713" selection-end="30713" vertical-scroll-proportion="-10.48">
               <folding>
-                <marker date="1402026208711" expanded="false" signature="38126:38177" placeholder="..." />
-                <marker date="1402026208711" expanded="true" signature="38325:38412" placeholder="..." />
-                <marker date="1402026208711" expanded="true" signature="38894:38968" placeholder="..." />
-                <marker date="1402026208711" expanded="true" signature="39408:39460" placeholder="..." />
-                <marker date="1402026208711" expanded="true" signature="39987:40061" placeholder="..." />
-                <marker date="1402026208711" expanded="false" signature="40364:40396" placeholder="..." />
-                <marker date="1402026208711" expanded="true" signature="41022:41096" placeholder="..." />
-                <marker date="1402026208711" expanded="false" signature="44298:44329" placeholder="..." />
+                <marker date="1402207491079" expanded="true" signature="42862:42913" placeholder="..." />
+                <marker date="1402207491079" expanded="true" signature="43065:43152" placeholder="..." />
+                <marker date="1402207491079" expanded="true" signature="43630:43704" placeholder="..." />
+                <marker date="1402207491079" expanded="false" signature="44169:44220" placeholder="..." />
+                <marker date="1402207491079" expanded="true" signature="44368:44455" placeholder="..." />
+                <marker date="1402207491079" expanded="true" signature="44937:45011" placeholder="..." />
+                <marker date="1402207491079" expanded="false" signature="45451:45503" placeholder="..." />
+                <marker date="1402207491079" expanded="false" signature="46030:46104" placeholder="..." />
+                <marker date="1402207491079" expanded="false" signature="46407:46439" placeholder="..." />
+                <marker date="1402207491079" expanded="true" signature="47065:47139" placeholder="..." />
+                <marker date="1402207491079" expanded="false" signature="50341:50372" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -139,8 +142,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1443" />
-    <option name="height" value="860" />
+    <option name="x" value="-12" />
+    <option name="y" value="1" />
+    <option name="width" value="1382" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -186,6 +191,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -203,22 +222,22 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../doctorui" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="128" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="921" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="921" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="921" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="128" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="129" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\test\test\images" />
       <recent name="D:\sss\onlinetwo\test" />
       <recent name="D:\sss\onlinetwo\test\js" />
       <recent name="D:\sss\onlinetwo\test\images" />
       <recent name="D:\sss\onlinetwo\test\css" />
-      <recent name="C:\Users\asus\test\test" />
     </key>
   </component>
   <component name="RunManager">
@@ -279,13 +298,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1443" height="860" extended-state="0" />
+    <frame x="-12" y="1" width="1382" height="784" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24877365" sideWeight="0.8044077" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24869695" sideWeight="0.8044077" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -327,7 +346,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
+    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
     <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
@@ -366,6 +385,32 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/jquery.mobile-1.4.2.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="130715" selection-start="130854" selection-end="130854" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="366" column="58" selection-start="14507" selection-end="14507" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1402207491079" expanded="true" signature="42862:42913" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="43065:43152" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="43630:43704" placeholder="..." />
+            <marker date="1402207491079" expanded="false" signature="44169:44220" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="44368:44455" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="44937:45011" placeholder="..." />
+            <marker date="1402207491079" expanded="false" signature="45451:45503" placeholder="..." />
+            <marker date="1402207491079" expanded="false" signature="46030:46104" placeholder="..." />
+            <marker date="1402207491079" expanded="false" signature="46407:46439" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="47065:47139" placeholder="..." />
+            <marker date="1402207491079" expanded="false" signature="50341:50372" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -427,14 +472,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="518" column="142" selection-start="21471" selection-end="21479" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1402026208711" expanded="false" signature="38126:38177" placeholder="..." />
-            <marker date="1402026208711" expanded="true" signature="38325:38412" placeholder="..." />
-            <marker date="1402026208711" expanded="true" signature="38894:38968" placeholder="..." />
-            <marker date="1402026208711" expanded="true" signature="39408:39460" placeholder="..." />
-            <marker date="1402026208711" expanded="true" signature="39987:40061" placeholder="..." />
-            <marker date="1402026208711" expanded="false" signature="40364:40396" placeholder="..." />
-            <marker date="1402026208711" expanded="true" signature="41022:41096" placeholder="..." />
-            <marker date="1402026208711" expanded="false" signature="44298:44329" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="42862:42913" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="43065:43152" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="43630:43704" placeholder="..." />
+            <marker date="1402207491079" expanded="false" signature="44169:44220" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="44368:44455" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="44937:45011" placeholder="..." />
+            <marker date="1402207491079" expanded="false" signature="45451:45503" placeholder="..." />
+            <marker date="1402207491079" expanded="false" signature="46030:46104" placeholder="..." />
+            <marker date="1402207491079" expanded="false" signature="46407:46439" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="47065:47139" placeholder="..." />
+            <marker date="1402207491079" expanded="false" signature="50341:50372" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -443,14 +491,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="250" column="55" selection-start="10107" selection-end="10107" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1402026208711" expanded="false" signature="38126:38177" placeholder="..." />
-            <marker date="1402026208711" expanded="true" signature="38325:38412" placeholder="..." />
-            <marker date="1402026208711" expanded="true" signature="38894:38968" placeholder="..." />
-            <marker date="1402026208711" expanded="true" signature="39408:39460" placeholder="..." />
-            <marker date="1402026208711" expanded="true" signature="39987:40061" placeholder="..." />
-            <marker date="1402026208711" expanded="false" signature="40364:40396" placeholder="..." />
-            <marker date="1402026208711" expanded="true" signature="41022:41096" placeholder="..." />
-            <marker date="1402026208711" expanded="false" signature="44298:44329" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="42862:42913" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="43065:43152" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="43630:43704" placeholder="..." />
+            <marker date="1402207491079" expanded="false" signature="44169:44220" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="44368:44455" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="44937:45011" placeholder="..." />
+            <marker date="1402207491079" expanded="false" signature="45451:45503" placeholder="..." />
+            <marker date="1402207491079" expanded="false" signature="46030:46104" placeholder="..." />
+            <marker date="1402207491079" expanded="false" signature="46407:46439" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="47065:47139" placeholder="..." />
+            <marker date="1402207491079" expanded="false" signature="50341:50372" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -498,23 +549,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="366" column="58" selection-start="14507" selection-end="14507" vertical-scroll-proportion="-14.24">
+        <state line="761" column="69" selection-start="30713" selection-end="30713" vertical-scroll-proportion="-10.48">
           <folding>
-            <marker date="1402026208711" expanded="false" signature="38126:38177" placeholder="..." />
-            <marker date="1402026208711" expanded="true" signature="38325:38412" placeholder="..." />
-            <marker date="1402026208711" expanded="true" signature="38894:38968" placeholder="..." />
-            <marker date="1402026208711" expanded="true" signature="39408:39460" placeholder="..." />
-            <marker date="1402026208711" expanded="true" signature="39987:40061" placeholder="..." />
-            <marker date="1402026208711" expanded="false" signature="40364:40396" placeholder="..." />
-            <marker date="1402026208711" expanded="true" signature="41022:41096" placeholder="..." />
-            <marker date="1402026208711" expanded="false" signature="44298:44329" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="42862:42913" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="43065:43152" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="43630:43704" placeholder="..." />
+            <marker date="1402207491079" expanded="false" signature="44169:44220" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="44368:44455" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="44937:45011" placeholder="..." />
+            <marker date="1402207491079" expanded="false" signature="45451:45503" placeholder="..." />
+            <marker date="1402207491079" expanded="false" signature="46030:46104" placeholder="..." />
+            <marker date="1402207491079" expanded="false" signature="46407:46439" placeholder="..." />
+            <marker date="1402207491079" expanded="true" signature="47065:47139" placeholder="..." />
+            <marker date="1402207491079" expanded="false" signature="50341:50372" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="642" column="96" selection-start="24275" selection-end="24275" vertical-scroll-proportion="0.5738994">
+        <state line="89" column="98" selection-start="3148" selection-end="3148" vertical-scroll-proportion="0.60714287">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

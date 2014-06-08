@@ -32,6 +32,14 @@ $(document).ready(function () {
         initSimiliarCase();
 
     });
+    $("#daily").on("pageshow",function(event){
+
+        var myDate = new Date();
+        var today = myDate.getFullYear()+"-"+ (myDate.getMonth()+1)+"-"+myDate.getDate();      //获取当前年份(2位)
+       $("#dailyLabel").empty();
+        $("#dailyLabel").append("日期："+today);
+
+    });
    function initSimiliarCase(){
         if(localStorage.getItem('username')!=null&&localStorage.getItem('username')!="null"&&localStorage.getItem('username')!=""){
             compare();
@@ -133,11 +141,12 @@ $(document).ready(function () {
         $("#divUserName").show();
         $("#divinputusername").hide();
         $("#username").val(localStorage.getItem('username'));
+        $("#userid").val(localStorage.getItem('userId'));
         $("#divUserName").append(localStorage.getItem('username'));
         if( localStorage.getItem('sex')=='woman'){
             $('input[id=woman]').attr('checked','checked');
         }
-      //  $("#birthday").val(localStorage.getItem('birthday'));
+       $("#birthday").val(localStorage.getItem('birthday'));
         $("#career").val(localStorage.getItem('career'));
         setMySituation();
         setSurvey6();
@@ -427,7 +436,7 @@ $(document).ready(function () {
         saveUserInfo();
     });
     $("#adviceHistory").click(function (){
-        $("#messageList").empty();
+       // $("#messageList").empty();
          getQuestionList();
         $.mobile.changePage("#adviceList", { transition: "slideup", changeHash: false });
         $("#preButton").click(function(){
@@ -445,7 +454,54 @@ $(document).ready(function () {
             $.mobile.changePage("#register", { transition: "none", changeHash: false });
         });
     });
+    $("#dailyHistory").click(function (){
+        localStorage.setItem('topic', "我的");
+        // $("#questionTopic").empty();
+        // $("#messageList").html(localStorage.getItem('topic')+"咨询记录").trigger( "pagecreate" );;
+        $("#dailyListContent").empty();
+        getMyDailyList(localStorage.getItem('userId'));
+        $.mobile.changePage("#dailyList", { transition: "slideup", changeHash: false });
+        $("#preDaily").click(function(){
+            $.mobile.changePage("#daily", { transition: "none", changeHash: false });
+        });
+    });
 
+    $("#dailySubmit").click(function () {
+            if($("#dailyText").val().length<6){
+                alert("最少6个字！");
+                return;
+            }
+            $.ajax({
+                type: "get",
+                url: 'http://www.ysrule.com/yy/saveDaily.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+                data: {userId:localStorage.getItem('userId'),username: escape($("#username").val()), doctorid: localStorage.getItem('currentDoctorID'), content: escape($("#dailyText").val()),
+                    doctorname: escape(localStorage.getItem('currentDoctorName'))
+                },
+                cache: true, //默认值true
+                dataType: "jsonp",
+                jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+                jsonpCallback: "jsonpCallback",
+                //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
+                //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
+                success: function (json) {
+                    $("#dailyText").val("");
+                   alert("日记保存成功！");
+
+                },
+                error: function (error) {
+                    alert("网络连接错误！");
+                }
+            });
+
+
+            function jsonpCallback(data) //回调函数
+            {
+                alert(data.message); //
+            }
+
+        }
+
+    );
     $("#submitQuestion").click(function () {
             if($("#questionAsk").val().length<8){
                 alert("最少8个字！");
@@ -465,7 +521,7 @@ $(document).ready(function () {
                 //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
                 success: function (json) {
                     $("#questionAsk").val("");
-                   alert("提问成功！");
+                    alert("提问成功！");
 
                 },
                 error: function (error) {
@@ -649,8 +705,59 @@ $(document).ready(function () {
         }
 
     }
+    function getMyDailyList(userid) {
+
+        $.ajax({
+            type: "get",
+            url: 'http://www.ysrule.com/yy/myDailyList.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+            data: {userId:userid
+            },
+            cache: true, //默认值true
+            dataType: "jsonp",
+            jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+            jsonpCallback: "jsonpCallback",
+            //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
+            //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
+            success: function (json) {
+                var data = json.magazineTab.records;
+                $.each(data, function(i, n){
+                    addDaily(n);
+
+                });
+                $("div[data-role=content] ul").listview({ defaults: true });
+//                var uls=$("#divMessageList")[0].children;
+//                $(uls).each(function(){
+//                    var ulHomes = this.children;
+//
+//                    $(ulHomes).each(function(){
+//                        if(this.id!=""){
+//                            $(this).click(function(){
+//                                $("#messageDetails").empty();
+//                                getmessageDetail(this.id);
+//                                localStorage.setItem('currentChatId', this.id);
+//                                $.mobile.changePage("#adviceListDetail", { transition: "slideup", changeHash: false });
+//                            });
+//                        }
+//
+//                    });
+//                });
+
+            },
+            error: function (error) {
+                alert("网络连接错误！");
+            }
+        });
+
+
+        function jsonpCallback(data) //回调函数
+        {
+            alert(data.message); //
+        }
+
+    }
     function getQuestionList() {
-        $("div[data-role=content] ul").remove();
+        //$("div[data-role=content] ul").remove();
+        $("#divMessageList").empty();
         $.ajax({
             type: "get",
             url: 'http://www.ysrule.com/yy/questionList.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
@@ -668,7 +775,7 @@ $(document).ready(function () {
                     addQuestions(n);
 
                 });
-               // $("#divMessageList").empty();
+
                //$(".selector").listview("refresh");
                 $("div[data-role=content] ul").listview({ defaults: true });
                // $("div[data-role=content] ul li").refresh();
@@ -771,6 +878,12 @@ $(document).ready(function () {
         }
 
     );
+    $("#dailyRefer").click(function () {
+
+            compare();
+        }
+
+    );
 
     function compare(){
         showLoader();
@@ -806,19 +919,26 @@ $(document).ready(function () {
                         $.each(data, function(i, n){
                             if(n.ID==localStorage.getItem('currentID')){
                                 $("#detailUsername")[0].innerText=unescape(n.username);
-                                localStorage.setItem('topic', unescape(n.username)+"的");
+                               // localStorage.setItem('topic', unescape(n.username)+"的");
                                 $("#detailSex")[0].innerText=$("#detailSex")[0].innerText.substr(0,3)+(unescape(n.sex)=="man"?"男":"女");
-                                $("#detailBirthday")[0].innerText=$("#detailBirthday")[0].innerText.substr(0,3)+ages(unescape(n.birthday));
+                                $("#detailBirthday")[0].innerText=$("#detailBirthday")[0].innerText.substr(0,3)+(unescape(n.birthday));
                                 $("#detailJob")[0].innerText=$("#detailJob")[0].innerText.substr(0,3)+unescape(n.job);
                                 var sc=unescape(n.sickContent);
                                 $("#detailSickContent")[0].innerText=$("#detailSickContent")[0].innerText.substr(0,3)+sc;
                                 $("#detailSickDesc")[0].innerText=$("#detailSickDesc")[0].innerText.substr(0,3)+ unescape(n.description);
-                                $("#detailSickDate")[0].innerText=$("#detailSickDate")[0].innerText.substr(0,3)+ages(unescape(n.sickDate));
+                                $("#detailSickDate")[0].innerText=$("#detailSickDate")[0].innerText.substr(0,3)+ages(unescape(n.sickDate))+"年";
                                 $("#hisQuestion").unbind();
                                 $("#hisQuestion").click(function(){
-                                    $("#messageList").empty();
+                                    $("#divMessageList").empty();
                                     getMyQuestionList(localStorage.getItem('currentID'));
                                     $.mobile.changePage("#adviceList", { transition: "slideup", changeHash: false });
+
+                                });
+                                $("#hisDaily").unbind();
+                                $("#hisDaily").click(function(){
+                                    $("#dailyListContent").empty();
+                                    getMyDailyList(localStorage.getItem('currentID'));
+                                    $.mobile.changePage("#dailyList", { transition: "slideup", changeHash: false });
 
                                 })
 
@@ -826,6 +946,9 @@ $(document).ready(function () {
 
                         });
                         $("#preButton").click(function(){
+                            $.mobile.changePage("#userDetail", { transition: "none", changeHash: false });
+                        });
+                        $("#preDaily").click(function(){
                             $.mobile.changePage("#userDetail", { transition: "none", changeHash: false });
                         });
                         $.mobile.changePage("#userDetail", { transition: "slideup", changeHash: false });
@@ -898,12 +1021,27 @@ $(document).ready(function () {
         li.class="userListClass";
         ul[0].innerHTML+=li.outerHTML;
     }
+    function addDaily(obj) {
+        var div=$("#dailyListContent");
+
+        //" <ul data-role='listview'  class='ui-listview' data-inset='true' role='listbox' >"+
+        var listStr= "<ul data-role='listview' id='messageList'  class='ui-listview selector' data-inset='true' role='listbox'><li data-role='list-divider' role='heading' tabindex='0' class='ui-bar-d ' style='white-space:normal;font-size:8pt;font-weight:normal'>"+
+            unescape(obj.username)+" 发布于："+unescape(obj.createtime)+
+            //"<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:55px;background: url(images/comments.jpg) no-repeat;padding:3px;padding-left:20px'>"+obj.commentNum+"</span>"+
+            "<span onclick='spanClick("+obj.ID+");' class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:5px;" +
+            "background: url(images/like1.jpg) no-repeat;padding:4px;padding-left:20px'>"+obj.agreenumber+"</span></li>"+
+            "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='c' >"+
+            "<a href='#'>"+
+            // "<img width='40' height='40' src='images/apple.jpg'/>"+
+            "<div style='font-size:11pt;font-weight:normal;white-space:normal;word-break:break-all;'>"+unescape(obj.content)+"</div></a></li></ul>";
+        div[0].innerHTML +=listStr;
+    }
     function addQuestions(obj) {
        var div=$("#divMessageList");
 
        //" <ul data-role='listview'  class='ui-listview' data-inset='true' role='listbox' >"+
        var listStr= "<ul data-role='listview' id='messageList'  class='ui-listview selector' data-inset='true' role='listbox'><li data-role='list-divider' role='heading' tabindex='0' class='ui-bar-d ' style='white-space:normal;font-size:8pt;font-weight:normal'>"+
-           unescape(obj.username)+" 发布于："+unescape(obj.createtime)+
+           unescape(obj.username)+" 提问  "+unescape(obj.createtime)+
            "<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:55px;background: url(images/comments.jpg) no-repeat;padding:3px;padding-left:20px'>"+obj.commentNum+"</span>"+
            "<span onclick='spanClick("+obj.ID+");' class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:5px;" +
            "background: url(images/like1.jpg) no-repeat;padding:4px;padding-left:20px'>"+obj.agreenumber+"</span></li>"+
@@ -918,7 +1056,7 @@ $(document).ready(function () {
         var listStr="";
         if(obj.isDoctor!="True"){
             listStr= "<ul data-role='listview'  class='ui-listview' data-inset='true' role='listbox'><li data-role='list-divider' data-theme='b' role='heading' tabindex='0'  class='ui-li ui-li-divider ' style='font-size:8pt;font-weight:normal;white-space:normal;'>"+
-                unescape(obj.username)+" 发布于："+unescape(obj.createtime)+
+                unescape(obj.username)+" 提问于："+unescape(obj.createtime)+
                 "<span onclick='spanClick("+obj.ID+");' class='ui-li-count ui-btn-up-e ui-btn-corner-all' style='right:5px;background: url(images/like1.jpg) no-repeat;padding:3px;padding-left:20px'>"+obj.agreenumber+"</span></li>"+
                 "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='c' >"+
                 "<a href='#'>"+
@@ -927,7 +1065,7 @@ $(document).ready(function () {
         }else{
             listStr= "<ul data-role='listview'  class='ui-listview' data-inset='true' role='listbox'><li data-role='list-divider' data-theme='d' role='heading' tabindex='0' class='ui-li ui-li-divider ui-btn-c ui-bar-c ui-btn-up-c' style='font-size:8pt;font-weight:normal'>"+
                // "<img class='imagesmall'  src='http://www.ysrule.com/yy/pic/"+obj.image+"'>"+
-                unescape(obj.doctorname)+" 发布于："+unescape(obj.createtime)+
+                unescape(obj.doctorname)+" 回答于："+unescape(obj.createtime)+
                 "<span onclick='spanClick("+obj.ID+");' class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:5px;background: url(images/like1.jpg) no-repeat;padding:3px;padding-left:20px'>"+obj.agreenumber+"</span></li>"+
                 "<li id='"+obj.ID+"' role='option' tabindex='0' data-theme='c' >"+
                 "<a href='#'>"+
