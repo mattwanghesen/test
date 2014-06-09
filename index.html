@@ -291,7 +291,7 @@
         <p id="doctorAddress"></p>
         <a  data-role="button" data-theme="a" id="adviceHistory" >咨询记录</a>
         <a href="#adviceOnline"  data-role="button" data-theme="a" id="adviceAsk" >在线咨询</a>
-        <a  data-role="button" data-theme="a" id="advicePhone" >电话咨询</a>
+        <a  data-role="button" data-theme="a" href="#contact" id="advicePhone" >电话咨询</a>
         <div data-role="fieldcontain">
 
         </div>
@@ -631,23 +631,33 @@
         <h3>
             我的咽炎日记
         </h3>
-        <a data-role="button" href="#index" class="ui-btn ui-icon-carat-l ui-btn-icon-notext" style="border-color: #6cd0bf">上一步</a>
+        <a data-role="button" href="#doctorDetail" class="ui-btn ui-icon-carat-l ui-btn-icon-notext" style="border-color: #6cd0bf">上一步</a>
     </div>
     <div data-role="content" id="dailyContent">
         <div>
-            <span>记下自己的饮食、休息、运动、天气、卫生.......等情况，有利于医生更好的给你提供帮助，同时可以留下你痊愈痕迹，供人参考。</span>
-            <span>记录30天详实记录，可免费获得问医生（签约医生，有丰富慢性咽炎康复经验）机会，可参与抽奖，可获赠免费咨询，直至痊愈。</span>
+
             <div data-role="fieldcontain">
-                <label for="dailyText" id="dailyLabel">日期：</label>
+                <label for="dailyText" id="dailyLabel">今日：</label>
                 <textarea cols="40" rows="8" name="textarea" id="dailyText" placeholder="请输入日记内容"></textarea>
             </div>
             <a  data-role="button" data-theme="a" id="dailySubmit" >保存</a>
             <a  data-role="button" data-theme="a" id="dailyHistory" >显示我的所有日记</a>
             <a  data-role="button" data-theme="a"  id="dailyRefer" >参考与我相似痊愈者的日记</a>
+            <span>记下自己的饮食、休息、运动、天气、卫生.......等情况，有利于医生更好的给你提供帮助，同时可以留下你痊愈痕迹，供人参考。</span>
+            <span>记录30天详实记录，可免费获得问医生（签约医生，有丰富慢性咽炎康复经验）机会，可参与抽奖，可获赠免费咨询，直至痊愈。</span>
         </div>
 
     </div>
-
+    <footer  data-role="footer" data-position="fixed" data-theme="c" style="border-color: #fefefe">
+        <nav data-role="navbar">
+            <ul>
+                <li><a href="#index"  data-icon="home">首页</a></li>
+                <li><a href="#task" data-icon="grid">在线医生</a></li>
+                <li><a href="#similiarCase" data-icon="info">相似案例</a></li>
+                <li><a href="#register"  data-icon="gear">账户</a></li>
+            </ul>
+        </nav>
+    </footer>
 </div>
 <div data-role="page" id="dailyList" data-theme="a">
     <div data-theme="a" data-role="header" data-position="fixed" >
@@ -661,7 +671,28 @@
             <li><a href="#">
                 <h2>养生</h2>
                 <p>道法自然，天人合一</p>
-                <p class="ui-li-aside">iOS</p>
+                <p class="ui-li-aside">锻炼</p>
+            </a></li>
+        </ul>
+
+
+
+    </div>
+
+</div>
+<div data-role="page" id="contact" data-theme="a">
+    <div data-theme="a" data-role="header" data-position="fixed" >
+        <h3>
+
+        </h3>
+        <a data-role="button"  class="ui-btn ui-icon-carat-l ui-btn-icon-notext" style="border-color: #6cd0bf">上一步</a>
+    </div>
+    <div data-role="content" id="contactListContent">
+        <ul data-role="listview" id="contactListDetail" class="ui-listview" data-inset="true" role="listbox" >
+            <li><a href="#">
+                <h2>养生</h2>
+                <p>道法自然，天人合一</p>
+                <p class="ui-li-aside">锻炼</p>
             </a></li>
         </ul>
 

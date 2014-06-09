@@ -27,6 +27,11 @@ $(document).ready(function () {
         getDoctors();
 
     });
+    $("#contact").on("pageshow",function(event){
+
+        getContactors();
+
+    });
     $("#similiarCase").on("pageshow",function(event){
 
         initSimiliarCase();
@@ -37,7 +42,7 @@ $(document).ready(function () {
         var myDate = new Date();
         var today = myDate.getFullYear()+"-"+ (myDate.getMonth()+1)+"-"+myDate.getDate();      //获取当前年份(2位)
        $("#dailyLabel").empty();
-        $("#dailyLabel").append("日期："+today);
+        $("#dailyLabel").append("今日："+today);
 
     });
    function initSimiliarCase(){
@@ -343,31 +348,28 @@ $(document).ready(function () {
         submitSurvey();
     });
  function submitSurvey() {
+     showLoader();
                 $.ajax({
                     type: "get",
-                    url: 'http://www.ysrule.com/yy/survey.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+                    url: 'http://www.ysrule.com/yy/survey.asp',
                     data: {userId:localStorage.getItem('userId'),
                         s1: localStorage.getItem('s1'), s2: localStorage.getItem('s2'), s3: localStorage.getItem('s3'), s4: localStorage.getItem('s4'), s5: localStorage.getItem('s5'), s6: localStorage.getItem('s6'), s7: localStorage.getItem('s7'), s8: localStorage.getItem('s8'), s9: localStorage.getItem('s9'), s10: localStorage.getItem('s10'), s11: localStorage.getItem('s11'), s12: localStorage.getItem("checks"), surveyValue: localStorage.getItem("surveyValue")
                     },
-                    cache: true, //默认值true
+                    cache: true,
                     dataType: "jsonp",
-                    jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+                    jsonp: "callbackfun",
                     jsonpCallback: "jsonpCallback",
-                    //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
-                    //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
                     success: function (json) {
-                       // localStorage.setItem('phoneNumber', $('#phoneNumber').val());
-                        //$.mobile.changePage("#success", { transition: "slideup", changeHash: false });
-                       // alert("成功上传！");
-                        // $.mobile.changePage("#success", { transition: "slideup", changeHash: false });
+                        hideLoader();
                     },
                     error: function (error) {
+                        hideLoader();
                         alert("网络连接错误！");
                     }
                 });
 
 
-                function jsonpCallback(data) //回调函数
+                function jsonpCallback(data)
                 {
                     alert(data.message); //
                 }
@@ -383,20 +385,22 @@ $(document).ready(function () {
         localStorage.setItem('surveyValue', null);
     });
     function saveUserInfo(){
+        showLoader();
         $.ajax({
             type: "get",
-            url: 'http://www.ysrule.com/yy/reg.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+            url: 'http://www.ysrule.com/yy/reg.asp',
             data: {userId:localStorage.getItem('userId'),description:escape($("#description").val()),username: escape($("#username").val()), career: $("#career").val(), birthday: $("#birthday").val(),t1:localStorage.getItem('my-1'),t2:localStorage.getItem('my-2'),
                 t3:localStorage.getItem('my-3'),t4:localStorage.getItem('my-4'),t5:localStorage.getItem('my-5'),t6:localStorage.getItem('my-6'),t7:localStorage.getItem('my-7'),t8:localStorage.getItem('my-8'),t9:localStorage.getItem('my-9'),t10:localStorage.getItem('my-10'),
                 sex: $('input[type="radio"][name="sex"]:checked').val(),sickDate:$("#sickDate").val(),sickContent:escape($("#sickContent").html().substring(15).substr(0,$("#sickContent").html().substring(15).length-51))
             },
-            cache: true, //默认值true
+            cache: true,
             dataType: "jsonp",
-            jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+            jsonp: "callbackfun",
             jsonpCallback: "jsonpCallback",
-            //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
-            //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
+
+
             success: function (json) {
+                hideLoader();
                 var data = json.magazineTab.records;
                 $.each(data, function(i, n){
                     localStorage.setItem('userId', n.ID);
@@ -411,6 +415,7 @@ $(document).ready(function () {
 
             },
             error: function (error) {
+                hideLoader();
                 alert("网络连接错误！");
             }
         });
@@ -446,8 +451,6 @@ $(document).ready(function () {
     });
     $("#myQuestions").click(function (){
         localStorage.setItem('topic', "我的");
-       // $("#questionTopic").empty();
-       // $("#messageList").html(localStorage.getItem('topic')+"咨询记录").trigger( "pagecreate" );;
         getMyQuestionList(localStorage.getItem('userId'));
         $.mobile.changePage("#adviceList", { transition: "slideup", changeHash: false });
         $("#preButton").click(function(){
@@ -456,8 +459,6 @@ $(document).ready(function () {
     });
     $("#dailyHistory").click(function (){
         localStorage.setItem('topic', "我的");
-        // $("#questionTopic").empty();
-        // $("#messageList").html(localStorage.getItem('topic')+"咨询记录").trigger( "pagecreate" );;
         $("#dailyListContent").empty();
         getMyDailyList(localStorage.getItem('userId'));
         $.mobile.changePage("#dailyList", { transition: "slideup", changeHash: false });
@@ -471,24 +472,27 @@ $(document).ready(function () {
                 alert("最少6个字！");
                 return;
             }
+            showLoader();
             $.ajax({
                 type: "get",
-                url: 'http://www.ysrule.com/yy/saveDaily.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+                url: 'http://www.ysrule.com/yy/saveDaily.asp',
                 data: {userId:localStorage.getItem('userId'),username: escape($("#username").val()), doctorid: localStorage.getItem('currentDoctorID'), content: escape($("#dailyText").val()),
                     doctorname: escape(localStorage.getItem('currentDoctorName'))
                 },
-                cache: true, //默认值true
+                cache: true,
                 dataType: "jsonp",
-                jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+                jsonp: "callbackfun",
                 jsonpCallback: "jsonpCallback",
-                //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
-                //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
+
+
                 success: function (json) {
+                    hideLoader();
                     $("#dailyText").val("");
                    alert("日记保存成功！");
 
                 },
                 error: function (error) {
+                    hideLoader();
                     alert("网络连接错误！");
                 }
             });
@@ -507,24 +511,27 @@ $(document).ready(function () {
                 alert("最少8个字！");
                 return;
             }
+            showLoader();
             $.ajax({
                 type: "get",
-                url: 'http://www.ysrule.com/yy/askQuestion.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+                url: 'http://www.ysrule.com/yy/askQuestion.asp',
                 data: {userId:localStorage.getItem('userId'),username: escape($("#username").val()), doctorid: localStorage.getItem('currentDoctorID'), content: escape($("#questionAsk").val()),
                     doctorname: escape(localStorage.getItem('currentDoctorName'))
                 },
-                cache: true, //默认值true
+                cache: true,
                 dataType: "jsonp",
-                jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+                jsonp: "callbackfun",
                 jsonpCallback: "jsonpCallback",
-                //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
-                //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
+
+
                 success: function (json) {
+                    hideLoader();
                     $("#questionAsk").val("");
                     alert("提问成功！");
 
                 },
                 error: function (error) {
+                    hideLoader();
                     alert("网络连接错误！");
                 }
             });
@@ -542,15 +549,13 @@ $(document).ready(function () {
      showLoader();
             $.ajax({
                 type: "get",
-                url: 'http://www.ysrule.com/yy/doctorView.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+                url: 'http://www.ysrule.com/yy/doctorView.asp',
                 data: {userId:localStorage.getItem('userId')
                 },
-                cache: true, //默认值true
+                cache: true,
                 dataType: "jsonp",
-                jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+                jsonp: "callbackfun",
                 jsonpCallback: "jsonpCallback",
-                //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
-                //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
                 success: function (json) {
                     var ul=$("#listDoctor").empty();
                     var data = json.magazineTab.records;
@@ -571,14 +576,9 @@ $(document).ready(function () {
                                     localStorage.setItem('topic', unescape(n.username)+"医生的");
                                     localStorage.setItem('currentDoctorID', n.ID);
                                     $("#doctorUsername")[0].innerText=unescape(n.username);
-                                    //$("#doctorSex")[0].innerText=$("#doctorSex")[0].innerText.substr(0,3)+(unescape(n.sex)=="man"?"男":"女");
-                                    //$("#doctorBirthday")[0].innerText=$("#doctorBirthday")[0].innerText.substr(0,3)+ages(unescape(n.birthday));
                                     $("#doctorTitle")[0].innerText=unescape(n.title);
                                     $("#doctorRemark")[0].innerText=unescape(n.remark);
                                     $("#doctorAddress")[0].innerText=unescape(n.address);
-                                    //$("#doctorSickContent")[0].innerText=$("#doctorSickContent")[0].innerText.substr(0,3)+unescape(n.sickContent);
-                                    //$("#doctorSickDate")[0].innerText=$("#doctorSickDate")[0].innerText.substr(0,3)+ages(unescape(n.sickDate));
-
                                 }
 
                             });
@@ -587,8 +587,6 @@ $(document).ready(function () {
                         });
 
                     });
-                   // hideLoader();
-
                 },
                 error: function (error) {
                     hideLoader();
@@ -603,6 +601,40 @@ $(document).ready(function () {
             }
 
         }
+    function getContactors() {
+        showLoader();
+        $.ajax({
+            type: "get",
+            url: 'http://www.ysrule.com/yy/contactView.asp',
+            data: {userId:localStorage.getItem('userId')
+            },
+            cache: true,
+            dataType: "jsonp",
+            jsonp: "callbackfun",
+            jsonpCallback: "jsonpCallback",
+            success: function (json) {
+                var ul=$("#contactListDetail").empty();
+                var data = json.magazineTab.records;
+                $.each(data, function(i, n){
+                    addContact(n);
+
+                });
+                $("#contactListDetail").listview("refresh");
+                hideLoader();
+            },
+            error: function (error) {
+                hideLoader();
+                alert("网络连接错误！");
+            }
+        });
+
+
+        function jsonpCallback(data) //回调函数
+        {
+            alert(data.message); //
+        }
+
+    }
 
     $("#submitQuestionMore").click(function () {
             if($("#questionAskMore").val().length<8){
@@ -612,16 +644,14 @@ $(document).ready(function () {
            showLoader();
             $.ajax({
                 type: "get",
-                url: 'http://www.ysrule.com/yy/askMoreQuestion.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+                url: 'http://www.ysrule.com/yy/askMoreQuestion.asp',
                 data: {userId:localStorage.getItem('userId'),username: escape($("#username").val()), doctorid: localStorage.getItem('currentDoctorID'), content: escape($("#questionAskMore").val()),
                     doctorname: escape(localStorage.getItem('currentDoctorName')),currentChatId:localStorage.getItem('currentChatId'),isDoctor:0
                 },
-                cache: true, //默认值true
+                cache: true,
                 dataType: "jsonp",
-                jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+                jsonp: "callbackfun",
                 jsonpCallback: "jsonpCallback",
-                //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
-                //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
                 success: function (json) {
                     hideLoader();
                    // $("#messageDetails").empty();
@@ -634,11 +664,6 @@ $(document).ready(function () {
                     addQuestionDetails(msg);
                     $("div[data-role=content] ul").listview({ defaults: true });
                     $("#questionAskMore").val("");
-                    // alert("提问成功！");
-                   // $("#messageDetails").empty();
-                    //getmessageDetail( localStorage.getItem('currentChatId'));
-                   // localStorage.setItem('currentChatId', this.id);
-
                 },
                 error: function (error) {
                     hideLoader();
@@ -656,19 +681,20 @@ $(document).ready(function () {
 
     );
     function getMyQuestionList(userid) {
-
+        showLoader();
         $.ajax({
             type: "get",
-            url: 'http://www.ysrule.com/yy/myQuestionList.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+            url: 'http://www.ysrule.com/yy/myQuestionList.asp',
             data: {userId:userid
             },
-            cache: true, //默认值true
+            cache: true,
             dataType: "jsonp",
-            jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+            jsonp: "callbackfun",
             jsonpCallback: "jsonpCallback",
-            //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
-            //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
+
+
             success: function (json) {
+                hideLoader();
                 var data = json.magazineTab.records;
                 $.each(data, function(i, n){
                     addQuestions(n);
@@ -703,47 +729,29 @@ $(document).ready(function () {
         {
             alert(data.message); //
         }
-
     }
     function getMyDailyList(userid) {
-
+        showLoader();
         $.ajax({
             type: "get",
-            url: 'http://www.ysrule.com/yy/myDailyList.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+            url: 'http://www.ysrule.com/yy/myDailyList.asp',
             data: {userId:userid
             },
-            cache: true, //默认值true
+            cache: true,
             dataType: "jsonp",
-            jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+            jsonp: "callbackfun",
             jsonpCallback: "jsonpCallback",
-            //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
-            //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
             success: function (json) {
+                hideLoader();
                 var data = json.magazineTab.records;
                 $.each(data, function(i, n){
                     addDaily(n);
 
                 });
                 $("div[data-role=content] ul").listview({ defaults: true });
-//                var uls=$("#divMessageList")[0].children;
-//                $(uls).each(function(){
-//                    var ulHomes = this.children;
-//
-//                    $(ulHomes).each(function(){
-//                        if(this.id!=""){
-//                            $(this).click(function(){
-//                                $("#messageDetails").empty();
-//                                getmessageDetail(this.id);
-//                                localStorage.setItem('currentChatId', this.id);
-//                                $.mobile.changePage("#adviceListDetail", { transition: "slideup", changeHash: false });
-//                            });
-//                        }
-//
-//                    });
-//                });
-
             },
             error: function (error) {
+                hideLoader();
                 alert("网络连接错误！");
             }
         });
@@ -756,30 +764,27 @@ $(document).ready(function () {
 
     }
     function getQuestionList() {
-        //$("div[data-role=content] ul").remove();
+        showLoader();
         $("#divMessageList").empty();
         $.ajax({
             type: "get",
-            url: 'http://www.ysrule.com/yy/questionList.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+            url: 'http://www.ysrule.com/yy/questionList.asp',
             data: {doctorid:localStorage.getItem('currentDoctorID')
             },
-            cache: true, //默认值true
+            cache: true,
             dataType: "jsonp",
-            jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+            jsonp: "callbackfun",
             jsonpCallback: "jsonpCallback",
-            //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
-            //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
+
+
             success: function (json) {
+                hideLoader();
                 var data = json.magazineTab.records;
                 $.each(data, function(i, n){
                     addQuestions(n);
 
                 });
-
-               //$(".selector").listview("refresh");
                 $("div[data-role=content] ul").listview({ defaults: true });
-               // $("div[data-role=content] ul li").refresh();
-              //  $("div[data-role=content] ul li").listview();
                 var uls=$("#divMessageList")[0].children;
                 $(uls).each(function(){
                 var ulHomes = this.children;
@@ -799,6 +804,7 @@ $(document).ready(function () {
 
             },
             error: function (error) {
+                hideLoader();
                 alert("网络连接错误！");
             }
         });
@@ -813,18 +819,20 @@ $(document).ready(function () {
 
 
     function getmessageDetail(parentid){
+        showLoader();
         $.ajax({
                 type: "get",
-                url: 'http://www.ysrule.com/yy/questionListDetails.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+                url: 'http://www.ysrule.com/yy/questionListDetails.asp',
                 data: {parentid:parentid
                 },
-                cache: true, //默认值true
+                cache: true,
                 dataType: "jsonp",
-                jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+                jsonp: "callbackfun",
                 jsonpCallback: "jsonpCallback",
-                //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
-                //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
+
+
                 success: function (json) {
+                    hideLoader();
                     $("#divMessageDetails").empty();
                     var data = json.magazineTab.records;
                     $.each(data, function(i, n){
@@ -832,34 +840,9 @@ $(document).ready(function () {
 
                     });
                     $("div[data-role=content] ul").listview();
-                    //               var ulHomes = $("#listDoctor")[0].children;
-
-//                    $(ulHomes).each(function(){
-//                        $(this).click(function(){
-//                            localStorage.setItem('currentID', this.id);
-//
-//                            $.each(data, function(i, n){
-//                                if(n.ID==localStorage.getItem('currentID')){
-//                                    localStorage.setItem('currentDoctorName', unescape(n.username));
-//                                    localStorage.setItem('currentDoctorID', n.ID);
-//                                    $("#doctorUsername")[0].innerText=unescape(n.username);
-//                                    //$("#doctorSex")[0].innerText=$("#doctorSex")[0].innerText.substr(0,3)+(unescape(n.sex)=="man"?"男":"女");
-//                                    //$("#doctorBirthday")[0].innerText=$("#doctorBirthday")[0].innerText.substr(0,3)+ages(unescape(n.birthday));
-//                                    //$("#doctorJob")[0].innerText=$("#doctorJob")[0].innerText.substr(0,3)+unescape(n.job);
-//                                    //$("#doctorSickContent")[0].innerText=$("#doctorSickContent")[0].innerText.substr(0,3)+unescape(n.sickContent);
-//                                    //$("#doctorSickDate")[0].innerText=$("#doctorSickDate")[0].innerText.substr(0,3)+ages(unescape(n.sickDate));
-//
-//                                }
-//
-//                            });
-//
-                        //   $.mobile.changePage("#adviceListDetail", { transition: "slideup", changeHash: false });
-//                        });
-//
-//                    });
-
                 },
                 error: function (error) {
+                    hideLoader();
                     alert("网络连接错误！");
                 }
             });
@@ -889,17 +872,17 @@ $(document).ready(function () {
         showLoader();
         $.ajax({
             type: "get",
-            url: 'http://www.ysrule.com/yy/searchFolder.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+            url: 'http://www.ysrule.com/yy/searchFolder.asp',
             data: {userId:localStorage.getItem('userId'),username: escape($("#username").val()), career: $("#career").val(), birthday: $("#birthday").val(),t1:localStorage.getItem('my-1'),t2:localStorage.getItem('my-2'),
                 t3:localStorage.getItem('my-3'),t4:localStorage.getItem('my-4'),t5:localStorage.getItem('my-5'),t6:localStorage.getItem('my-6'),t7:localStorage.getItem('my-7'),t8:localStorage.getItem('my-8'),t9:localStorage.getItem('my-9'),t10:localStorage.getItem('my-10'),
                 sex: $('input[type="radio"][name="sex"]:checked').val(),sickDate:$("#sickDate").val(),sickContent:escape($("#sickContent").html().substring(15).substr(0,$("#sickContent").html().substring(15).length-5))
             },
-            cache: true, //默认值true
+            cache: true,
             dataType: "jsonp",
-            jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+            jsonp: "callbackfun",
             jsonpCallback: "jsonpCallback",
-            //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
-            //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
+
+
             success: function (json) {
                 hideLoader();
                 $("#listViewUser").empty();
@@ -996,10 +979,6 @@ $(document).ready(function () {
             imageStr= "images/woman.jpg";
         }
         href_a.innerHTML="<img width='100%' height='100%' src='"+imageStr+"'><h2>"+unescape(obj.username)+"</h2><p>"+sc.substr(0,sc.length)+"</p> <p class='ui-li-aside'>"+unescape(obj.job)+"</p>";
-        //href_a.href="javascript:del('"+id+"');";
-       // href_a.innerHTML ="del";                         t
-        //li.innerHTML=txt;                                est
-        //li.id=id;
         li.innerHTML= href_a.outerHTML;
         li.id=obj.ID;
         li.class="userListClass";
@@ -1012,10 +991,6 @@ $(document).ready(function () {
         var head = document.createElement("h2");
         var img = document.createElement("img");
         href_a.innerHTML="<img class='image'  src='http://www.ysrule.com/yy/pic/"+obj.image+"'><h2>"+unescape(obj.username)+"</h2><p>"+unescape(obj.remark)+"</p> <p class='ui-li-aside'>主治医师</p>";
-        //href_a.href="javascript:del('"+id+"');";
-        // href_a.innerHTML ="del";
-        //li.innerHTML=txt;
-        //li.id=id;
         li.innerHTML= href_a.outerHTML;
         li.id=obj.ID;
         li.class="userListClass";
@@ -1035,6 +1010,18 @@ $(document).ready(function () {
             // "<img width='40' height='40' src='images/apple.jpg'/>"+
             "<div style='font-size:11pt;font-weight:normal;white-space:normal;word-break:break-all;'>"+unescape(obj.content)+"</div></a></li></ul>";
         div[0].innerHTML +=listStr;
+    }
+    function addContact(obj) {
+        var ul=$("#contactListDetail");
+        var li= document.createElement("li");
+        var href_a = document.createElement("a");
+        var head = document.createElement("h2");
+        var img = document.createElement("img");
+        href_a.innerHTML="<img class='image'  src='http://www.ysrule.com/yy/pic/"+obj.image+"'><h2>"+unescape(obj.username)+"</h2><p>"+unescape(obj.usercontact)+"</p> <p class='ui-li-aside'>值班护士</p>";
+        li.innerHTML= href_a.outerHTML;
+        li.id=obj.ID;
+        li.class="userListClass";
+        ul[0].innerHTML+=li.outerHTML;
     }
     function addQuestions(obj) {
        var div=$("#divMessageList");
@@ -1192,14 +1179,14 @@ $(document).ready(function () {
 
         $.ajax({
             type: "get",
-            url: 'http://www.ysrule.com/ysrule/survey.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+            url: 'http://www.ysrule.com/ysrule/survey.asp',
             data: {id: 10, code: $("#phoneNumber").val()},
-            cache: true, //默认值true
+            cache: true,
             dataType: "jsonp",
-            jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+            jsonp: "callbackfun",
             jsonpCallback: "jsonpCallback",
-            //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
-            //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
+
+
             success: function (json) {
                 alert(json.message);
             },
@@ -1225,14 +1212,12 @@ $(document).ready(function () {
         } else {
             $.ajax({
                 type: "get",
-                url: 'http://www.ysrule.com/ysrule/question.asp', //实际上访问时产生的地址为: ajax.ashx?callbackfun=jsonpCallback&id=10
+                url: 'http://www.ysrule.com/ysrule/question.asp',
                 data: {id: 10, code: localStorage.getItem('phoneNumber'), question: $('#question').val()},
-                cache: true, //默认值true
+                cache: true,
                 dataType: "jsonp",
-                jsonp: "callbackfun",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
+                jsonp: "callbackfun",
                 jsonpCallback: "jsonpCallback",
-                //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
-                //如果这里自定了jsonp的回调函数，则success函数则不起作用;否则success将起作用
                 success: function (json) {
                     if (json.message == 0) {
                         alert('提交成功！');
