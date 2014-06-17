@@ -385,6 +385,7 @@ $(document).ready(function () {
         localStorage.setItem('surveyValue', null);
     });
     function saveUserInfo(){
+        if($("#username").val()!=""||$("#username").val()!=null){
         showLoader();
         $.ajax({
             type: "get",
@@ -420,6 +421,7 @@ $(document).ready(function () {
             }
         });
 
+        }
 
         function jsonpCallback(data) //回调函数
         {
@@ -515,7 +517,7 @@ $(document).ready(function () {
             $.ajax({
                 type: "get",
                 url: 'http://www.ysrule.com/yy/askQuestion.asp',
-                data: {userId:localStorage.getItem('userId'),username: escape($("#username").val()), doctorid: localStorage.getItem('currentDoctorID'), content: escape($("#questionAsk").val()),
+                data: {userId:localStorage.getItem('userId'),ownerId:localStorage.getItem('userId'),username: escape($("#username").val()), doctorid: localStorage.getItem('currentDoctorID'), content: escape($("#questionAsk").val()),
                     doctorname: escape(localStorage.getItem('currentDoctorName'))
                 },
                 cache: true,
@@ -730,6 +732,56 @@ $(document).ready(function () {
             alert(data.message); //
         }
     }
+    function getHisQuestionList(userid) {
+        showLoader();
+        $.ajax({
+            type: "get",
+            url: 'http://www.ysrule.com/yy/hisQuestionList.asp',
+            data: {userId:userid,ownerId:localStorage.getItem('userId')
+            },
+            cache: true,
+            dataType: "jsonp",
+            jsonp: "callbackfun",
+            jsonpCallback: "jsonpCallback",
+
+
+            success: function (json) {
+                hideLoader();
+                var data = json.magazineTab.records;
+                $.each(data, function(i, n){
+                    addQuestions(n);
+
+                });
+                $("div[data-role=content] ul").listview({ defaults: true });
+                var uls=$("#divMessageList")[0].children;
+                $(uls).each(function(){
+                    var ulHomes = this.children;
+
+                    $(ulHomes).each(function(){
+                        if(this.id!=""){
+                            $(this).click(function(){
+                                $("#messageDetails").empty();
+                                getmessageDetail(this.id);
+                                localStorage.setItem('currentChatId', this.id);
+                                $.mobile.changePage("#adviceListDetail", { transition: "slideup", changeHash: false });
+                            });
+                        }
+
+                    });
+                });
+
+            },
+            error: function (error) {
+                alert("网络连接错误！");
+            }
+        });
+
+
+        function jsonpCallback(data) //回调函数
+        {
+            alert(data.message); //
+        }
+    }
     function getMyDailyList(userid) {
         showLoader();
         $.ajax({
@@ -913,7 +965,7 @@ $(document).ready(function () {
                                 $("#hisQuestion").unbind();
                                 $("#hisQuestion").click(function(){
                                     $("#divMessageList").empty();
-                                    getMyQuestionList(localStorage.getItem('currentID'));
+                                    getHisQuestionList(localStorage.getItem('currentID'));
                                     $.mobile.changePage("#adviceList", { transition: "slideup", changeHash: false });
 
                                 });
