@@ -528,8 +528,12 @@ $(document).ready(function () {
 
                 success: function (json) {
                     hideLoader();
-                    $("#questionAsk").val("");
-                    alert("提问成功！");
+                    if(json.message=="success"){
+                        alert("提问成功！");
+                    }else if(json.message=="pay"){
+                        alert("免费健康值已经用完，请联系客服，或者写咽炎日记，即刻赚取！");
+                    }
+
 
                 },
                 error: function (error) {
@@ -656,16 +660,20 @@ $(document).ready(function () {
                 jsonpCallback: "jsonpCallback",
                 success: function (json) {
                     hideLoader();
-                   // $("#messageDetails").empty();
-                    var msg=new Object();
-                    msg.createtime= new Date();
-                    msg.content= $("#questionAskMore").val();
-                    msg.ID=900000;
-                    msg.agreenumber=0;
-                    msg.username=$("#username").val();
-                    addQuestionDetails(msg);
-                    $("div[data-role=content] ul").listview({ defaults: true });
-                    $("#questionAskMore").val("");
+                    if(json.message=="success"){
+                        var msg=new Object();
+                        msg.createtime= new Date();
+                        msg.content= $("#questionAskMore").val();
+                        msg.ID=900000;
+                        msg.agreenumber=0;
+                        msg.username=$("#username").val();
+                        addQuestionDetails(msg);
+                        $("div[data-role=content] ul").listview({ defaults: true });
+                        $("#questionAskMore").val("");
+                    }else if(json.message=="pay"){
+                        alert("免费健康值已经用完，请联系客服，或者写咽炎日记，即刻赚取！");
+                    }
+
                 },
                 error: function (error) {
                     hideLoader();
