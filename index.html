@@ -203,9 +203,9 @@
     <div data-role="content" id="divMessageList">
     <ul data-role="listview" id="messageList" class="ui-listview" data-inset="true" role="listbox">
         <li><a href="#">
-            <h2>养生</h2>
-            <p>道法自然，天人合一</p>
-            <p class="ui-li-aside">iOS</p>
+            <h2>找到病因</h2>
+            <p>咽炎就是那么简单</p>
+            <p class="ui-li-aside">咨询记录</p>
         </a></li>
     </ul>
 
@@ -584,7 +584,7 @@
 
 
         <p>下图是访问本应用的人员位置分布图，可见慢性咽炎与气候，地域无关。与污染有一点关系，但是关系不大。</p>
-
+        <img src="images/11111.jpg" width="100%" >
 
     </div>
     <footer  data-role="footer" data-position="fixed" data-theme="c" style="border-color: #fefefe">
@@ -599,28 +599,7 @@
     </footer>
 </div>
 
-<div data-role="page" id="success" data-theme="a">
-    <div data-theme="a" data-role="header" data-position="fixed">
-        <h3>
-            注册成功！
-        </h3>
-        <a data-role="button" href="#survey-7" class="ui-btn ui-icon-carat-l ui-btn-icon-notext" style="border-color: #6cd0bf">上一步</a>
-        <a data-role="button" href="#index" >首页</a>
-    </div>
-    <div data-role="content">
-        <img src="images/apple.jpg" >
-    </div>
-    <div data-theme="a" data-role="footer" data-position="fixed">
-        <nav data-role="navbar">
-            <ul>
-                <li><a href="#index" data-icon="home">首页</a></li>
-                <li><a href="#task" data-icon="grid">在线医生</a></li>
-                <li><a href="#similiarCase" data-icon="info">相似案例</a></li>
-                <li><a href="#register" class="ui-btn-active" data-icon="gear">我的</a></li>
-            </ul>
-        </nav>
-    </div>
-</div>
+
 <div data-role="page" id="daily" data-theme="a">
     <div data-theme="a" data-role="header" data-position="fixed" >
         <h3>
@@ -680,7 +659,6 @@
         <h3>
              客户服务
         </h3>
-        <a data-role="button"  class="ui-btn ui-icon-carat-l ui-btn-icon-notext" style="border-color: #6cd0bf">上一步</a>
     </div>
     <div data-role="content" id="contactListContent">
         <ul data-role="listview" id="contactListDetail" class="ui-listview" data-inset="true" role="listbox" >
@@ -694,7 +672,16 @@
 
 
     </div>
-
+    <footer  data-role="footer" data-position="fixed" data-theme="c" style="border-color: #fefefe">
+        <nav data-role="navbar">
+            <ul>
+                <li><a href="#index"  data-icon="home">首页</a></li>
+                <li><a href="#task" data-icon="grid">在线医生</a></li>
+                <li><a href="#similiarCase" data-icon="info">相似案例</a></li>
+                <li><a href="#register"  data-icon="gear">账户</a></li>
+            </ul>
+        </nav>
+    </footer>
 </div>
 <div data-role="page" id="register" data-theme="c">
     <div data-theme="a" data-role="header" data-position="fixed" data-theme="a" style="color: white;border: white">
@@ -706,7 +693,7 @@
     </div>
     <div data-role="content">
       <div id="divinputusername">  <input type="text" name="username" id="username" placeholder="用户名" data-clear-btn=true/></div>
-        <input type="text" name="userid" id="userid" placeholder="userid" data-clear-btn=true/>
+        <!--input type="text" name="userid" id="userid" placeholder="userid" data-clear-btn=true/-->
      <div id="divUserName" >你好，</div>
                     <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" >
                         <legend>性别：</legend>
@@ -716,7 +703,7 @@
                         <label for="woman">女</label>
                         </fieldset>
                     <label for="birthday">年龄：</label>
-                <input name="birthday" type="number" id="birthday" value="0" />
+                <input name="birthday" type="number" id="birthday" value="" />
             <label for="career" class="select">职业：</label>
             <select id="career" name="career">
                 <option value=""></option>
@@ -727,10 +714,11 @@
                 <option value="governor">公务员</option>
                 <option value="other">其他</option>
             </select>
+        <a data-role="button" id="saveUser" data-theme="a">确定</a>
         <a href="#mysituaton" data-role="button" id="situation" data-theme="a">填写我的症状</a>
         <div id="sickContent" hidden="true">症状：</div>
         <div id="sickDesc" hidden="true">详情：</div>
-        <a data-role="button" id="clearLocal" data-theme="a">clearLocal</a>
+        <!--a data-role="button" id="clearLocal" data-theme="a">clearLocal</a-->
         <a data-role="button" id="yyNumber" data-theme="a">我的咽炎指数</a>
         <a data-role="button" id="myQuestions" data-theme="a">我的问医生记录</a>
         <a data-role="button" id="compare" data-theme="a">参考与我相似案例</a>
@@ -819,7 +807,7 @@
         <a data-role="button" href="#index" class="ui-btn ui-icon-carat-l ui-btn-icon-notext" style="border-color: #6cd0bf">返回</a>
     </div>
     <div  data-role="content" style="word-break:break-all;white-space:normal;">
-       <p><h1>台湾老中医，针对病因治病（不是根据症状）</h1>
+       <p><h1>台湾老中医吴清忠，针对病因治病（不是根据症状）</h1>
         去年夏天，一个年轻的女同事每天上午都不停的打喷嚏。<br>  <br>
         我问她：『晚上是不是穿短裤睡觉？』                  <br>     <br>
         她说：『你怎么知道？』                                <br> <br>
@@ -827,25 +815,18 @@
         我建议她晚上睡觉时改穿长裤睡觉试试。            <br>  <br>
         第二天开始，就不再打喷嚏了。                  <br>  <br>
 
-        由于她很年轻血气也不差，每天上午喷嚏打得特别严重，到下午下班时就好多了。 <br>
-        她的打喷嚏是寒气 的排泄，根据经验，应该是她生活中有某些习惯造成寒气经常侵入身体，最大的可能性是夜间睡觉时进入的。<br>
-        特别是在台湾炎热的夏天，大家都开着冷气睡觉。如果 睡觉时穿着短裤，那么寒气会从大腿的胆经和胃经侵入身体。<br>
-        年轻人血气较高，第二天早上就开始把前一晚进入的寒气排出去。<br>因此，一到夏天身体每天都上演相同 的戏码，于是就成了过敏性鼻炎。改穿长裤之后，大腿不再有寒气侵入，早上就不再打喷嚏了。  <br><br>
+        由于她很年轻血气也不差，每天上午喷嚏打得特别严重，到下午下班时就好多了。 <br> <br>
+        她的打喷嚏是寒气 的排泄，根据经验，应该是她生活中有某些习惯造成寒气经常侵入身体，最大的可能性是夜间睡觉时进入的。<br><br>
+        特别是在台湾炎热的夏天，大家都开着冷气睡觉。如果 睡觉时穿着短裤，那么寒气会从大腿的胆经和胃经侵入身体。<br><br>
+        年轻人血气较高，第二天早上就开始把前一晚进入的寒气排出去。<br><br>
+        因此，一到夏天身体每天都上演相同 的戏码，于是就成了过敏性鼻炎。改穿长裤之后，大腿不再有寒气侵入，早上就不再打喷嚏了。  <br><br>
+
+        天幸这个女士认识吴清忠，否则来大陆看病，不管三七二十一开一堆药，甚至点滴，迟早加入慢性咽炎行列。然后吃更多药，花更多钱。   <br><br>
 
 
 
-        <h4>如果这个患者去医院看病，<strong style="color: red">针对症状治疗</strong>，然后开一堆药，是药三分毒，结果将会怎样？</h4><br><br>
-        三言两语问清症状，就开药，不问病因，懒得多说一句话，不求有功，但求无过。难道我们排队2小时，看病5分钟，等到的竟是这样结果？           <br>
-        调查（参与调查，获健康值，可抵消问医生"求病因"费用）：<br>
-        我感冒发烧时去医院，医生是告诉了我致病的原因：<br>
-        <fieldset data-role="controlgroup">
-            <input type="radio" name="reason" id="isReason1" value="1"  />
-            <label for="isReason1">告诉我了</label>
-
-            <input type="radio" name="reason" id="isReason2" value="0"  />
-            <label for="isReason2">没有告诉</label>
-        </fieldset>
-
+       <h4>吴清忠老中医告诉我们，找对病因，才是治病之本。不找病因，根据症状开药，就是庸医杀人。</h4>
+       <h4>你知道你的慢性咽炎的根本原因么？</h4>
 
 
     </div>
@@ -891,9 +872,9 @@
 
         <h5 style="color: red"> 5、怎样有机会得到免费医生电话咨询？ </h5>
 
-        第一、详细填写我的资料。<br>
+        第一、详细填写我的资料以及患病历史。<br>
         第二、认真进行慢性咽炎指数测试。<br>
-        第三、详细记录个人日志。   <br>
+        第三、详细记录个人治疗日志。   <br>
 
 
 

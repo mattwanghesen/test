@@ -54,7 +54,7 @@ $(document).ready(function () {
         }
    }
     $("#register").on("pageinit",function(event){
-        if(localStorage.getItem("my-1")!=null||localStorage.getItem("my-1")!=""){
+        if(localStorage.getItem("my-1")!=null&&localStorage.getItem("my-1")!=""&&localStorage.getItem("my-1")!=undefined){
             $("#situation").hide();
             $("#sickContent").show();
             $("#sickContent").empty();
@@ -402,6 +402,7 @@ $(document).ready(function () {
 
             success: function (json) {
                 hideLoader();
+                alert("saved！");
                 var data = json.magazineTab.records;
                 $.each(data, function(i, n){
                     localStorage.setItem('userId', n.ID);
@@ -436,10 +437,13 @@ $(document).ready(function () {
         }
 
     );
-    $("#career").change(function(){
-        saveUserInfo();
-    });
-    $("#username").blur(function(){
+//    $("#career").change(function(){
+//        saveUserInfo();
+//    });
+//    $("#username").blur(function(){
+//        saveUserInfo();
+//    });
+    $("#saveUser").click(function(){
         saveUserInfo();
     });
     $("#adviceHistory").click(function (){
@@ -478,8 +482,8 @@ $(document).ready(function () {
             $.ajax({
                 type: "get",
                 url: 'http://www.ysrule.com/yy/saveDaily.asp',
-                data: {userId:localStorage.getItem('userId'),username: escape($("#username").val()), doctorid: localStorage.getItem('currentDoctorID'), content: escape($("#dailyText").val()),
-                    doctorname: escape(localStorage.getItem('currentDoctorName'))
+                data: {userId:localStorage.getItem('userId'),username:escape($("#username").val()),content:escape($("#dailyText").val())
+
                 },
                 cache: true,
                 dataType: "jsonp",
