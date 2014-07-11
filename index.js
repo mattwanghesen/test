@@ -39,6 +39,16 @@ $(document).ready(function () {
     });
     $("#daily").on("pageshow",function(event){
 
+        initDaily();
+
+    });
+    $("#adviceOnline").on("pageshow",function(event){
+
+        initadviceOnline();
+
+    });
+    $("#daily").on("pageshow",function(event){
+
         var myDate = new Date();
         var today = myDate.getFullYear()+"-"+ (myDate.getMonth()+1)+"-"+myDate.getDate();      //获取当前年份(2位)
        $("#dailyLabel").empty();
@@ -53,8 +63,24 @@ $(document).ready(function () {
             $.mobile.changePage("#register", { transition: "none", changeHash: false });
         }
    }
+    function initDaily(){
+        if(localStorage.getItem('username')!=null&&localStorage.getItem('username')!="null"&&localStorage.getItem('username')!=""){
+
+        }else{
+            alert("请先描述你的情况！");
+            $.mobile.changePage("#register", { transition: "none", changeHash: false });
+        }
+    }
+    function initadviceOnline(){
+        if(localStorage.getItem('username')!=null&&localStorage.getItem('username')!="null"&&localStorage.getItem('username')!=""){
+
+        }else{
+            alert("请先描述你的情况！");
+            $.mobile.changePage("#register", { transition: "none", changeHash: false });
+        }
+    }
     $("#register").on("pageinit",function(event){
-        if(localStorage.getItem("my-1")!=null&&localStorage.getItem("my-1")!=""&&localStorage.getItem("my-1")!=undefined){
+        if(localStorage.getItem("my-1")!=null&&localStorage.getItem("my-1")!="null"&&localStorage.getItem("my-1")!=""&&localStorage.getItem("my-1")!=undefined){
             $("#situation").hide();
             $("#sickContent").show();
             $("#sickContent").empty();
@@ -383,6 +409,7 @@ $(document).ready(function () {
         localStorage.setItem('sex',null);
         localStorage.setItem('birthday', null);
         localStorage.setItem('surveyValue', null);
+        localStorage.setItem('my-1',null);
     });
     function saveUserInfo(){
         if($("#username").val()!=""||$("#username").val()!=null){
@@ -390,7 +417,7 @@ $(document).ready(function () {
         $.ajax({
             type: "get",
             url: 'http://www.ysrule.com/yy/reg.asp',
-            data: {userId:localStorage.getItem('userId'),description:escape($("#description").val()),username: escape($("#username").val()), career: $("#career").val(), birthday: $("#birthday").val(),t1:localStorage.getItem('my-1'),t2:localStorage.getItem('my-2'),
+            data: {userId:localStorage.getItem('userId'),description:escape($("#description").val()),username: escape($("#username").val()), career: $("#career").val(), birthday: $("#birthday").val()==""?"0":$("#birthday").val(),t1:localStorage.getItem('my-1'),t2:localStorage.getItem('my-2'),
                 t3:localStorage.getItem('my-3'),t4:localStorage.getItem('my-4'),t5:localStorage.getItem('my-5'),t6:localStorage.getItem('my-6'),t7:localStorage.getItem('my-7'),t8:localStorage.getItem('my-8'),t9:localStorage.getItem('my-9'),t10:localStorage.getItem('my-10'),
                 sex: $('input[type="radio"][name="sex"]:checked').val(),sickDate:$("#sickDate").val(),sickContent:escape($("#sickContent").html().substring(15).substr(0,$("#sickContent").html().substring(15).length-51))
             },
@@ -402,7 +429,6 @@ $(document).ready(function () {
 
             success: function (json) {
                 hideLoader();
-                alert("saved！");
                 var data = json.magazineTab.records;
                 $.each(data, function(i, n){
                     localStorage.setItem('userId', n.ID);
@@ -437,9 +463,9 @@ $(document).ready(function () {
         }
 
     );
-//    $("#career").change(function(){
-//        saveUserInfo();
-//    });
+    $("#career").change(function(){
+        saveUserInfo();
+    });
 //    $("#username").blur(function(){
 //        saveUserInfo();
 //    });
@@ -532,6 +558,7 @@ $(document).ready(function () {
 
                 success: function (json) {
                     hideLoader();
+                    $("#questionAsk").val("");
                     if(json.message=="success"){
                         alert("提问成功！");
                     }else if(json.message=="pay"){
@@ -808,6 +835,9 @@ $(document).ready(function () {
             success: function (json) {
                 hideLoader();
                 var data = json.magazineTab.records;
+                if(data.length==0){
+                    addDailyBlank();
+                }
                 $.each(data, function(i, n){
                     addDaily(n);
 
@@ -984,6 +1014,7 @@ $(document).ready(function () {
                                 $("#hisDaily").unbind();
                                 $("#hisDaily").click(function(){
                                     $("#dailyListContent").empty();
+
                                     getMyDailyList(localStorage.getItem('currentID'));
                                     $.mobile.changePage("#dailyList", { transition: "slideup", changeHash: false });
 
@@ -1075,13 +1106,28 @@ $(document).ready(function () {
             "<div style='font-size:11pt;font-weight:normal;white-space:normal;word-break:break-all;'>"+unescape(obj.content)+"</div></a></li></ul>";
         div[0].innerHTML +=listStr;
     }
+    function addDailyBlank() {
+        var div=$("#dailyListContent");
+
+        //" <ul data-role='listview'  class='ui-listview' data-inset='true' role='listbox' >"+
+        var listStr= "<ul data-role='listview' id='messageList'  class='ui-listview selector' data-inset='true' role='listbox'><li data-role='list-divider' role='heading' tabindex='0' class='ui-bar-d ' style='white-space:normal;font-size:8pt;font-weight:normal'>"+
+
+            //"<span class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:55px;background: url(images/comments.jpg) no-repeat;padding:3px;padding-left:20px'>"+obj.commentNum+"</span>"+
+            "<span  class='ui-li-count ui-btn-up-c ui-btn-corner-all' style='right:5px;" +
+            "background:  no-repeat;padding:4px;padding-left:20px'>"+"</span></li>"+
+            "<li  role='option' tabindex='0' data-theme='c' >"+
+            "<a href='#'>"+
+            // "<img width='40' height='40' src='images/apple.jpg'/>"+
+            "<div style='font-size:11pt;font-weight:normal;white-space:normal;word-break:break-all;'>还没写日记！</div></a></li></ul>";
+        div[0].innerHTML +=listStr;
+    }
     function addContact(obj) {
         var ul=$("#contactListDetail");
         var li= document.createElement("li");
         var href_a = document.createElement("a");
         var head = document.createElement("h2");
         var img = document.createElement("img");
-        href_a.innerHTML="<img class='image'  src='http://www.ysrule.com/yy/pic/"+obj.image+"'><h2>"+unescape(obj.username)+"</h2><p>"+unescape(obj.usercontact)+"</p> <p class='ui-li-aside'>值班护士</p>";
+        href_a.innerHTML="<img class='image'  src='http://www.ysrule.com/yy/pic/"+obj.userimage+"'><h2>"+unescape(obj.username)+"</h2><p>"+unescape(obj.usercontact)+"</p> <p class='ui-li-aside'>值班护士</p>";
         li.innerHTML= href_a.outerHTML;
         li.id=obj.ID;
         li.class="userListClass";

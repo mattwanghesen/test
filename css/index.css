@@ -25,6 +25,19 @@
 #daily ul li a{
     border-color:#FEFEFE;
 }
+#contact ul li a{
+    border-color:#FEFEFE;
+}
+#smalltipone ul li a{
+    border-color:#FEFEFE;
+}
+#smalltipthree ul li a{
+    border-color:#FEFEFE;
+}
+
+#userDetail ul li a{
+    border-color:#FEFEFE;
+}
 .ui-bar-a{
     color: white;
     border: white;

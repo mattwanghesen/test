@@ -175,7 +175,7 @@
 <div data-role="page" id="adviceOnline" data-theme="a">
 <div data-theme="a" data-role="header" data-position="fixed" >
     <h3>
-        在线咨询
+        在线提问
     </h3>
     <a data-role="button" href="#doctorDetail" class="ui-btn ui-icon-carat-l ui-btn-icon-notext" style="border-color: #6cd0bf">上一步</a>
 </div>
@@ -260,12 +260,12 @@
         </div>
 
     </div>
-    <footer data-theme="a" data-role="footer" data-position="fixed">
+    <footer  data-role="footer" data-position="fixed" data-theme="c">
         <nav data-role="navbar">
             <ul>
-                <li><a href="#index" data-icon="home">首页</a></li>
+                <li><a href="#index"  data-icon="home">首页</a></li>
                 <li><a href="#task" data-icon="grid">在线医生</a></li>
-                <li><a href="#similiarCase"  data-icon="info">相似案例</a></li>
+                <li><a href="#similiarCase" data-icon="info">相似案例</a></li>
                 <li><a href="#register"  data-icon="gear">账户</a></li>
             </ul>
         </nav>
@@ -285,7 +285,7 @@
         <p id="doctorRemark"></p>
         <p id="doctorAddress"></p>
         <a  data-role="button" data-theme="a" id="adviceHistory" >咨询记录</a>
-        <a href="#adviceOnline"  data-role="button" data-theme="a" id="adviceAsk" >在线咨询</a>
+        <a href="#adviceOnline"  data-role="button" data-theme="a" id="adviceAsk" >在线提问</a>
         <a  data-role="button" data-theme="a" href="#contact" id="advicePhone" >电话咨询</a>
         <div data-role="fieldcontain">
 
@@ -714,14 +714,13 @@
                 <option value="governor">公务员</option>
                 <option value="other">其他</option>
             </select>
-        <a data-role="button" id="saveUser" data-theme="a">确定</a>
+        <!--a data-role="button" id="saveUser" data-theme="a">确定</a-->
         <a href="#mysituaton" data-role="button" id="situation" data-theme="a">填写我的症状</a>
         <div id="sickContent" hidden="true">症状：</div>
         <div id="sickDesc" hidden="true">详情：</div>
         <!--a data-role="button" id="clearLocal" data-theme="a">clearLocal</a-->
         <a data-role="button" id="yyNumber" data-theme="a">我的咽炎指数</a>
         <a data-role="button" id="myQuestions" data-theme="a">我的问医生记录</a>
-        <a data-role="button" id="compare" data-theme="a">参考与我相似案例</a>
     </div>
     <footer  data-role="footer" data-position="fixed" data-theme="c" style="border-color: #fefefe">
         <nav data-role="navbar">
@@ -768,7 +767,7 @@
             <input type="checkbox" name="my1" id="my-10" value="10"  />
             <label for="my-10">消化不好胃返酸水</label>
             <div data-role="fieldcontain">
-                <label for="description">详情:</label>
+                <label for="description">详情(越详细越好):</label>
             <textarea type="text" name="name" id="description" placeholder="如果足够详细，有机会获得医生的免费咨询时间" data-clear-btn=true>
             </textarea>
             </div>
@@ -807,6 +806,8 @@
         <a data-role="button" href="#index" class="ui-btn ui-icon-carat-l ui-btn-icon-notext" style="border-color: #6cd0bf">返回</a>
     </div>
     <div  data-role="content" style="word-break:break-all;white-space:normal;">
+
+        <h4>吴清忠老中医告诉我们，找对病因，才是治病之本。不找病因，根据症状开药，就是庸医杀人。</h4>  <br><br>
        <p><h1>台湾老中医吴清忠，针对病因治病（不是根据症状）</h1>
         去年夏天，一个年轻的女同事每天上午都不停的打喷嚏。<br>  <br>
         我问她：『晚上是不是穿短裤睡觉？』                  <br>     <br>
@@ -825,8 +826,8 @@
 
 
 
-       <h4>吴清忠老中医告诉我们，找对病因，才是治病之本。不找病因，根据症状开药，就是庸医杀人。</h4>
-       <h4>你知道你的慢性咽炎的根本原因么？</h4>
+        <h4>吴清忠老中医告诉我们，找对病因，才是治病之本。不找病因，根据症状开药，就是庸医杀人。</h4>
+
 
 
     </div>
@@ -899,7 +900,10 @@
         </h3>
     </div>
     <div  data-role="content" style="word-break:break-all;white-space:normal;">
-        <h5> 如果您对我们的软件有任何疑问和建议，请至</h5>
+        <h5>慢性咽炎案例库，是一款在职业医生的指导下，共享慢性咽炎治疗经验的手机app软件。最终目的是，用户可以找到与自己相同年龄、相同职业、相同症状的人，参考他们的彻底根治经验。</h5>
+        <h5>本站由数名职业医生在线主持，他们在认识慢性咽炎、根治慢性咽炎方面有丰富经验，但鉴于医生的时间终究有限，最终目的还是在医生指导下，找到病因，咽炎患者之间可以达到经验共享，同病互助。</h5>
+
+        <h5>本软件由pomer团队承接开发，如果您对我们的软件有任何疑问和建议，请至</h5>
         Email:mattwangready@gmail.com <br>
 
 
